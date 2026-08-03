@@ -89,6 +89,24 @@ export class HttpCache {
     await mkdir(this.rawDir, { recursive: true });
     await writeFile(this.rawPath(key), body, "utf8");
   }
+
+  /**
+   * Whether a cached body exists to replay.
+   *
+   * Load-bearing: `http-meta.json` is committed but `.cache/raw/` is gitignored,
+   * so a fresh runner has ETags without bodies. Sending If-None-Match in that
+   * state earns a legitimate 304 with nothing to serve — seven sources silently
+   * contributed zero items that way. Only send a conditional request when this
+   * returns true.
+   */
+  async hasRaw(key: string): Promise<boolean> {
+    try {
+      await readFile(this.rawPath(key), "utf8");
+      return true;
+    } catch {
+      return false;
+    }
+  }
 }
 
 export function contentHash(body: string): string {

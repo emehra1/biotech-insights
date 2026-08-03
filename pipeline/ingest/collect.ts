@@ -75,7 +75,11 @@ async function collectOne(
 ): Promise<{ items: NormalizedItem[]; health: SourceHealth }> {
   const url = resolveEndpoint(source, options.window);
   const previous = options.previousHealth?.[source.id];
-  const meta = source.conditionalGet ? cache.get(source.id) : undefined;
+  // Only make the request conditional when we can actually serve a 304: a
+  // runner that restored the committed ETags but not the gitignored bodies
+  // would otherwise get a valid "not modified" and contribute nothing.
+  const canReplay = await cache.hasRaw(source.id);
+  const meta = source.conditionalGet && canReplay ? cache.get(source.id) : undefined;
 
   const response = await http(url, {
     cacheKey: source.id,

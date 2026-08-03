@@ -185,9 +185,22 @@ async function main(): Promise<number> {
       `- ${okSources}/${health.length} sources healthy`,
       `- ${digest.alerts.length} watchlist alerts`,
       "",
-      "| Source | Status | Items |",
-      "| --- | --- | --- |",
-      ...health.map((h) => `| ${h.sourceId} | ${h.status} | ${h.itemsKept} |`),
+      "| Source | Status | Items | Detail |",
+      "| --- | --- | --- | --- |",
+      // The detail column is the point: "failed" alone doesn't distinguish a
+      // WAF blocking the runner's IP from a timeout or a parse error, and those
+      // have completely different fixes.
+      ...health.map((h) => {
+        const detail = [
+          h.httpStatus ? `HTTP ${h.httpStatus}` : "",
+          h.error ?? "",
+          h.parseWarnings.join(", "),
+          h.consecutiveFailures > 1 ? `failing ${h.consecutiveFailures}x` : "",
+        ]
+          .filter(Boolean)
+          .join(" · ");
+        return `| ${h.sourceId} | ${h.status} | ${h.itemsKept} | ${detail || "—"} |`;
+      }),
     ].join("\n"),
   );
 
