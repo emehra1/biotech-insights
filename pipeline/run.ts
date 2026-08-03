@@ -198,7 +198,12 @@ async function main(): Promise<number> {
           h.consecutiveFailures > 1 ? `failing ${h.consecutiveFailures}x` : "",
         ]
           .filter(Boolean)
-          .join(" · ");
+          .join(" · ")
+          // Collapse to one line: a multi-line parser error (Line/Column/Char
+          // on separate lines) shattered the markdown table into fake rows.
+          .replace(/\s*[\r\n]+\s*/g, " ")
+          .replace(/\|/g, "\\|")
+          .slice(0, 160);
         return `| ${h.sourceId} | ${h.status} | ${h.itemsKept} | ${detail || "—"} |`;
       }),
     ].join("\n"),

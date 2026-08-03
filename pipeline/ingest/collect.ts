@@ -133,6 +133,26 @@ async function collectOne(
     };
   }
 
+  // Diagnose the response before parsing it. A WAF that answers a datacenter IP
+  // with a 200 and an interstitial page produces "Attribute without value,
+  // Line: 13" from the XML parser — HTML boolean attributes like `<script
+  // async>` are illegal in XML. That error is useless for deciding what to do;
+  // "received HTML, not XML" tells you it is a block, not a parser bug.
+  if (source.dialect !== "json") {
+    const shape = describeNonXml(body);
+    if (shape) {
+      return {
+        items: [],
+        health: {
+          ...baseHealth,
+          status: "failed",
+          error: `expected XML, ${shape}`,
+          consecutiveFailures: (previous?.consecutiveFailures ?? 0) + 1,
+        },
+      };
+    }
+  }
+
   let parsed;
   try {
     parsed =
@@ -170,6 +190,26 @@ async function collectOne(
       lastSuccessAt: new Date().toISOString(),
     },
   };
+}
+
+/**
+ * Returns a human description when the body is NOT parseable XML, or undefined
+ * when it looks fine. Kept to a single line so it survives a markdown table.
+ */
+function describeNonXml(body: string): string | undefined {
+  const head = body.slice(0, 400).trim();
+  if (!head) return "got an empty response";
+
+  const lower = head.toLowerCase();
+  if (lower.startsWith("<!doctype html") || lower.startsWith("<html") || lower.includes("<head>")) {
+    const title = /<title[^>]*>([^<]{0,80})/i.exec(head)?.[1]?.trim();
+    return `got HTML${title ? ` titled "${title}"` : ""} — likely a bot challenge or consent page`;
+  }
+  if (lower.startsWith("{") || lower.startsWith("[")) return "got JSON";
+  if (!head.startsWith("<")) {
+    return `got non-markup starting ${JSON.stringify(head.slice(0, 40))}`;
+  }
+  return undefined;
 }
 
 function parseJsonSource(source: SourceDef, body: string, now: Date) {

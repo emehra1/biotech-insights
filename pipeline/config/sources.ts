@@ -318,7 +318,13 @@ export const SOURCES: SourceDef[] = [
     crawlDelayMs: 700,
     conditionalGet: true,
     maxItems: 30,
-    enabled: true,
+    // Disabled: returns HTTP 403 to GitHub Actions runners (Atypon fronts the
+    // cell.com feeds and blocks datacenter ranges). It works from a laptop, so
+    // a local `npm run pipeline` still picks it up — but a source that can only
+    // ever fail in CI is noise in the health panel. Coverage is replaced by
+    // europepmc-clinical below, which indexes these journals AND gives real
+    // abstracts instead of RSS titles.
+    enabled: false,
   },
   {
     id: "cell-stem-cell",
@@ -335,7 +341,7 @@ export const SOURCES: SourceDef[] = [
     crawlDelayMs: 700,
     conditionalGet: true,
     maxItems: 20,
-    enabled: true,
+    enabled: false, // HTTP 403 from Actions runners — see the note on `cell`.
   },
   {
     id: "nejm",
@@ -353,7 +359,35 @@ export const SOURCES: SourceDef[] = [
     crawlDelayMs: 700,
     conditionalGet: true,
     maxItems: 25,
+    enabled: false, // HTTP 403 from Actions runners — see the note on `cell`.
+  },
+  {
+    // Replaces the three journal feeds that 403 from CI. Europe PMC indexes all
+    // of them, is happy to be queried from a datacenter, and returns abstracts —
+    // strictly better input than the titles-only RSS it replaces.
+    id: "europepmc-clinical",
+    name: "Europe PMC (high-impact journals)",
+    publisherGroup: "europepmc",
+    homepage: "https://europepmc.org/",
+    kind: "journal",
+    dialect: "json",
+    endpoint: (window) =>
+      "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=40&query=" +
+      encodeURIComponent(
+        `(JOURNAL:"N Engl J Med" OR JOURNAL:"Lancet" OR JOURNAL:"Cell" OR ` +
+          `JOURNAL:"Cell Stem Cell" OR JOURNAL:"Cell Metab" OR JOURNAL:"Nat Med" OR ` +
+          `JOURNAL:"Nature" OR JOURNAL:"Science" OR JOURNAL:"JAMA") AND ` +
+          `(FIRST_PDATE:[${eutc(window.start)} TO ${eutc(window.end)}])`,
+      ),
+    authority: 0.8,
+    laneHints: { "clinical-regulatory": 0.35, "frontier-science": 0.45 },
+    fullText: "api-body",
+    paywalled: false,
+    crawlDelayMs: 1000,
+    conditionalGet: false,
+    maxItems: 40,
     enabled: true,
+    note: "Covers NEJM/Lancet/Cell/Nature/Science/JAMA with abstracts.",
   },
   {
     id: "jama",
