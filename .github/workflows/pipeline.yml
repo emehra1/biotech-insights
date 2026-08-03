@@ -52,7 +52,7 @@ jobs:
       weekly_outcome: ${{ steps.weekly.outcome }}
       date: ${{ steps.when.outputs.date }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v4
         with:
@@ -150,7 +150,7 @@ jobs:
     env:
       TZ: America/New_York
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref_name }}
       - uses: actions/setup-node@v4
