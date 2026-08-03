@@ -1,28 +1,31 @@
 {
   "endpoints": {
-    "lastSuccessAt": "2026-08-03T05:18:03.018Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.029Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       24,
       24,
       0,
+      24,
       24
     ]
   },
   "fierce-biotech": {
-    "lastSuccessAt": "2026-08-03T05:18:03.077Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.110Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       25,
       25,
       0,
+      25,
       25
     ]
   },
   "fierce-pharma": {
-    "lastSuccessAt": "2026-08-03T05:18:03.522Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.249Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      23,
       23,
       23,
       23,
@@ -30,9 +33,10 @@
     ]
   },
   "statnews": {
-    "lastSuccessAt": "2026-08-03T05:18:03.617Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.369Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      20,
       20,
       20,
       20,
@@ -40,19 +44,21 @@
     ]
   },
   "biopharmadive": {
-    "lastSuccessAt": "2026-08-03T05:18:03.050Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.353Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       10,
       10,
       0,
+      10,
       10
     ]
   },
   "fda-press": {
-    "lastSuccessAt": "2026-08-03T05:18:03.757Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.323Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      20,
       20,
       20,
       20,
@@ -60,49 +66,54 @@
     ]
   },
   "nature": {
-    "lastSuccessAt": "2026-08-03T05:12:41.503Z",
-    "consecutiveFailures": 1,
+    "lastSuccessAt": "2026-08-03T05:25:52.431Z",
+    "consecutiveFailures": 0,
     "recentCounts": [
       40,
       40,
       0,
-      0
+      0,
+      40
     ]
   },
   "nature-biotech": {
-    "lastSuccessAt": "2026-08-03T05:18:04.432Z",
+    "lastSuccessAt": "2026-08-03T05:25:53.134Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
+      8,
       8
     ]
   },
   "nature-medicine": {
-    "lastSuccessAt": "2026-08-03T05:18:05.139Z",
+    "lastSuccessAt": "2026-08-03T05:25:53.850Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
+      8,
       8
     ]
   },
   "nature-rev-drug-discovery": {
-    "lastSuccessAt": "2026-08-03T05:18:05.845Z",
+    "lastSuccessAt": "2026-08-03T05:25:54.561Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
+      8,
       8
     ]
   },
   "science-news": {
-    "lastSuccessAt": "2026-08-03T05:18:04.253Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.512Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      10,
       10,
       10,
       10,
@@ -140,9 +151,10 @@
     ]
   },
   "jama": {
-    "lastSuccessAt": "2026-08-03T05:18:03.951Z",
+    "lastSuccessAt": "2026-08-03T05:25:52.659Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      25,
       25,
       25,
       25,
@@ -150,9 +162,10 @@
     ]
   },
   "biorxiv": {
-    "lastSuccessAt": "2026-08-03T05:18:04.422Z",
+    "lastSuccessAt": "2026-08-03T05:25:53.223Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      30,
       30,
       30,
       30,
@@ -160,9 +173,10 @@
     ]
   },
   "medrxiv": {
-    "lastSuccessAt": "2026-08-03T05:18:04.523Z",
+    "lastSuccessAt": "2026-08-03T05:25:53.814Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      30,
       30,
       30,
       30,
@@ -170,9 +184,10 @@
     ]
   },
   "europepmc-aging": {
-    "lastSuccessAt": "2026-08-03T05:18:06.576Z",
+    "lastSuccessAt": "2026-08-03T05:25:54.800Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      50,
       50,
       50,
       50,
@@ -180,13 +195,21 @@
     ]
   },
   "clinicaltrials": {
-    "lastSuccessAt": "2026-08-03T05:18:04.475Z",
+    "lastSuccessAt": "2026-08-03T05:25:53.341Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       40,
       40,
       40,
+      40,
       40
+    ]
+  },
+  "europepmc-clinical": {
+    "lastSuccessAt": "2026-08-03T05:25:53.106Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      36
     ]
   }
 }
