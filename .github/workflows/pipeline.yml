@@ -1,0 +1,196 @@
+name: Digest pipeline
+
+# Daily digest, Sunday-gated weekly rollup, build, deploy and email — all in ONE
+# workflow on purpose. Two workflows would race on the Pages deployment and both
+# push to main. And commits made with the default GITHUB_TOKEN do not trigger
+# other workflows, so a separate `on: push` deploy would simply never fire.
+
+on:
+  schedule:
+    # 11:17 UTC. Off the hour deliberately: :00 is peak queue time for GitHub's
+    # scheduler and delays of tens of minutes are normal there.
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYY-MM-DD (blank = today)"
+        type: string
+        required: false
+      send_email:
+        description: "Send the email"
+        type: boolean
+        default: false
+      force:
+        description: "Regenerate an existing digest"
+        type: boolean
+        default: false
+      weekly:
+        description: "Force the weekly rollup"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit data/
+  pages: write # deploy
+  id-token: write # OIDC for deploy-pages
+  issues: write # failure reporting
+
+concurrency:
+  group: digest-pipeline
+  cancel-in-progress: false # never cancel a deploy mid-flight
+
+env:
+  # "Today" must mean the reader's day, not UTC's.
+  TZ: America/New_York
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      digest_outcome: ${{ steps.digest.outcome }}
+      weekly_outcome: ${{ steps.weekly.outcome }}
+      date: ${{ steps.when.outputs.date }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+            .cache/raw
+          key: bti-${{ hashFiles('package-lock.json') }}-${{ github.run_id }}
+          restore-keys: bti-${{ hashFiles('package-lock.json') }}-
+
+      - id: when
+        run: |
+          echo "dow=$(date -u +%u)" >> "$GITHUB_OUTPUT"
+          echo "date=${{ inputs.date }}" >> "$GITHUB_OUTPUT"
+
+      # The pipeline is allowed to fail without killing the deploy: a bad run
+      # must not take the site down, it must leave yesterday's digest live.
+      - id: digest
+        continue-on-error: true
+        run: >
+          npx tsx pipeline/run.ts
+          ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
+          ${{ inputs.force && '--force' || '' }}
+          --summary "$GITHUB_STEP_SUMMARY"
+
+      - id: weekly
+        if: steps.digest.outcome == 'success' && (inputs.weekly || steps.when.outputs.dow == '7')
+        run: npx tsx pipeline/rollup/run-weekly.ts
+
+      # Runs even on failure so state/last-run.json lands and the site can show
+      # an honest staleness banner.
+      - id: commit
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data .cache/http-meta.json
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "data: digest ${{ steps.when.outputs.date || 'run' }} [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" \
+              && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 5))
+          done
+          echo "::error::could not push data commit after 3 attempts"
+          exit 1
+
+      - id: pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_BUILD_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: out
+          # v4+ EXCLUDES dotfiles by default, which would silently drop
+          # .nojekyll from the artifact.
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  email:
+    needs: [build, deploy]
+    # Only email a digest that actually generated; a failed run stays silent
+    # rather than mailing yesterday's news as if it were today's.
+    if: needs.build.outputs.digest_outcome == 'success' && (github.event_name == 'schedule' || inputs.send_email)
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Send digest
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          WATCHLIST_PRIVATE: ${{ secrets.WATCHLIST_PRIVATE }}
+          SITE_URL: ${{ needs.deploy.result == 'success' && format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) || '' }}
+        run: >
+          npx tsx scripts/send-email.ts --send
+          ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
+          ${{ needs.build.outputs.weekly_outcome == 'success' && '--weekly' || '' }}
+
+  report-failure:
+    needs: [build, deploy]
+    if: failure() || needs.build.outputs.digest_outcome == 'failure'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const title = 'Digest pipeline failing';
+            const url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              ...context.repo, state: 'open', labels: 'pipeline-failure',
+            });
+            const body = `Run failed: ${url}`;
+            if (issues.length > 0 && issues[0]) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: issues[0].number, body });
+            } else {
+              await github.rest.issues.create({ ...context.repo, title, body, labels: ['pipeline-failure'] });
+            }

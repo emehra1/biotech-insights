@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
+      - ".cache/**"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run validate
+
+      - name: Build with a project basePath
+        env:
+          NEXT_PUBLIC_BASE_PATH: /biotech-insights
+          NEXT_PUBLIC_BUILD_ID: ci-${{ github.run_id }}
+        run: npm run build
+
+      # The three regressions that break a Pages deploy without failing a build.
+      - name: Assert static-export invariants
+        run: |
+          test ! -d out/api          || { echo "::error::a route handler is back — impossible under output: export"; exit 1; }
+          test -f out/404.html       || { echo "::error::no 404.html; Pages will serve nothing for unknown paths"; exit 1; }
+          grep -q '/biotech-insights/_next' out/index.html \
+            || { echo "::error::basePath missing from asset URLs — the deployed site will be unstyled"; exit 1; }
+          echo "static export OK"

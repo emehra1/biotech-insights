@@ -1,0 +1,16 @@
+# Dependency hygiene, and insurance against the 60-day rule: GitHub disables
+# scheduled workflows in a public repo after 60 days with no repository
+# activity. The daily data commit normally covers that, but if the pipeline is
+# broken for two months the cron would switch itself off too — exactly when you
+# would not notice. Dependabot keeps a heartbeat either way.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
