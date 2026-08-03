@@ -10,6 +10,13 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 3
+    # Major upgrades here are migrations, not bumps: Next 14→16, TypeScript
+    # 5→7 and the React major all failed CI within minutes of this file
+    # landing. Keep them deliberate rather than a standing stream of red pull
+    # requests, which just trains you to ignore CI.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
