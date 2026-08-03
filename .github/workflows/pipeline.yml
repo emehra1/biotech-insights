@@ -78,11 +78,21 @@ jobs:
       # must not take the site down, it must leave yesterday's digest live.
       - id: digest
         continue-on-error: true
-        run: >
-          npx tsx pipeline/run.ts
-          ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
-          ${{ inputs.force && '--force' || '' }}
-          --summary "$GITHUB_STEP_SUMMARY"
+        env:
+          # Passed through env instead of interpolated into the command line,
+          # and compared against both forms: `inputs.*` is typed for
+          # workflow_dispatch, but `github.event.inputs.*` is always a string —
+          # and the string "false" is truthy in a `&&` expression, so the naive
+          # version can pass or drop the flag for the wrong reason.
+          BTI_FORCE: ${{ (inputs.force == true || inputs.force == 'true') && '1' || '' }}
+          BTI_DATE: ${{ inputs.date }}
+        run: |
+          echo "force input resolved to: '${BTI_FORCE:-<empty>}'"
+          set -x
+          npx tsx pipeline/run.ts \
+            ${BTI_DATE:+--date "$BTI_DATE"} \
+            ${BTI_FORCE:+--force} \
+            --summary "$GITHUB_STEP_SUMMARY"
 
       - id: weekly
         if: steps.digest.outcome == 'success' && (inputs.weekly || steps.when.outputs.dow == '7')

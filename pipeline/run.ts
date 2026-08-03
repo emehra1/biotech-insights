@@ -74,8 +74,18 @@ async function main(): Promise<number> {
   const timeZone = process.env.TZ || "America/New_York";
   const date = args.date && /^\d{4}-\d{2}-\d{2}$/.test(args.date) ? args.date : isoDay(now, timeZone);
 
+  console.log(
+    `flags: date=${date} force=${args.force} dryRun=${args.dryRun} fromCache=${args.fromCache}` +
+      `${args.only.length ? ` only=${args.only.join(",")}` : ""}`,
+  );
+
   if (!args.force && !args.dryRun && readDigest(date)) {
-    console.log(`Digest for ${date} already exists. Use --force to regenerate.`);
+    // Exit 0 — for the cron this is correct, not an error. But say so loudly in
+    // the job summary: a run that fetched nothing must never read as a healthy
+    // run that happened to find nothing.
+    const message = `Digest for ${date} already exists, so **no sources were fetched**. Re-run with \`force\` to regenerate.`;
+    console.log(`SKIPPED: ${message}`);
+    emitSummary(args.summaryFile, `### Digest ${date} — skipped\n\n${message}`);
     return 0;
   }
 
