@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W32",
+  "start": "2026-08-03",
+  "end": "2026-08-09",
+  "generatedAt": "2026-08-03T04:14:23.408Z",
+  "themes": {
+    "status": "warming-up",
+    "weeksObserved": 0,
+    "items": []
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "7adcf020b39fb37a",
+        "title": "Fierce Pharma Asia—Legend CEO exits; Merck’s hush-hush PD-1xVEGF plan; Otsuka’s novel ADHD nod"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [],
+      "missed": [
+        "cc6b9a95dfd101b8"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 7,
+      "totalUsdM": 6463,
+      "largest": {
+        "itemId": "63350f10228b3f6c",
+        "usdM": 2800
+      }
+    },
+    "financings": {
+      "count": 8,
+      "totalUsdM": 25029,
+      "byRound": {
+        "financing": 5,
+        "Series C": 1,
+        "IPO": 2
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07342478",
+        "title": "ROCKET-CLL Global Phase 3 Study: Rocbrutinib vs Pirtobrutinib in cBTKi-Pretreated R/R CLL/SLL",
+        "sponsor": "Newave Pharmaceutical"
+      },
+      {
+        "nct": "NCT07581002",
+        "title": "A Study to Assess Adverse Events and Change in Disease Activity When Intravenous (IV) Pivekimab Sunirine is Given in Combination With Oral Venetoclax and IV or Subcutaneous Azacitidine in Adult Participants With Acute Myeloid Leukemia (AML)",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07011719",
+        "title": "Study of Casdatifan and Cabozantinib Versus Placebo and Cabozantinib in Patients With Advanced Clear Cell Renal Cell Carcinoma",
+        "sponsor": "Arcus Biosciences"
+      },
+      {
+        "nct": "NCT07339111",
+        "title": "Phase 3 Pivotal Trial Comparing CARTISTEM® and Surgical Comparator for Knee Cartilage Lesions and Osteoarthritis"
+      },
+      {
+        "nct": "NCT07067463",
+        "title": "A Study of Orelabrutinib in Patients With Primary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      },
+      {
+        "nct": "NCT06559306",
+        "title": "Phase 3 Study of Adjunctive Treatment With Seltorexant in Adult and Elderly Participants With Major Depressive Disorder and Insomnia Symptoms",
+        "sponsor": "Johnson & Johnson"
+      },
+      {
+        "nct": "NCT03394365",
+        "title": "A Phase 3 Study of Tabelecleucel for Participants With Epstein-Barr Virus-Associated Post-Transplant Lymphoproliferative Disease After Failure With Rituximab or Rituximab and Chemotherapy"
+      },
+      {
+        "nct": "NCT06012240",
+        "title": "A Study to Evaluate the Safety and Effectiveness of Upadacitinib Tablets in Adult and Adolescent Participants With Severe Alopecia Areata",
+        "sponsor": "AbbVie"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_bccfbdc7b1",
+      "leadItemId": "d7bc47e629290aeb",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_9ba19f8567",
+      "leadItemId": "97faba78fd1208d9",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_b4e62e9ad8",
+      "leadItemId": "491e274bd124d1e0",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [],
+  "degradedSources": [],
+  "lexiconSuggestions": [
+    "aging",
+    "phase",
+    "spatial",
+    "microbiome",
+    "single",
+    "melanoma",
+    "participants",
+    "checkpoint",
+    "about",
+    "related"
+  ]
+}

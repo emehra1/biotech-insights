@@ -1,0 +1,154 @@
+{
+  "endpoints": {
+    "lastSuccessAt": "2026-08-03T04:06:52.146Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      24,
+      24
+    ]
+  },
+  "fierce-biotech": {
+    "lastSuccessAt": "2026-08-03T04:06:52.151Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      25,
+      25
+    ]
+  },
+  "fierce-pharma": {
+    "lastSuccessAt": "2026-08-03T04:06:52.153Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      23,
+      23
+    ]
+  },
+  "statnews": {
+    "lastSuccessAt": "2026-08-03T04:06:52.157Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      20,
+      20
+    ]
+  },
+  "biopharmadive": {
+    "lastSuccessAt": "2026-08-03T04:06:52.157Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      10,
+      10
+    ]
+  },
+  "fda-press": {
+    "lastSuccessAt": "2026-08-03T04:06:52.158Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      20,
+      20
+    ]
+  },
+  "nature": {
+    "lastSuccessAt": "2026-08-03T04:06:52.163Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      40,
+      40
+    ]
+  },
+  "nature-biotech": {
+    "lastSuccessAt": "2026-08-03T04:06:52.163Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      8,
+      8
+    ]
+  },
+  "nature-medicine": {
+    "lastSuccessAt": "2026-08-03T04:06:52.159Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      8,
+      8
+    ]
+  },
+  "nature-rev-drug-discovery": {
+    "lastSuccessAt": "2026-08-03T04:06:52.173Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      8,
+      8
+    ]
+  },
+  "science-news": {
+    "lastSuccessAt": "2026-08-03T04:06:52.165Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      10,
+      10
+    ]
+  },
+  "cell": {
+    "lastSuccessAt": "2026-08-03T04:06:52.171Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      0,
+      30
+    ]
+  },
+  "cell-stem-cell": {
+    "lastSuccessAt": "2026-08-03T04:06:52.166Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      0,
+      11
+    ]
+  },
+  "nejm": {
+    "lastSuccessAt": "2026-08-03T04:06:52.184Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      25,
+      25
+    ]
+  },
+  "jama": {
+    "lastSuccessAt": "2026-08-03T04:06:52.182Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      25,
+      25
+    ]
+  },
+  "biorxiv": {
+    "lastSuccessAt": "2026-08-03T04:06:52.186Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      30,
+      30
+    ]
+  },
+  "medrxiv": {
+    "lastSuccessAt": "2026-08-03T04:06:52.191Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      30,
+      30
+    ]
+  },
+  "europepmc-aging": {
+    "lastSuccessAt": "2026-08-03T04:06:52.194Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      50,
+      50
+    ]
+  },
+  "clinicaltrials": {
+    "lastSuccessAt": "2026-08-03T04:06:52.192Z",
+    "consecutiveFailures": 0,
+    "recentCounts": [
+      40,
+      40
+    ]
+  }
+}

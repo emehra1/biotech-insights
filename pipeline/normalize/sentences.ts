@@ -49,3 +49,27 @@ export function splitSentences(text: string): string[] {
 export function wordCount(sentence: string): number {
   return sentence.split(/\s+/).filter(Boolean).length;
 }
+
+/**
+ * The sentence containing `index`, for quoting evidence.
+ *
+ * Must not treat the period in "HR 0.94" or "p=0.31" as a boundary — a naive
+ * lastIndexOf(".") returns the 8-character fragment " p=0.31)" instead of the
+ * sentence, which makes the evidence quote useless.
+ */
+export function sentenceAround(text: string, index: number, maxChars = 260): string {
+  const boundary = /[.!?](?=\s|$)/g;
+  let start = 0;
+  let end = text.length;
+
+  for (const match of text.matchAll(boundary)) {
+    if (match.index === undefined) continue;
+    if (match.index < index) start = match.index + 1;
+    else {
+      end = match.index + 1;
+      break;
+    }
+  }
+
+  return text.slice(start, end).replace(/\s+/g, " ").trim().slice(0, maxChars);
+}

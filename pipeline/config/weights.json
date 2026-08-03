@@ -1,0 +1,66 @@
+{
+  "version": "2026-08-02.1",
+  "weights": {
+    "authority": 14,
+    "recency": 22,
+    "lexicon": 26,
+    "laneSpread": 4,
+    "event": 18,
+    "corroboration": 8,
+    "watchlist": 14,
+    "factDensity": 6
+  },
+  "penalties": {
+    "thinContent": 6,
+    "opinionRoundup": 6,
+    "dateMissing": 5,
+    "preclinicalInClinicalLane": 7,
+    "nonMammalianModel": 9,
+    "reviewArticle": 5,
+    "inVitroOnly": 3,
+    "stemOnlyEntities": 2
+  },
+  "recencyHalfLifeHours": {
+    "clinical-regulatory": 20,
+    "business-deals": 24,
+    "frontier-science": 72,
+    "aging-omics": 96
+  },
+  "maxAgeDays": {
+    "clinical-regulatory": 4,
+    "business-deals": 5,
+    "frontier-science": 14,
+    "aging-omics": 21
+  },
+  "lexiconSaturationK": 8,
+  "keepThreshold": 24,
+  "maxItemsPerDay": 80,
+  "maxItemsPerLane": 24,
+  "eventBoosts": {
+    "approval": 1.0,
+    "crl": 0.85,
+    "phase3-readout": 0.95,
+    "phase-readout": 0.6,
+    "safety-hold": 0.85,
+    "ma-large": 1.0,
+    "ma": 0.8,
+    "license-large": 0.7,
+    "license": 0.45,
+    "financing-large": 0.6,
+    "financing": 0.35,
+    "ipo": 0.6,
+    "major-journal-primary": 0.75,
+    "phase3-start": 0.5,
+    "filing": 0.5,
+    "designation": 0.45,
+    "distress": 0.45,
+    "preprint": 0.25,
+    "personnel": 0.2,
+    "opinion": 0.0
+  },
+  "largeDealThresholdUsdM": {
+    "ma": 1000,
+    "license": 500,
+    "financing": 100
+  }
+}

@@ -1,123 +1,90 @@
-import { getSummary } from "@/lib/summary";
-import { InsightSummary } from "@/lib/types";
+import {
+  LaneSection,
+  SourceHealthStrip,
+  StalenessBanner,
+  WatchAlertPanel,
+} from "@/components/digest";
+import { latestDigest, listDigestDates, readRunStatus } from "@/lib/data/repo";
+import { formatDay, formatDateTime } from "@/lib/format";
+import { routes } from "@/lib/paths";
 
-export const revalidate = 1800;
+/**
+ * Today's digest, read from committed JSON at build time.
+ *
+ * The previous version awaited getSummary() here, which fired ~10 feeds and up
+ * to 240 article fetches on every render. Under `output: 'export'` that would
+ * run at build time from a GitHub Actions IP — and get 403'd.
+ */
+export default function HomePage() {
+  const digest = latestDigest();
+  const runStatus = readRunStatus();
+  const dates = listDigestDates();
 
-function Badge({ children }: { children: React.ReactNode }) {
-  return <span className="badge">{children}</span>;
-}
-
-function InfoChip({ children }: { children: React.ReactNode }) {
-  return <span className="info-chip">{children}</span>;
-}
-
-function ItemCard({ item }: { item: any }) {
-  return (
-    <article className="card">
-      <div className="item-header">
-        <div>
-          <span className="badge">{item.source}</span>
-          <span className="item-date">{item.publishedAt ? new Date(item.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : ""}</span>
-        </div>
-        <span className="item-type">{item.category}</span>
-      </div>
-      <h3>{item.title}</h3>
-      <p className="item-snippet">{item.isAcademic ? item.abstract ?? item.summary : item.executiveSummary ?? item.summary}</p>
-      <div className="meta-row">
-        {item.drugNames?.length > 0 && (
-          <div className="meta-block">
-            <span className="meta-label">Drugs:</span>
-            {item.drugNames.map((name: string) => (
-              <InfoChip key={name}>{name}</InfoChip>
-            ))}
+  if (!digest) {
+    return (
+      <main>
+        <section className="hero-panel">
+          <div className="hero-card">
+            <span className="eyebrow">Biotech Insights</span>
+            <h1>No digest yet</h1>
+            <p>
+              Run <code>npm run pipeline</code> locally, or trigger the{" "}
+              <strong>Digest pipeline</strong> workflow from the Actions tab, and this page will fill
+              in on the next build.
+            </p>
           </div>
-        )}
-        {item.indications?.length > 0 && (
-          <div className="meta-block">
-            <span className="meta-label">Indications:</span>
-            {item.indications.map((indication: string) => (
-              <InfoChip key={indication}>{indication}</InfoChip>
-            ))}
-          </div>
-        )}
-      </div>
-      {item.trialDetails ? <p className="trial-details">{item.trialDetails}</p> : null}
-      <div className="tag-row">
-        {item.tags?.slice(0, 4).map((tag: string) => (
-          <InfoChip key={tag}>{tag}</InfoChip>
-        ))}
-      </div>
-      <a className="read-link" href={item.url} target="_blank" rel="noreferrer">
-        Read full item →
-      </a>
-    </article>
-  );
-}
+        </section>
+      </main>
+    );
+  }
 
-export default async function HomePage() {
-  const data: InsightSummary = await getSummary();
+  const previous = dates[1];
 
   return (
     <main>
+      <StalenessBanner digestDate={digest.date} runStatus={runStatus} />
+
       <section className="hero-panel">
         <div className="hero-card">
-          <span className="eyebrow">Biotech Intelligence</span>
-          <h1>Daily clinical, deal, and translational research briefing</h1>
+          <span className="eyebrow">Daily digest · {formatDay(`${digest.date}T12:00:00Z`)}</span>
+          <h1>What moved in biotech</h1>
           <p>
-            A dark-mode intelligence dashboard for biotech deals, platform acquisitions, clinical outcomes, age-related translational
-            science, immunology, 3D genome research, single-cell omics, and epigenetics.
+            {digest.stats.kept} items kept from {digest.stats.fetched} fetched, ranked by source
+            authority, recency, topic match, event type and cross-outlet corroboration.
           </p>
-          <div className="hero-tags">
-            <InfoChip>Endpoint coverage</InfoChip>
-            <InfoChip>Fierce Biotech alerts</InfoChip>
-            <InfoChip>Recent papers only</InfoChip>
-            <InfoChip>Drug/indication extraction</InfoChip>
+          <SourceHealthStrip health={digest.health} />
+          <div className="hero-links">
+            <a href={routes.archive()}>Browse the archive</a>
+            {previous ? <a href={routes.digest(previous)}>← {formatDay(`${previous}T12:00:00Z`)}</a> : null}
           </div>
         </div>
       </section>
 
-      <section className="overview-section">
-        <div className="section-heading">
-          <div>
-            <h2>Top headlines</h2>
-            <p>Latest biotech news, fast clinical readouts, and translational paper summaries pulled from free feeds.</p>
-          </div>
-          <span className="section-note">Updated daily</span>
-        </div>
-        <div className="summary-grid">
-          {data.overview.map((item) => (
-            <ItemCard key={item.id} item={item} />
-          ))}
-        </div>
-      </section>
+      <WatchAlertPanel alerts={digest.alerts} digest={digest} />
 
-      {data.categories.map((group) => (
-        <section key={group.name}>
-          <div className="section-heading">
-            <div>
-              <h2>{group.name}</h2>
-              <p>{group.description}</p>
-            </div>
-            <span className="section-note">{group.items.length} items</span>
-          </div>
-          <div className="grid grid-2">
-            {group.items.length > 0 ? (
-              group.items.map((item) => <ItemCard key={item.id} item={item} />)
-            ) : (
-              <div className="card empty-card">
-                <p>No recent coverage in this category yet. The scanner is pulling the latest journal and news feeds.</p>
-              </div>
-            )}
-          </div>
-        </section>
+      {digest.lanes.map((lane) => (
+        <LaneSection
+          key={lane.id}
+          lane={lane}
+          digest={digest}
+          items={lane.itemIds
+            .map((id) => digest.items[id])
+            .filter((item): item is NonNullable<typeof item> => Boolean(item))}
+        />
       ))}
 
       <section className="footer-panel">
         <div className="footer-card">
-          <h2>Why this dashboard?</h2>
+          <h2>How this is ranked</h2>
           <p>
-            This interface is designed to move beyond headlines and surface drug names, indications, PK/PD signals, clinical trial
-            context, and paper abstracts in a single view.
+            No model reads these articles. Each item is scored by a transparent weighted sum — source
+            authority, exponential recency decay tuned per topic, a saturating keyword match, an event
+            boost for approvals and readouts and M&amp;A, corroboration across independent publishers,
+            and your watchlist. Open <em>why this ranked</em> on any card to see the arithmetic.
+          </p>
+          <p className="footer-meta">
+            Generated {formatDateTime(digest.generatedAt)} · window from{" "}
+            {formatDateTime(digest.windowStart)} · median score {digest.stats.medianScore}
           </p>
         </div>
       </section>

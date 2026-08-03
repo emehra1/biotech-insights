@@ -430,7 +430,7 @@ export const SOURCES: SourceDef[] = [
           `"spatial transcriptomics" OR "DNA methylation age")) AND ` +
           `(FIRST_PDATE:[${eutc(window.start)} TO ${eutc(window.end)}])`,
       ),
-    authority: 0.7,
+    authority: 0.5,
     laneHints: { "aging-omics": 0.7, "frontier-science": 0.3 },
     fullText: "api-body",
     paywalled: false,

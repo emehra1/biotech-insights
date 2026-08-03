@@ -1,0 +1,99 @@
+# Watchlist — the single input that most improves signal quality.
+#
+# This file is read by the pipeline (alerts + score boost), by the site build
+# (highlighting) and by the email (pinned alert block). Edit it from github.com
+# on your phone if you like; comments survive.
+#
+# NOTE: the published GitHub Pages site is PUBLIC even if the repo is private,
+# so anything here is visible. For private terms, set the WATCHLIST_PRIVATE
+# secret instead (same YAML shape) — those affect the email only.
+#
+# match:
+#   any      list of names/phrases, matched case-insensitively on word boundaries
+#   tickers  matched CASE-SENSITIVELY (so "KL" doesn't hit every headline)
+#   regex    raw patterns when you need them
+#   deny     if any of these appear, the entry does not fire
+# priority: high   always alerts and pins, ignoring alertMinScore
+# topics:          restrict the entry to certain lanes
+
+version: 1
+
+defaults:
+  alertMinScore: 55
+  fields: [title, body, entities]
+
+entries:
+  - id: aging-reprogramming
+    label: Partial reprogramming & epigenetic age
+    kind: keyword
+    priority: high
+    topics: [aging-omics, frontier-science]
+    match:
+      any:
+        - partial reprogramming
+        - epigenetic clock
+        - epigenetic reprogramming
+        - Yamanaka
+        - biological age
+        - methylation clock
+
+  - id: senescence
+    label: Senescence & senolytics
+    kind: keyword
+    topics: [aging-omics, frontier-science]
+    match:
+      any: [senolytic, senomorphic, senescent cell, cellular senescence]
+
+  - id: three-d-genome
+    label: 3D genome & chromatin architecture
+    kind: keyword
+    topics: [aging-omics, frontier-science]
+    match:
+      any:
+        - 3D genome
+        - chromatin architecture
+        - topologically associating domain
+        - Hi-C
+        - loop extrusion
+        - CTCF
+        - cohesin
+
+  - id: single-cell-spatial
+    label: Single-cell & spatial omics
+    kind: keyword
+    topics: [aging-omics, frontier-science]
+    match:
+      any:
+        - single-cell atlas
+        - spatial transcriptomics
+        - spatial omics
+        - scRNA-seq
+        - single-nucleus
+        - multiomic
+
+  - id: longevity-companies
+    label: Longevity companies
+    kind: company
+    match:
+      any: [Altos Labs, Calico, Retro Biosciences, NewLimit, BioAge, Unity Biotechnology, Rubedo]
+
+  - id: vertex
+    label: Vertex Pharmaceuticals
+    kind: company
+    match:
+      any: [Vertex Pharmaceuticals, Vertex Pharma]
+      tickers: [VRTX]
+      deny: [Vertex AI, vertex shader, vertex form]
+
+  - id: novo-lilly-obesity
+    label: Obesity/incretin race
+    kind: keyword
+    topics: [clinical-regulatory, business-deals]
+    match:
+      any: [semaglutide, tirzepatide, retatrutide, orforglipron, survodutide, CagriSema, amylin]
+
+  - id: gene-editing-clinical
+    label: Gene editing in the clinic
+    kind: keyword
+    match:
+      any: [base editing, prime editing, CRISPR therapy, in vivo editing, epigenome editing]

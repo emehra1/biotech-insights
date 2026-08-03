@@ -8,9 +8,9 @@
       "contentHash": "f47c0a804ae122ff"
     },
     "biorxiv": {
-      "fetchedAt": "2026-08-03T03:50:07.620Z",
+      "fetchedAt": "2026-08-03T04:06:02.964Z",
       "status": 200,
-      "contentHash": "84e3042ebcdd4760"
+      "contentHash": "cc7102b5c0b0986b"
     },
     "cell": {
       "fetchedAt": "2026-08-03T03:50:06.396Z",
@@ -24,9 +24,9 @@
     },
     "clinicaltrials": {
       "etag": "\"4/0.34.1/ms8pp1r4-gzip\"",
-      "fetchedAt": "2026-08-03T03:50:07.967Z",
+      "fetchedAt": "2026-08-03T04:06:03.767Z",
       "status": 200,
-      "contentHash": "254cc2a61b34ac1a"
+      "contentHash": "59e2f5c32864d92e"
     },
     "endpoints": {
       "etag": "\"056fa75424f6c0c8fb3f1f49b15c0cb5-gzip\"",
@@ -36,9 +36,9 @@
       "contentHash": "0c0380a1b9dbc24f"
     },
     "europepmc-aging": {
-      "fetchedAt": "2026-08-03T03:50:09.047Z",
+      "fetchedAt": "2026-08-03T04:06:04.625Z",
       "status": 200,
-      "contentHash": "53df838ed1b01c46"
+      "contentHash": "7ce70a20c72fd85a"
     },
     "fda-press": {
       "etag": "\"1785727558\"",
@@ -55,23 +55,23 @@
       "contentHash": "a02356667f895dae"
     },
     "fierce-pharma": {
-      "etag": "W/\"1785726318\"",
-      "lastModified": "Mon, 03 Aug 2026 03:05:18 GMT",
-      "fetchedAt": "2026-08-03T03:49:34.435Z",
+      "etag": "W/\"1785729792\"",
+      "lastModified": "Mon, 03 Aug 2026 04:03:12 GMT",
+      "fetchedAt": "2026-08-03T04:06:01.514Z",
       "status": 200,
-      "contentHash": "cff51c41cd52402f"
+      "contentHash": "0fe1fd88d376d2fd"
     },
     "jama": {
-      "etag": "\"71399cd2a71edd1:0\"",
+      "etag": "\"805f71d2a71edd1:0\"",
       "lastModified": "Tue, 28 Jul 2026 15:43:23 GMT",
-      "fetchedAt": "2026-08-03T03:50:07.179Z",
+      "fetchedAt": "2026-08-03T04:06:02.732Z",
       "status": 200,
       "contentHash": "13169fd09a0a4847"
     },
     "medrxiv": {
-      "fetchedAt": "2026-08-03T03:50:07.878Z",
+      "fetchedAt": "2026-08-03T04:06:04.368Z",
       "status": 200,
-      "contentHash": "e725edaf836dab0e"
+      "contentHash": "85ee49438e474d18"
     },
     "nature": {
       "etag": "\"0b11e620ddb121f61a5b850154fcc5f6\"",
@@ -99,7 +99,7 @@
     },
     "nejm": {
       "lastModified": "Sun, 02 Aug 2026 08:00:18 GMT",
-      "fetchedAt": "2026-08-03T03:50:06.867Z",
+      "fetchedAt": "2026-08-03T04:06:02.419Z",
       "status": 200,
       "contentHash": "4d83bbaab183e9ff"
     },
