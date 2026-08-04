@@ -1,41 +1,45 @@
 {
   "endpoints": {
-    "lastSuccessAt": "2026-08-03T05:25:52.029Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.359Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       24,
       24,
       0,
+      24,
       24,
       24
     ]
   },
   "fierce-biotech": {
-    "lastSuccessAt": "2026-08-03T05:25:52.110Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.335Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       25,
       25,
       0,
       25,
+      25,
       25
     ]
   },
   "fierce-pharma": {
-    "lastSuccessAt": "2026-08-03T05:25:52.249Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.383Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       23,
       23,
       23,
       23,
-      23
+      23,
+      22
     ]
   },
   "statnews": {
-    "lastSuccessAt": "2026-08-03T05:25:52.369Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.409Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      20,
       20,
       20,
       20,
@@ -44,20 +48,22 @@
     ]
   },
   "biopharmadive": {
-    "lastSuccessAt": "2026-08-03T05:25:52.353Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.390Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       10,
       10,
       0,
       10,
+      10,
       10
     ]
   },
   "fda-press": {
-    "lastSuccessAt": "2026-08-03T05:25:52.323Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.498Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      20,
       20,
       20,
       20,
@@ -66,53 +72,58 @@
     ]
   },
   "nature": {
-    "lastSuccessAt": "2026-08-03T05:25:52.431Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.439Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       40,
       40,
       0,
       0,
+      40,
       40
     ]
   },
   "nature-biotech": {
-    "lastSuccessAt": "2026-08-03T05:25:53.134Z",
+    "lastSuccessAt": "2026-08-04T13:12:37.131Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
+      8,
       8,
       8
     ]
   },
   "nature-medicine": {
-    "lastSuccessAt": "2026-08-03T05:25:53.850Z",
+    "lastSuccessAt": "2026-08-04T13:12:37.843Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
+      8,
       8,
       8
     ]
   },
   "nature-rev-drug-discovery": {
-    "lastSuccessAt": "2026-08-03T05:25:54.561Z",
+    "lastSuccessAt": "2026-08-04T13:12:38.554Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
       8,
       0,
       8,
+      8,
       8
     ]
   },
   "science-news": {
-    "lastSuccessAt": "2026-08-03T05:25:52.512Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.799Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      10,
       10,
       10,
       10,
@@ -151,9 +162,10 @@
     ]
   },
   "jama": {
-    "lastSuccessAt": "2026-08-03T05:25:52.659Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.570Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      25,
       25,
       25,
       25,
@@ -162,9 +174,10 @@
     ]
   },
   "biorxiv": {
-    "lastSuccessAt": "2026-08-03T05:25:53.223Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.756Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      30,
       30,
       30,
       30,
@@ -173,9 +186,10 @@
     ]
   },
   "medrxiv": {
-    "lastSuccessAt": "2026-08-03T05:25:53.814Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.912Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      30,
       30,
       30,
       30,
@@ -184,20 +198,22 @@
     ]
   },
   "europepmc-aging": {
-    "lastSuccessAt": "2026-08-03T05:25:54.800Z",
+    "lastSuccessAt": "2026-08-04T13:12:38.908Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       50,
       50,
       50,
       50,
-      50
+      50,
+      21
     ]
   },
   "clinicaltrials": {
-    "lastSuccessAt": "2026-08-03T05:25:53.341Z",
+    "lastSuccessAt": "2026-08-04T13:12:36.873Z",
     "consecutiveFailures": 0,
     "recentCounts": [
+      40,
       40,
       40,
       40,
@@ -206,10 +222,11 @@
     ]
   },
   "europepmc-clinical": {
-    "lastSuccessAt": "2026-08-03T05:25:53.106Z",
+    "lastSuccessAt": "2026-08-04T13:12:37.569Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      36
+      36,
+      13
     ]
   }
 }
