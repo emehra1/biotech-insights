@@ -1,20 +1,24 @@
 {
-  "generatedAt": "2026-08-05T13:04:25.255Z",
+  "generatedAt": "2026-08-06T13:04:31.541Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 10
-    },
-    {
-      "term": "Sobi",
       "count": 5
     },
     {
-      "term": "STAT",
-      "count": 3
+      "term": "Demis Hassabis",
+      "count": 2
     },
     {
-      "term": "After",
+      "term": "Reuters",
+      "count": 2
+    },
+    {
+      "term": "Emergent BioSolutions",
+      "count": 2
+    },
+    {
+      "term": "Sobi",
       "count": 2
     },
     {
