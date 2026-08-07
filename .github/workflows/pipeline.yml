@@ -49,6 +49,10 @@ jobs:
     timeout-minutes: 30
     outputs:
       digest_outcome: ${{ steps.digest.outcome }}
+      # The email reads the digest back out of the commit this job pushes, so
+      # "did the push land" is its real precondition — not "did the whole build
+      # job succeed", which also covers publishing the site.
+      commit_outcome: ${{ steps.commit.outcome }}
       weekly_outcome: ${{ steps.weekly.outcome }}
       date: ${{ steps.when.outputs.date }}
     steps:
@@ -120,7 +124,7 @@ jobs:
           exit 1
 
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         with:
           enablement: true
 
@@ -141,21 +145,83 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Two attempts against the action's hard 600s ceiling, plus slack. Without a
+    # bound, a hung deploy holds the single `digest-pipeline` concurrency slot
+    # (cancel-in-progress: false) and can block tomorrow's run.
+    timeout-minutes: 25
     permissions:
       pages: write
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
     steps:
+      # Run 31104163416 spent 608s here and died on "Timeout reached, aborting!".
+      # The artifact uploaded fine; the Pages API simply never reported the
+      # deployment complete.
+      #
+      # Note what is NOT here: a longer `timeout`. The action clamps that input to
+      # its own MAX_TIMEOUT of 600000 ms and warns when you exceed it
+      # (src/internal/deployment.js:26,51-58), so raising it buys nothing at all.
+      # `error_count` is the one knob that helps — it is how many status-report
+      # errors are tolerated before giving up, so a 5xx burst cannot abort early.
+      #
+      # v4 runs on Node 20, which the runners now force onto Node 24 with a
+      # deprecation warning; v5 targets Node 24 natively and its input/output
+      # surface is otherwise identical.
       - id: deployment
-        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+        with:
+          error_count: 20
+
+      # One retry. Safe from a half-published site: on both timeout and
+      # too-many-errors the action explicitly cancels its own pending deployment
+      # before failing (deployment.js:202-215), so the retry starts from a clean
+      # slate with the same artifact. Worst case is ten more wasted minutes.
+      - id: retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        with:
+          error_count: 20
 
   email:
     needs: [build, deploy]
     # Only email a digest that actually generated; a failed run stays silent
     # rather than mailing yesterday's news as if it were today's.
-    if: needs.build.outputs.digest_outcome == 'success' && (github.event_name == 'schedule' || inputs.send_email)
+    #
+    # `!cancelled()` is load-bearing. A failed `needs` skips a job regardless of
+    # what its `if` says — the implicit success() check on needs applies unless
+    # the expression opts out — so the deploy in `needs` used to swallow the
+    # email even though this job never wanted the site to exist. Run
+    # 31104163416 generated and committed a fine digest, Pages timed out, and no
+    # email was sent. The SITE_URL below already degrades to "" for exactly that
+    # case, which is the tell that the gate was never intentional.
+    #
+    # Gated on the digest generating AND its commit landing — not on
+    # `build.result`. Every site-publishing step lives in that same job
+    # (configure-pages, `next build`, upload-pages-artifact), and all three run
+    # AFTER the commit, so gating on the job as a whole would let a Next build
+    # error suppress an email whose digest is already safely in the repo. That is
+    # the same defect as the deploy gate, one job earlier.
+    #
+    # commit_outcome is tested with `!= 'failure'` rather than `== 'success'` so
+    # the gate fails OPEN. Every bug in this file has been a silent unsent email;
+    # an `== 'success'` test against an output that ever goes missing would mute
+    # the digest forever and look like nothing was wrong.
+    #
+    # send_email is compared against both forms for the reason already documented
+    # on BTI_FORCE above: `github.event.inputs.*` is always a string, and the
+    # string "false" is truthy.
+    if: >-
+      !cancelled()
+      && needs.build.outputs.digest_outcome == 'success'
+      && needs.build.outputs.commit_outcome != 'failure'
+      && (github.event_name == 'schedule'
+      || inputs.send_email == true
+      || github.event.inputs.send_email == 'true')
     runs-on: ubuntu-latest
     env:
       TZ: America/New_York
@@ -176,31 +242,142 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_FROM: ${{ secrets.MAIL_FROM }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
+          # KNOWN GAP, left as-is deliberately: nothing in this job reads this.
+          # The only reader is pipeline/watchlist/index.ts, which runs inside the
+          # `build` job, so private terms have never affected anything. Moving the
+          # secret to `build` is NOT the fix — the digest it produces is committed
+          # and published to a public Pages site, so the private terms would ship
+          # in data/digests as watchHits and alert labels. Doing this properly
+          # means matching the private watchlist inside send-email.ts, over the
+          # already-built digest.
           WATCHLIST_PRIVATE: ${{ secrets.WATCHLIST_PRIVATE }}
-          SITE_URL: ${{ needs.deploy.result == 'success' && format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) || '' }}
+          # Prefer the URL the deploy actually reported — a custom domain later
+          # cannot desync from a hand-built one. Fall back to the canonical
+          # github.io address rather than to "": this used to blank out whenever
+          # the deploy failed, removing the reader's "View on the web" link on
+          # precisely the day the email is a partial view of a digest they cannot
+          # otherwise reach. The previous deploy is still live, so the fallback
+          # resolves; it just shows yesterday's digest until Pages catches up.
+          SITE_URL: >-
+            ${{ needs.deploy.outputs.page_url
+            || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
         run: >
           npx tsx scripts/send-email.ts --send
           ${{ inputs.date && format('--date {0}', inputs.date) || '' }}
           ${{ needs.build.outputs.weekly_outcome == 'success' && '--weekly' || '' }}
 
+      # send-email.ts stamps `emailedAt` into the digest and guards on it, but the
+      # checkout it writes to is thrown away — so in CI the guard has never been
+      # able to fire. That matters more now that a failed deploy no longer skips
+      # this job: "Re-run failed jobs" re-runs failed jobs AND their dependents,
+      # so retrying a flaky Pages deploy would mail the reader a second copy.
+      #
+      # A warning, never a failure: the mail is already sent by this point, and
+      # failing here would file a "Digest email failing" issue about an email that
+      # arrived.
+      - name: Record that the digest was emailed
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/digests
+          if git diff --cached --quiet; then
+            echo "nothing to record"
+            exit 0
+          fi
+          git commit -m "data: mark digest emailed [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" \
+              && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((attempt * 5))
+          done
+          echo "::warning::could not push the emailedAt marker — a re-run may resend this digest"
+
   report-failure:
-    needs: [build, deploy]
-    if: failure() || needs.build.outputs.digest_outcome == 'failure'
+    # `email` is in needs so a broken SMTP config is reported too — previously a
+    # send failure was silent, which is the one failure the reader notices.
+    needs: [build, deploy, email]
+    if: >-
+      !cancelled()
+      && (needs.build.result == 'failure'
+      || needs.build.outputs.digest_outcome == 'failure'
+      || needs.deploy.result == 'failure'
+      || needs.email.result == 'failure')
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
       - uses: actions/github-script@v7
+        # Passed through env, not interpolated into the script body: these are
+        # all fixed enums today, but a template hole in a `script:` block is a
+        # bad habit to keep around.
+        env:
+          BUILD_RESULT: ${{ needs.build.result }}
+          DIGEST_OUTCOME: ${{ needs.build.outputs.digest_outcome }}
+          COMMIT_OUTCOME: ${{ needs.build.outputs.commit_outcome }}
+          DEPLOY_RESULT: ${{ needs.deploy.result }}
+          EMAIL_RESULT: ${{ needs.email.result }}
         with:
           script: |
-            const title = 'Digest pipeline failing';
             const url = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { BUILD_RESULT, DIGEST_OUTCOME, COMMIT_OUTCOME, DEPLOY_RESULT, EMAIL_RESULT } =
+              process.env;
+
+            // Three different failures with three different urgencies, which used
+            // to share one "Digest pipeline failing" issue. That is how you train
+            // yourself to ignore the alert that matters: run 31104163416 built a
+            // perfectly good digest, timed out waiting for Pages, and filed the
+            // digest alarm anyway.
+            //
+            // Note the ordering. A digest that never generated is the only one
+            // that costs the reader content; everything else is a publishing
+            // problem, and the reader still got their email.
+            const contentBroke =
+              DIGEST_OUTCOME === 'failure' || COMMIT_OUTCOME === 'failure';
+            const emailBroke = EMAIL_RESULT === 'failure';
+
+            const { title, label, detail } = contentBroke
+              ? {
+                  title: 'Digest pipeline failing',
+                  label: 'pipeline-failure',
+                  detail:
+                    DIGEST_OUTCOME === 'failure'
+                      ? 'the digest did not generate — today has no new content'
+                      : 'the digest generated but its commit could not be pushed, so nothing downstream can read it',
+                }
+              : emailBroke
+                ? {
+                    title: 'Digest email failing',
+                    label: 'email-failure',
+                    detail: 'the digest generated and committed, but the email failed to send',
+                  }
+                : {
+                    title: 'Site publishing failing',
+                    label: 'deploy-failure',
+                    detail:
+                      'the digest generated, committed and was emailed — only publishing the site failed, ' +
+                      'so github.io is still serving the previous build. Usually transient; re-run the job',
+                  };
+
+            const body = [
+              `Run failed: ${url}`,
+              '',
+              `**Diagnosis:** ${detail}.`,
+              '',
+              '| step | result |',
+              '| --- | --- |',
+              `| build job | ${BUILD_RESULT} |`,
+              `| digest | ${DIGEST_OUTCOME || 'n/a'} |`,
+              `| data commit | ${COMMIT_OUTCOME || 'n/a'} |`,
+              `| pages deploy | ${DEPLOY_RESULT} |`,
+              `| email | ${EMAIL_RESULT} |`,
+            ].join('\n');
+
             const { data: issues } = await github.rest.issues.listForRepo({
-              ...context.repo, state: 'open', labels: 'pipeline-failure',
+              ...context.repo, state: 'open', labels: label,
             });
-            const body = `Run failed: ${url}`;
             if (issues.length > 0 && issues[0]) {
               await github.rest.issues.createComment({ ...context.repo, issue_number: issues[0].number, body });
             } else {
-              await github.rest.issues.create({ ...context.repo, title, body, labels: ['pipeline-failure'] });
+              await github.rest.issues.create({ ...context.repo, title, body, labels: [label] });
             }
