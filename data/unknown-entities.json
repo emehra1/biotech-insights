@@ -1,10 +1,6 @@
 {
-  "generatedAt": "2026-08-06T13:04:31.541Z",
+  "generatedAt": "2026-08-07T12:00:32.121Z",
   "candidates": [
-    {
-      "term": "Lead",
-      "count": 5
-    },
     {
       "term": "Demis Hassabis",
       "count": 2
@@ -14,15 +10,19 @@
       "count": 2
     },
     {
+      "term": "PacBio",
+      "count": 2
+    },
+    {
       "term": "Emergent BioSolutions",
       "count": 2
     },
     {
-      "term": "Sobi",
+      "term": "Drug Administration",
       "count": 2
     },
     {
-      "term": "Drug Administration",
+      "term": "Lead",
       "count": 2
     }
   ]
