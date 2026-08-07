@@ -309,9 +309,19 @@ export function extractIndications(input: ExtractInput): Mention[] {
     let matchedText = "";
 
     for (const synonym of entry.synonyms) {
-      const index = lower.indexOf(synonym.toLowerCase());
-      if (index !== -1) {
-        offset = index;
+      // Boundary-matched, not substring-matched. A bare indexOf meant "flu"
+      // matched "influencing", "fluorescence" and "flux" — and, worse for a
+      // digest whose whole aging lane depends on it, "aging" matched "imaging"
+      // and "packaging", so every live-cell-imaging paper carried the aging
+      // indication. The abbreviation branch below has always been careful about
+      // this; the dictionary branch was not.
+      //
+      // Lookarounds rather than \b so a synonym that begins or ends in
+      // punctuation ("COVID-19") still behaves, and so "aging-related" and
+      // "anti-aging" still match.
+      const match = boundedMatch(haystack, synonym);
+      if (match) {
+        offset = match.index;
         confidence = "dictionary";
         matchedText = synonym;
         break;
@@ -443,13 +453,18 @@ function escapeRegExp(input: string): string {
   return input.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+/** First whole-token occurrence of `needle`, case-insensitively. */
+export function boundedMatch(haystack: string, needle: string): RegExpExecArray | null {
+  if (!needle) return null;
+  return new RegExp(`(?<![a-z0-9])${escapeRegExp(needle)}(?![a-z0-9])`, "i").exec(haystack);
+}
+
 function countOccurrences(haystack: string, needle: string): number {
   if (!needle) return 0;
+  // Whole tokens only, for the same reason as boundedMatch: counting substrings
+  // let five mentions of "imaging" inflate a single real "aging" mention.
+  const re = new RegExp(`(?<![a-z0-9])${escapeRegExp(needle)}(?![a-z0-9])`, "gi");
   let count = 0;
-  let index = haystack.indexOf(needle);
-  while (index !== -1) {
-    count++;
-    index = haystack.indexOf(needle, index + needle.length);
-  }
+  while (re.exec(haystack) !== null) count++;
   return count;
 }

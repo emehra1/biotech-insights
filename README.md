@@ -1,7 +1,7 @@
 # Biotech Insights
 
 A daily biotech/pharma intelligence digest that runs itself on free GitHub
-infrastructure. A scheduled Action pulls 19 sources, ranks everything with a
+infrastructure. A scheduled Action pulls 27 sources, ranks everything with a
 transparent scoring model, commits the result to this repo, publishes a static
 site to GitHub Pages, and emails you the digest.
 
@@ -78,8 +78,69 @@ score = authority + recency + topic match + event boost + corroboration
 - **Penalties** cover thin content, reviews, in-vitro-only work and
   non-mammalian models. Without the last one, a honeybee mitophagy paper
   outranks the day's biggest merger on keyword match alone.
+- **Off-topic** penalises an item that matched no lexicon term in any lane.
+  Authority plus recency alone is worth ~33 against a keep threshold of 24, so
+  without this a high-authority source publishing anything at all cleared the
+  bar on provenance rather than relevance — a Nature Futures short story and an
+  astrophysics news item both made the digest that way.
+- **Stale repeat** penalises an item a digest in the last week already
+  delivered. Keyed on *delivered*, not on the seen store: most items are seen
+  and then dropped by a cap, and penalising those would permanently bury
+  everything a productive source could not fit into its slots on day one.
 
 Tune any of it in `pipeline/config/weights.json` — no code change needed.
+
+### Where papers come from
+
+The journal allowlist is closed, and lives in `pipeline/config/journals.ts`:
+**Nature, Cell, Science, NEJM, The Lancet, JAMA and bioRxiv/medRxiv**, plus
+their sub-journals. Nothing else — an earlier keyword-across-all-of-Europe-PMC
+source is what put *Computational Biology and Chemistry* and *Advanced Materials
+(Deerfield Beach, Fla.)* in a biotech digest.
+
+Each family's high-volume open-access title is excluded on volume alone: Nature
+Communications (~80 papers/day), Science Advances (208 records/14d), JAMA Network
+Open, Cell Reports and Cell Reports Medicine, Current Biology, Cell Systems. Any
+one of them would spend a source's whole daily allowance before its flagship was
+reached.
+
+**Every paper is credited to the journal that published it**, never to the index
+it was read through — `pipeline/config/journals.ts` also holds the canonical
+display name for each title, because the raw NLM catalogue form is "Cell stem
+cell" and "Lancet (London, England)".
+
+Routing is decided by who will actually serve a machine, and that part is not
+negotiable:
+
+- **Springer Nature** — direct RSS (`nature.com/*.rss`), same-day, and the
+  sub-journal feeds carry real editor's-summary abstracts. Note that
+  `nature.rss` is 59% newsroom: a live pull was 44 `d41586` items (News, News &
+  Views, Careers, Books & Arts, Futures fiction) against 31 `s41586` research
+  articles. `pipeline/extract/article-class.ts` tells them apart by the DOI
+  prefix, so "it appeared in Nature" no longer scores a book review as a
+  landmark paper.
+- **Cell Press, Lancet, Science, NEJM, JAMA's specialty titles** — via Europe
+  PMC, one source per family so each gets its own daily allowance. Their own
+  feeds return 403 to datacenter IPs, and that is enforcement rather than an
+  obstacle: `nejm.org/robots.txt` disallows both `/action` and `/rss`,
+  science.org and thelancet.com disallow `/action`, and Elsevier serves
+  `tdm-reservation: 1` on the cell.com feeds. Europe PMC is the licensed index
+  that says yes, and it returns abstracts, which the publisher RSS does not.
+- **JAMA itself and bioRxiv/medRxiv** — direct RSS, which works.
+
+No family is reachable by two routes, and that is deliberate: the same paper
+arriving as `nature.com/articles/…` and `doi.org/10.1038/…` is two different
+canonical URLs, and the deduper cannot merge them. It is why JAMA is absent from
+the Europe PMC query that covers JAMA Oncology and the rest.
+
+Two things about the Europe PMC queries are easy to get wrong and are commented
+in `pipeline/config/sources.ts`: the window has to be ~14 days (deposit lag runs
+1–9 days per journal, and index dates arrive in bursts with empty days between),
+and `HAS_ABSTRACT:Y` is what removes the News, Letters, Comments and errata that
+otherwise make up three quarters of the matches. Beware also that `PUB_DATE`,
+`EPUB_DATE` and `INDEXED_DATE` are not Europe PMC fields — they return HTTP 200
+with zero hits and no error, so a plausible-looking edit can silently kill a
+source.
 
 ### Clustering
 
@@ -139,8 +200,14 @@ Two things rot on their own:
 
 - Keyword ranking reliably identifies *what kind of event* happened and *who is
   involved*. It cannot tell you whether a result is scientifically surprising.
-- The Pages site is publicly readable even from a private repo. Keep private
-  watchlist terms in the `WATCHLIST_PRIVATE` secret, which only affects email.
+- The Pages site is publicly readable even from a private repo, so anything in
+  `config/watchlist.yml` is public. **`WATCHLIST_PRIVATE` is not implemented
+  yet** — the secret is wired into the email job, but the only code that reads it
+  runs in the `build` job, so private terms currently do nothing. Moving the
+  secret is not the fix: `build` produces the digest that gets committed and
+  published, so the private terms would ship in `data/digests/`. Doing it
+  properly means matching the private watchlist inside `scripts/send-email.ts`,
+  against the already-built digest.
 - GitHub cron drifts by tens of minutes and occasionally skips. The ingest
   window is "since the last digest", never a fixed 24 hours, so a late run just
   widens the window.

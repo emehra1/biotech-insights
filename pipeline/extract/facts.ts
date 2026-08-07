@@ -39,8 +39,46 @@ const MISS =
 const SAFETY =
   /\bgrade\s?([3-5])\s?(?:\+|or higher)?\s?(?:treatment-related\s?)?(?:adverse events?|AEs?|TRAEs?)\b|\bclinical hold\b|\bboxed warning\b|\bdeaths? (?:in|among) (?:the )?(?:treatment|study) (?:arm|group)/gi;
 
-const APPROVAL =
-  /\b(?:FDA|EMA|CHMP|MHRA|PMDA|NMPA|European Commission)\b[^.]{0,90}?\b(approv\w+|authoris\w+|clear\w+|licens\w+)|\b(?:approved|cleared) by the (?:FDA|EMA)\b/gi;
+const AGENCY = String.raw`(?:FDA|EMA|CHMP|MHRA|PMDA|NMPA|European Commission)`;
+
+/**
+ * A regulatory action that happened — not a description of one, and not a hope
+ * of one. `approval` carries the largest event boost there is (1.0 × 18), so a
+ * loose match here puts a mouse study at the top of the digest, which is exactly
+ * what it did.
+ *
+ * Two false-positive shapes, both from real runs, both fixed by requiring an
+ * actual action rather than the agency's name near an approval word:
+ *
+ *   "Last, FDA-approved long-acting bupivacaine prevented ossification…"
+ *   "repurposing Food and Drug Administration (FDA)-approved EGFR inhibitor…"
+ *       — attributive. It describes a reagent. Rejected by the lookahead, which
+ *         allows for the closing paren of a spelled-out first mention.
+ *
+ *   "…may provide a path toward FDA approval."
+ *       — prospective, on a trial that just MISSED its endpoint. Rejected by
+ *         splitting verb from noun: the agency branch takes only verb forms, so
+ *         the bare noun phrase "FDA approval" no longer matches on its own, and
+ *         reaching it requires somebody to have accomplished it.
+ *
+ * Note that the agency list stays abbreviation-only on purpose. Adding the
+ * spelled-out "Food and Drug Administration" would re-open the second case
+ * above through the back door, since the parenthetical sits between the
+ * spelled-out name and the hyphen.
+ */
+const APPROVAL = new RegExp(
+  [
+    // The agency acting: "FDA approves X", "the FDA on Tuesday cleared X".
+    String.raw`\b${AGENCY}\b(?![)\]]?\s*-\s*(?:approv|authoris|authoriz|clear|licens))[^.]{0,60}?\b(?:approve[sd]?|approving|clear(?:s|ed|ing)|authoris(?:e|es|ed)|authoriz(?:e|es|ed)|licen[cs]e[sd]?)\b`,
+    // The passive form: "approved by the FDA".
+    String.raw`\b(?:approved|cleared|authoris(?:ed)?|authoriz(?:ed)?)\s+by\s+(?:the\s+)?${AGENCY}\b`,
+    // Somebody accomplished it: "gains FDA nod", "secured approval".
+    // `win` is spelled out rather than stemmed with \w* so it cannot reach
+    // "window" — "the approval window" is not an approval.
+    String.raw`\b(?:(?:gain|secur|receiv|grant|scor|nab|clinch|obtain|achiev)\w*|wins?|won)\b[^.]{0,50}?\b(?:approval|marketing authoris\w+|marketing authoriz\w+|${AGENCY}\s+nod|regulatory\s+nod)\b`,
+  ].join("|"),
+  "gi",
+);
 const CRL = /\bcomplete response letter\b|\bCRLs?\b/g;
 const FILING =
   /\b(?:BLA|sBLA|NDA|sNDA|MAA|IND|510\(k\)|PMA)\b|\bfiled for (?:approval|marketing)\b|\bsubmitted (?:an? )?(?:BLA|NDA|MAA)\b/g;
@@ -79,9 +117,16 @@ const PRECLINICAL =
  * Non-mammalian model systems. Real science, but several translational steps
  * further out than a mouse study — and without this, a honeybee mitophagy paper
  * outranks the day's biggest M&A story on keyword match alone.
+ *
+ * Plants were the gap: Nature publishes crop genetics, and "Uncovering the
+ * mechanism of female restitution in sugarcane hybrids" scored 58.2 and made
+ * the email, because `Arabidopsis` was the only plant term here. Crop and
+ * plant-anatomy words are unambiguous enough to match on directly; `rice` and
+ * bare `plant` are deliberately absent, since a manufacturing plant and a
+ * dietary rice intervention are both common in this corpus.
  */
 const NON_MAMMALIAN =
-  /\b(Apis (?:cerana|mellifera)|honeybees?|Drosophila|fruit fly|C\. elegans|Caenorhabditis|nematodes?|zebrafish|Danio rerio|yeast|S\. cerevisiae|Saccharomyces|Arabidopsis|E\. coli|planaria|killifish|Xenopus)\b/i;
+  /\b(Apis (?:cerana|mellifera)|honeybees?|Drosophila|fruit fly|C\. elegans|Caenorhabditis|nematodes?|zebrafish|Danio rerio|yeast|S\. cerevisiae|Saccharomyces|Arabidopsis|E\. coli|planaria|killifish|Xenopus|sugarcane|maize|Zea mays|Oryza sativa|sorghum|barley|cassava|soybean|meristem|chloroplasts?|photosynthesis|cyanobacteri(?:a|um)|Chlamydomonas)\b/i;
 const CLINICAL =
   /\b(patients|participants|randomi[sz]ed|phase\s?[1-4]|enrolled|volunteers|cohort of \d+)\b/i;
 const REVIEW = /\b(review|meta-analysis|systematic review|perspective|commentary)\b/i;

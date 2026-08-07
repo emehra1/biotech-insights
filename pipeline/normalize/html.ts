@@ -34,6 +34,31 @@ export function htmlToText(input: string): string {
 }
 
 /**
+ * Only genuine markup, so a title is not mangled by looking like one.
+ *
+ * `<[^>]+>` would eat the middle of "p<0.05 and n>10", which is a real title
+ * shape in this corpus. Requiring a letter (or slash) after the `<` means only
+ * actual tags qualify, and the entity branch catches the double-escaped form.
+ */
+const LOOKS_LIKE_MARKUP = /<\/?[a-z][^>]*>|&(?:lt|gt|amp|quot|apos|nbsp|#\d+);/i;
+
+/**
+ * Titles carry markup too, and nothing was stripping it. Verbatim from committed
+ * digests:
+ *
+ *   "CCR7<sup>+</sup> activated dendritic cells are essential…"        (Immunity)
+ *   "CD34&lt;sup&gt;+&lt;/sup&gt; Foam-Like Macrophages…"              (Europe PMC)
+ *   "<b>The forensic traces that can help catch poachers — </b> July's…" (Nature)
+ *
+ * The email escapes on output, so the reader saw the tags as literal text — a
+ * paper recommendation that looks broken is worse than one that is missing. Body
+ * text has gone through htmlToText since the beginning; titles never did.
+ */
+export function cleanTitleMarkup(title: string): string {
+  return LOOKS_LIKE_MARKUP.test(title) ? htmlToText(title) : title;
+}
+
+/**
  * Journal feeds prepend publication boilerplate to content:encoded, e.g.
  * "Nature, Published online: 03 August 2026; doi:10.1038/…". Strip it so the
  * teaser is what remains.

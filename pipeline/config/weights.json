@@ -18,7 +18,9 @@
     "nonMammalianModel": 9,
     "reviewArticle": 5,
     "inVitroOnly": 3,
-    "stemOnlyEntities": 2
+    "stemOnlyEntities": 2,
+    "offTopic": 8,
+    "staleRepeat": 7
   },
   "recencyHalfLifeHours": {
     "clinical-regulatory": 20,
@@ -32,10 +34,12 @@
     "frontier-science": 14,
     "aging-omics": 21
   },
+  "maxAgeDaysAcademic": 21,
   "lexiconSaturationK": 8,
   "keepThreshold": 24,
   "maxItemsPerDay": 80,
   "maxItemsPerLane": 24,
+  "maxItemsPerPublisher": 20,
   "eventBoosts": {
     "approval": 1.0,
     "crl": 0.85,

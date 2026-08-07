@@ -1,7 +1,14 @@
 import { describe, expect, it } from "vitest";
 
 import { displayable, extractCompanies, extractDrugs, extractEntities, extractIndications, extractTargets } from "../pipeline/extract/entities";
-import { buildKeyFacts, detectEvidenceLevel, detectOutcome, extractDeal } from "../pipeline/extract/facts";
+import {
+  buildKeyFacts,
+  detectEvidenceLevel,
+  detectOutcome,
+  extractDeal,
+  extractRegulatory,
+} from "../pipeline/extract/facts";
+import { classifyArticle } from "../pipeline/extract/article-class";
 
 const noCompanies = new Set<string>();
 
@@ -137,6 +144,41 @@ describe("indication extraction", () => {
     }).map((i) => i.canonical);
     expect(gated).toContain("multiple sclerosis");
   });
+
+  /**
+   * Negative corpus. Dictionary synonyms used to be matched with a bare
+   * indexOf, so short ones matched inside longer words: "flu" inside
+   * "influencing" and "fluorescence", and "aging" inside "imaging" and
+   * "packaging" — which tagged every live-cell-imaging paper with the aging
+   * indication, in a digest whose aging lane is the point.
+   */
+  const noIndication = [
+    "Live-cell imaging of chromatin dynamics",
+    "Spatial imaging reveals tumour architecture",
+    "Cellular development unfolds, with lineage history influencing identity",
+    "Fluorescence microscopy of protein flux across the membrane",
+    "Packaging of viral genomes into capsids",
+    "Managing and averaging the damaging effects of heat",
+  ];
+
+  for (const title of noIndication) {
+    it(`finds no indication in: ${title.slice(0, 52)}…`, () => {
+      expect(displayable(extractIndications({ title, body: "" }))).toEqual([]);
+    });
+  }
+
+  const stillMatches: [string, string][] = [
+    ["An aging-related decline in stem cell function", "aging"],
+    ["Anti-aging interventions in mice", "aging"],
+    ["Influenza vaccine efficacy in older adults", "influenza"],
+    ["Patients with severe asthma", "asthma"],
+  ];
+
+  for (const [title, canonical] of stillMatches) {
+    it(`still finds ${canonical} in: ${title.slice(0, 42)}…`, () => {
+      expect(extractIndications({ title, body: "" }).map((i) => i.canonical)).toContain(canonical);
+    });
+  }
 });
 
 describe("target extraction", () => {
@@ -160,6 +202,112 @@ describe("target extraction", () => {
       body: "ABCD1 gene expression was measured.",
     }).map((t) => t.text);
     expect(withContext).toContain("ABCD1");
+  });
+});
+
+function approvals(text: string): string[] {
+  return extractRegulatory(text)
+    .filter((fact) => fact.action === "approval")
+    .map((fact) => fact.agency);
+}
+
+describe("regulatory approval — negative corpus", () => {
+  /**
+   * `approval` is the largest event boost in the model (1.0 × 18), so a loose
+   * match here reorders the whole digest. Every sentence below is verbatim from a
+   * real run in which it was scored as an approval.
+   */
+  const notApprovals = [
+    // Attributive: describes a reagent, reports nothing.
+    "Last, FDA-approved long-acting bupivacaine prevented pathological innervation and ossification of the growth plate after injury.",
+    "Thus, repurposing Food and Drug Administration (FDA)-approved EGFR inhibitor offers a safe and cost-effective approach to advancing fetal RPE suspension transplantation into clinical practice.",
+    "We screened a library of FDA-approved compounds for senolytic activity.",
+    // Prospective — and this one is from a trial that MISSED its endpoint.
+    "But just like with prior disappointing readouts, the biotech has set its sights on a subpopulation that it says may provide a path toward FDA approval.",
+    "The company is seeking FDA approval in the second half of the year.",
+    "Analysts expect a decision on FDA approval by the PDUFA date.",
+  ];
+
+  for (const sentence of notApprovals) {
+    it(`finds no approval in: ${sentence.slice(0, 58)}…`, () => {
+      expect(approvals(sentence)).toEqual([]);
+    });
+  }
+});
+
+describe("regulatory approval — positive cases", () => {
+  const realApprovals = [
+    "FDA approves Moderna flu vaccine after spat with past agency leaders",
+    "Takeda’s narcolepsy drug approved by the FDA, seen as a boon for new class",
+    "Takeda gains FDA nod for first-in-class narcolepsy treatment Orzeyful",
+    "After coming up short with two OX2R agonists, Takeda has scored with oveporexton, gaining FDA approval for the first-in-class drug.",
+    "FDA Approves First Oral Carbapenem for Complicated UTIs",
+    "The EMA has cleared the therapy for use in adults.",
+    "The company won marketing authorisation in Europe.",
+  ];
+
+  for (const sentence of realApprovals) {
+    it(`finds an approval in: ${sentence.slice(0, 58)}…`, () => {
+      expect(approvals(sentence)).toHaveLength(1);
+    });
+  }
+});
+
+describe("journal article class", () => {
+  it("calls Nature's newsroom DOI prefix news, not research", () => {
+    expect(
+      classifyArticle({
+        title: "The recovered notes of Professor Alborough",
+        url: "https://www.nature.com/articles/d41586-026-02339-1",
+      }),
+    ).toBe("news-comment");
+  });
+
+  it("calls the journal DOI prefix research", () => {
+    expect(
+      classifyArticle({
+        title: "DCAF11-dependent molecular glue degrader activated by glutathionylation",
+        url: "https://www.nature.com/articles/s41586-026-02513-3",
+      }),
+    ).toBe("research");
+  });
+
+  it("catches a correction even when it carries a research DOI", () => {
+    expect(
+      classifyArticle({
+        title: "Publisher Correction: Progressive plasticity during colorectal cancer metastasis",
+        url: "https://www.nature.com/articles/s41586-026-02400-1",
+      }),
+    ).toBe("notice");
+  });
+
+  it("catches journal front matter that carries a research DOI", () => {
+    expect(
+      classifyArticle({
+        title: "Editor’s pick: Excelsior Sciences",
+        url: "https://www.nature.com/articles/s41587-026-03249-3",
+      }),
+    ).toBe("news-comment");
+  });
+
+  it("calls science.org's newsroom path news", () => {
+    expect(
+      classifyArticle({
+        title: "Astrophysicists find best evidence yet that galaxies get some spin before birth",
+        url: "https://www.science.org/content/article/astrophysicists-find-best-evidence-yet",
+      }),
+    ).toBe("news-comment");
+  });
+
+  it("leaves publishers with no article-type signal alone", () => {
+    // JAMA and the Europe PMC routes expose nothing to classify on, and guessing
+    // would trade a known false positive for an unknown false negative.
+    expect(
+      classifyArticle({
+        title: "FDA Approves First Oral Carbapenem for Complicated UTIs",
+        url: "https://jamanetwork.com/journals/jama/fullarticle/2850774",
+      }),
+    ).toBe("unknown");
   });
 });
 

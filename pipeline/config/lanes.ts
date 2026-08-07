@@ -163,14 +163,35 @@ export const LANE_LEXICONS: Record<FocusLane, LaneTerm[]> = {
   ],
 };
 
-/** Journals whose primary research papers deserve an event boost. */
+/**
+ * Journals whose primary research papers deserve an event boost.
+ *
+ * "Primary research" is enforced, not assumed — see
+ * pipeline/extract/article-class.ts. Membership here only makes an item
+ * *eligible* for the boost; a Nature News item or an Author Correction is in one
+ * of these feeds and still does not get it.
+ *
+ * `science-news` is deliberately absent. It is science.org's newsroom feed and
+ * carries no papers at all, so it collected a landmark-paper boost for items like
+ * "Astrophysicists find best evidence yet that galaxies get some spin before
+ * birth". Science research now arrives via europepmc-aaas.
+ *
+ * cell / cell-stem-cell / nejm are kept for the local-only runs where their
+ * direct feeds work; in CI their coverage comes from the europepmc-* entries.
+ */
 export const MAJOR_JOURNAL_SOURCES = new Set([
   "nature",
   "nature-medicine",
   "nature-biotech",
-  "science-news",
+  "nature-genetics",
+  "nature-aging",
+  "jama",
   "cell",
   "cell-stem-cell",
   "nejm",
-  "jama",
+  "europepmc-cellpress",
+  "europepmc-lancet",
+  "europepmc-aaas",
+  "europepmc-nejm",
+  "europepmc-jama",
 ]);

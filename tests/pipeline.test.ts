@@ -2,12 +2,69 @@ import { describe, expect, it } from "vitest";
 
 import { clusterItems, type ClusterCandidate } from "../pipeline/cluster";
 import { extractEntities } from "../pipeline/extract/entities";
+import { cleanJournalTitle } from "../pipeline/ingest/json-apis";
 import { isoWeek, parseFeedDate, wallClockToUtc } from "../pipeline/normalize/dates";
-import { htmlToText, stripJournalBoilerplate } from "../pipeline/normalize/html";
+import { cleanTitleMarkup, htmlToText, stripJournalBoilerplate } from "../pipeline/normalize/html";
 import { splitSentences, sentenceAround } from "../pipeline/normalize/sentences";
 import { cleanText } from "../pipeline/normalize/text";
 import { canonicalizeUrl } from "../pipeline/normalize/url";
 import { summarize } from "../pipeline/summarize";
+
+describe("markup in titles", () => {
+  it("strips inline tags a journal put in the title", () => {
+    expect(
+      cleanTitleMarkup("CCR7<sup>+</sup> activated dendritic cells are essential for immunity"),
+    ).toBe("CCR7+ activated dendritic cells are essential for immunity");
+  });
+
+  it("handles the double-escaped form Europe PMC returns", () => {
+    expect(cleanTitleMarkup("CD34&lt;sup&gt;+&lt;/sup&gt; Foam-Like Macrophages")).toBe(
+      "CD34+ Foam-Like Macrophages",
+    );
+  });
+
+  it("unwraps a bolded Nature headline", () => {
+    expect(
+      cleanTitleMarkup("<b>The forensic traces that can help catch poachers — </b> July’s best"),
+    ).toBe("The forensic traces that can help catch poachers — July’s best");
+  });
+
+  it("leaves an inequality alone", () => {
+    // The naive /<[^>]+>/ strip turns this into "Survival improved 10 patients".
+    expect(cleanTitleMarkup("Survival improved at p<0.05 in n>10 patients")).toBe(
+      "Survival improved at p<0.05 in n>10 patients",
+    );
+  });
+
+  it("decodes an ampersand entity", () => {
+    expect(cleanTitleMarkup("Merck &amp; Co. reports")).toBe("Merck & Co. reports");
+  });
+});
+
+describe("journal titles from Europe PMC", () => {
+  /**
+   * These are the byline the reader sees now that papers are credited to the
+   * journal rather than to the index. All inputs are verbatim from live responses.
+   */
+  const cases: [string, string][] = [
+    ["Advanced materials (Deerfield Beach, Fla.)", "Advanced materials"],
+    [
+      "Radiotherapy and oncology : journal of the European Society for Therapeutic Radiology and Oncology",
+      "Radiotherapy and oncology",
+    ],
+    ["Cell reports. Medicine", "Cell reports Medicine"],
+    ["Med (New York, N.Y.)", "Med"],
+    ["The New England journal of medicine", "The New England journal of medicine"],
+    ["JAMA", "JAMA"],
+    ["Cell", "Cell"],
+  ];
+
+  for (const [input, expected] of cases) {
+    it(`renders ${JSON.stringify(input)} as ${JSON.stringify(expected)}`, () => {
+      expect(cleanJournalTitle(input)).toBe(expected);
+    });
+  }
+});
 
 describe("feed text coercion", () => {
   it("unwraps the anchor object Fierce puts inside <title>", () => {

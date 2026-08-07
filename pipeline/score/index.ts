@@ -39,6 +39,8 @@ export interface ScoreInput {
   watchHits: { entryId: string; label: string; priority: boolean }[];
   now: Date;
   weights?: Weights;
+  /** True when a digest in the last week actually delivered this item. */
+  deliveredBefore?: boolean;
 }
 
 export interface ScoreResult {
@@ -118,6 +120,10 @@ export function scoreItem(input: ScoreInput): ScoreResult {
   const ranked = [...FOCUS_LANES].sort((a, b) => (laneScores[b] ?? 0) - (laneScores[a] ?? 0));
   const primaryLane = ranked[0] ?? "frontier-science";
   const primaryScore = laneScores[primaryLane] ?? 0;
+
+  // Did any lexicon term match anywhere, in any lane? `laneScores` can't answer
+  // that — the source's lane prior lifts it above zero on its own.
+  const hasTopicalSignal = FOCUS_LANES.some((lane) => (laneMatches[lane]?.length ?? 0) > 0);
 
   factors.push({
     key: `lane.${primaryLane}`,
@@ -238,6 +244,43 @@ export function scoreItem(input: ScoreInput): ScoreResult {
   }
 
   /* penalties */
+  //
+  // Nothing in the item matched any lexicon, in any lane. Authority and recency
+  // alone used to be worth ~33 against a keep threshold of 24, so a
+  // high-authority source publishing anything today cleared the bar on
+  // provenance rather than relevance: a Nature Futures short story, a
+  // Correspondence about author-name ordering, and an astrophysics news item all
+  // made the digest this way. Measured over three real runs this fires on 19 of
+  // 240 kept items, and reviewing all 19 by hand, the penalty is right on 15 of
+  // them — the misses are legitimate items whose vocabulary is simply missing
+  // from the lexicon, which is a lexicon gap to fill rather than a reason to
+  // keep scoring provenance as relevance.
+  if (!hasTopicalSignal) {
+    penalties.push({
+      key: "offTopic",
+      label: "No topical keyword match",
+      raw: 1,
+      weight: weights.penalties.offTopic,
+      contribution: -weights.penalties.offTopic,
+    });
+  }
+  // Already delivered by a digest in the last week. Recency decay alone did not
+  // shift these: ~21% of every digest was the previous day's items, journals
+  // worst of all, because a 14-day frontier-science age window plus a slow feed
+  // re-serves the same paper for days. A penalty rather than a filter, because
+  // the recency half-life is deliberately tuned to keep a genuinely big story
+  // alive into day two.
+  //
+  // Keyed on delivery, not on the seen store — see recentlyDelivered().
+  if (input.deliveredBefore === true) {
+    penalties.push({
+      key: "staleRepeat",
+      label: "Carried in an earlier digest",
+      raw: 1,
+      weight: weights.penalties.staleRepeat,
+      contribution: -weights.penalties.staleRepeat,
+    });
+  }
   if (item.bodyText.length < 200) {
     penalties.push({
       key: "thinContent",
@@ -331,14 +374,31 @@ function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
-/** Age cutoff per lane, so a preprint gets a longer shelf life than a readout. */
+/**
+ * Age cutoff per lane, so a preprint gets a longer shelf life than a readout.
+ *
+ * Papers get a floor on top of the lane's ceiling. A paper's date is its
+ * online-first date, and for NEJM, Cell and Nature that can precede the day
+ * Europe PMC indexes it by weeks — NEJM records in a current window carry
+ * firstPublicationDate up to 29 days back. Since clinical-regulatory allows 4
+ * days, calibrated for a press release, the pipeline was fetching NEJM trials and
+ * dropping them as stale in the same run, which is the worst of both: the cost of
+ * the request and none of the coverage.
+ *
+ * This only widens eligibility, not prominence. Recency is scored on an
+ * exponential half-life, so a three-week-old paper still arrives with
+ * essentially none of the 22 recency points and has to earn its place on
+ * topical fit and authority.
+ */
 export function isTooOld(
   publishedAt: Date | undefined,
   lane: FocusLane,
   now: Date,
   weights: Weights = WEIGHTS,
+  isAcademic = false,
 ): boolean {
   if (!publishedAt) return false;
-  const maxDays = weights.maxAgeDays[lane];
+  const laneMax = weights.maxAgeDays[lane];
+  const maxDays = isAcademic ? Math.max(laneMax, weights.maxAgeDaysAcademic) : laneMax;
   return ageHours(publishedAt, now) / 24 > maxDays;
 }

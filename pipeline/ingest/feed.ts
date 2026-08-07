@@ -2,7 +2,7 @@ import Parser from "rss-parser";
 
 import type { BodyProvenance } from "../../lib/types";
 import { parseFeedDate } from "../normalize/dates";
-import { htmlToText, stripJournalBoilerplate } from "../normalize/html";
+import { cleanTitleMarkup, htmlToText, stripJournalBoilerplate } from "../normalize/html";
 import { canonicalizeUrl, extractDoi } from "../normalize/url";
 import { cleanText, squish, truncateWords } from "../normalize/text";
 import type { RawFeedItem, SourceDef } from "../config/sources";
@@ -91,7 +91,9 @@ export async function parseFeed(
   for (const raw of rawItems.slice(0, source.maxItems)) {
     if (raw.title != null && typeof raw.title !== "string") objectTitles++;
 
-    const title = squish(source.parser?.title ? source.parser.title(raw) : cleanText(raw.title));
+    const title = squish(
+      cleanTitleMarkup(source.parser?.title ? source.parser.title(raw) : cleanText(raw.title)),
+    );
     const link = squish(source.parser?.link ? source.parser.link(raw) : cleanText(raw.link));
 
     if (!title || !link) continue;

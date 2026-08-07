@@ -11,6 +11,7 @@ import {
   healthFromHistory,
   readDigest,
   readSourceHistory,
+  recentlyDelivered,
   SeenStore,
   trailingMedians,
   writeDigest,
@@ -127,6 +128,7 @@ async function main(): Promise<number> {
     health,
     watchlist,
     seen,
+    delivered: recentlyDelivered(date),
     runId: process.env.GITHUB_RUN_ID,
   });
 

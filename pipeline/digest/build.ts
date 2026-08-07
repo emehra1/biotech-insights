@@ -2,6 +2,7 @@ import {
   FOCUS_LANES,
   LANE_BLURBS,
   LANE_LABELS,
+  type ArticleClass,
   type DailyDigest,
   type DigestItem,
   type DropReason,
@@ -11,6 +12,7 @@ import {
 } from "../../lib/types";
 import { MAJOR_JOURNAL_SOURCES } from "../config/lanes";
 import { clusterItems, type ClusterCandidate } from "../cluster";
+import { classifyArticle, earnsMajorJournalBoost } from "../extract/article-class";
 import { extractEntities } from "../extract/entities";
 import { buildKeyFacts, detectEventTypes } from "../extract/facts";
 import type { NormalizedItem } from "../ingest/types";
@@ -35,6 +37,8 @@ export interface BuildOptions {
   health: SourceHealth[];
   watchlist: CompiledEntry[];
   seen: SeenStore;
+  /** Ids delivered by a recent digest — see recentlyDelivered(). */
+  delivered: Set<string>;
   weights?: Weights;
   runId?: string;
 }
@@ -81,6 +85,7 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
   interface Enriched {
     id: string;
     item: NormalizedItem;
+    articleClass: ArticleClass;
     entities: ReturnType<typeof extractEntities>;
     facts: ReturnType<typeof buildKeyFacts>;
     events: ReturnType<typeof detectEventTypes>;
@@ -90,6 +95,19 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
   const unknownEntities = new Map<string, number>();
 
   for (const [id, item] of byId) {
+    const isAcademic = item.sourceKind === "journal" || item.sourceKind === "preprint";
+    const articleClass = classifyArticle({
+      title: item.title,
+      url: item.canonicalUrl,
+      doi: item.doi,
+    });
+    // "Author Correction: …" is not a paper recommendation. Four of them reached
+    // the digest over three runs, one of them twice.
+    if (isAcademic && articleClass === "notice") {
+      drop("editorial-notice");
+      continue;
+    }
+
     const input = { title: item.title, body: item.bodyText };
     const entities = extractEntities(input, item.nctIds);
     const facts = buildKeyFacts({
@@ -102,11 +120,16 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
     });
     const events = detectEventTypes(facts, `${item.title}. ${item.bodyText}`, {
       largeDealThresholdUsdM: weights.largeDealThresholdUsdM,
-      isMajorJournal: MAJOR_JOURNAL_SOURCES.has(item.sourceId) && item.sourceKind === "journal",
+      // The boost is named "-primary" and now means it: Nature's feed is 59%
+      // newsroom, and every one of those items used to collect it.
+      isMajorJournal:
+        MAJOR_JOURNAL_SOURCES.has(item.sourceId) &&
+        item.sourceKind === "journal" &&
+        earnsMajorJournalBoost(articleClass),
       isPreprint: item.sourceKind === "preprint",
     });
 
-    enriched.push({ id, item, entities, facts, events });
+    enriched.push({ id, item, articleClass, entities, facts, events });
     collectUnknownEntities(item, entities, unknownEntities);
   }
 
@@ -134,6 +157,13 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
     const cluster = clusterKey ? clusterById.get(clusterKey) : undefined;
     const publisherCount = cluster?.publisherCount ?? 1;
 
+    // Claimed before scoring, because the score now carries a penalty for an
+    // item an earlier digest already delivered. Every item that reaches this loop
+    // is recorded exactly once, whichever way it exits — that is what keeps
+    // "first seen" from drifting into "first seen and also kept".
+    const { date: firstSeenAt, isNew } = options.seen.firstSeen(entry.id, options.date);
+    const deliveredBefore = options.delivered.has(entry.id);
+
     // Provisional lane so the watchlist's topic filter has something to read.
     const provisional = scoreItem({
       item: entry.item,
@@ -143,6 +173,7 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
       watchHits: [],
       now: options.now,
       weights,
+      deliveredBefore,
     });
 
     const hits = matchWatchlist(options.watchlist, {
@@ -162,23 +193,31 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
             watchHits: hits.map((h) => ({ entryId: h.entryId, label: h.label, priority: h.priority })),
             now: options.now,
             weights,
+            deliveredBefore,
           })
         : provisional;
 
-    if (isTooOld(entry.item.publishedAt, scoreResult.primaryLane, options.now, weights)) {
+    if (
+      isTooOld(
+        entry.item.publishedAt,
+        scoreResult.primaryLane,
+        options.now,
+        weights,
+        entry.item.sourceKind === "journal" || entry.item.sourceKind === "preprint",
+      )
+    ) {
       drop("too-old");
       continue;
     }
-    if (!entry.item.publishedAt) drop("no-date");
+    // Deliberately no drop("no-date") here: this item is about to be KEPT, and a
+    // counter in `dropped` that also counts kept items is why the stats never
+    // added up. The per-item signal is better anyway — `datePrecision` is
+    // "unknown" and the `dateMissing` penalty is in the score breakdown.
 
     if (scoreResult.score < weights.keepThreshold && !hits.some((h) => h.priority)) {
       drop("below-threshold");
-      // Still record it as seen so it can never masquerade as new tomorrow.
-      options.seen.firstSeen(entry.id, options.date);
       continue;
     }
-
-    const { date: firstSeenAt, isNew } = options.seen.firstSeen(entry.id, options.date);
 
     const summary = summarize({
       title: entry.item.title,
@@ -230,6 +269,7 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
       scoreBreakdown: scoreResult.breakdown,
       watchHits,
       isAcademic: entry.item.sourceKind === "journal" || entry.item.sourceKind === "preprint",
+      articleClass: entry.articleClass,
     });
   }
 
@@ -245,6 +285,7 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
 
   const seenClusters = new Set<string>();
   const perSource = new Map<string, number>();
+  const perPublisher = new Map<string, number>();
   // Europe PMC alone returns 50 dense abstracts a day; without a per-source cap
   // it fills its whole lane and the digest stops feeling curated.
   const maxPerSource = Math.max(5, Math.floor(weights.maxItemsPerDay / 10));
@@ -252,11 +293,28 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
   const byLane = new Map<FocusLane, DigestItem[]>();
   for (const lane of FOCUS_LANES) byLane.set(lane, []);
   for (const item of scored) {
-    if (seenClusters.has(item.clusterId)) continue;
+    if (seenClusters.has(item.clusterId)) {
+      // A second outlet's telling of a story already represented.
+      drop("duplicate");
+      continue;
+    }
     const used = perSource.get(item.sourceId) ?? 0;
-    if (used >= maxPerSource) continue;
+    if (used >= maxPerSource) {
+      drop("over-cap");
+      continue;
+    }
+    // The per-source cap alone stopped counting once Springer Nature had a dozen
+    // feeds in the registry: twelve sub-journals at 8 apiece is 96 candidates
+    // from one publisher for an 80-item digest. Corroboration is already counted
+    // per publisherGroup, so the ceiling belongs there too.
+    const publisherUsed = perPublisher.get(item.publisherGroup) ?? 0;
+    if (publisherUsed >= weights.maxItemsPerPublisher) {
+      drop("over-cap");
+      continue;
+    }
     seenClusters.add(item.clusterId);
     perSource.set(item.sourceId, used + 1);
+    perPublisher.set(item.publisherGroup, publisherUsed + 1);
     byLane.get(item.primaryLane)?.push(item);
   }
 
@@ -277,6 +335,15 @@ export function buildDigest(items: NormalizedItem[], options: BuildOptions): Bui
         progress = true;
       }
     }
+  }
+
+  // Items that cleared every quality gate and still never got a slot, because
+  // the day or the lane was full. Counting them is the difference between stats
+  // that add up and stats that read "346 fetched, 80 kept" and silently lose
+  // the other 207 — which is what made the caps invisible in the first place.
+  const keptIdSet = new Set(kept.map((item) => item.id));
+  for (const laneItems of byLane.values()) {
+    for (const item of laneItems) if (!keptIdSet.has(item.id)) drop("over-cap");
   }
 
   const lanes = FOCUS_LANES.map((lane) => ({

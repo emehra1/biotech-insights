@@ -214,6 +214,13 @@ export interface ScoreBreakdown {
 
 export type DigestSource = "extractive" | "abstract" | "dek";
 
+/**
+ * Article type within a journal feed. Nature's RSS mixes its newsroom and its
+ * journal in one stream, so "came from Nature" says nothing about whether an
+ * item is a paper. See pipeline/extract/article-class.ts.
+ */
+export type ArticleClass = "research" | "news-comment" | "notice" | "unknown";
+
 export interface DigestItem {
   id: string;
   guid?: string;
@@ -244,6 +251,8 @@ export interface DigestItem {
   scoreBreakdown: ScoreBreakdown;
   watchHits: string[];
   isAcademic: boolean;
+  /** Set for journal/preprint items; `unknown` when the feed gives no signal. */
+  articleClass?: ArticleClass;
 }
 
 export interface Cluster {
@@ -278,7 +287,11 @@ export type DropReason =
   | "too-old"
   | "duplicate"
   | "below-threshold"
-  | "no-date";
+  | "no-date"
+  /** Correction, erratum or retraction notice — never a recommendation. */
+  | "editorial-notice"
+  /** Passed the score gate but lost to a per-source, per-lane or daily cap. */
+  | "over-cap";
 
 export interface WatchAlert {
   itemId: string;

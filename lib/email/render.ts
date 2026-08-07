@@ -68,8 +68,35 @@ function whyLine(item: DigestItem): string {
     .join(" · ");
 }
 
+/**
+ * "Paper · Nature Genetics" rather than a bare source name.
+ *
+ * Half of "I don't get paper recommendations" was legibility: a Nature Genetics
+ * paper and a Fierce Biotech dek rendered identically — one bold line over one
+ * grey byline — so a lane holding four papers and one news item read as five
+ * headlines. The other half was that the papers on offer were Nature's newsroom;
+ * `articleClass` is how a journal's own news gets labelled as news here.
+ */
+function kindLabel(item: DigestItem): string {
+  if (item.sourceKind === "preprint") return "Preprint";
+  if (item.sourceKind !== "journal") return "";
+  // `articleClass` is absent from every digest built before it existed, and
+  // inferring "Paper" from a missing value would relabel the whole archive —
+  // including the astrophysics news item that started all this. No evidence, no
+  // badge; a badge that lies is worse than none.
+  if (!item.articleClass) return "";
+  if (item.articleClass === "news-comment") return "Journal news";
+  if (item.articleClass === "notice") return "Correction";
+  return "Paper";
+}
+
 function renderItem(item: DigestItem, options: { showDigest: boolean }): Raw {
   const facts = factsLine(item);
+  const kind = kindLabel(item);
+  // A paper's abstract IS the recommendation — without it the reader has a bare
+  // title and no way to judge. So papers keep their summary even in the
+  // size-reduced build; news deks are what gets shed to fit under Gmail's clip.
+  const showBody = options.showDigest || item.isAcademic;
   return html`
     <tr>
       <td style="padding:14px 0;border-bottom:1px solid ${COLORS.border};">
@@ -79,9 +106,11 @@ function renderItem(item: DigestItem, options: { showDigest: boolean }): Raw {
           >${item.title}</a
         >
         <div style="color:${COLORS.muted};font-size:12px;padding-top:4px;">
-          ${item.sourceName} · score ${Math.round(item.score)} · ${whyLine(item)}
+          ${kind
+            ? html`<span style="color:${COLORS.accent};font-weight:700;">${kind}</span> · `
+            : ""}${item.sourceName} · score ${Math.round(item.score)} · ${whyLine(item)}
         </div>
-        ${options.showDigest && item.digest[0]
+        ${showBody && item.digest[0]
           ? html`<div style="color:${COLORS.ink};font-size:13px;line-height:1.5;padding-top:6px;">
               ${item.digest[0]}
             </div>`
@@ -95,7 +124,10 @@ function renderItem(item: DigestItem, options: { showDigest: boolean }): Raw {
 }
 
 export function renderDigestEmail(digest: DailyDigest, options: RenderOptions = {}): RenderedEmail {
-  const maxPerLane = options.maxPerLane ?? 5;
+  // 5 per lane showed 20 of the 80 items the pipeline had already selected and
+  // committed. The lanes holding the papers are the last two, so the ones that
+  // got cut were disproportionately papers.
+  const maxPerLane = options.maxPerLane ?? 7;
   const alertItems = uniqueAlertItems(digest);
 
   const subject = buildSubject(digest, alertItems);
@@ -287,8 +319,12 @@ function renderText(
   for (const { lane, items } of lanes) {
     lines.push(lane.label.toUpperCase());
     for (const item of items) {
+      const kind = kindLabel(item);
       lines.push(`- ${item.title}`);
-      lines.push(`  ${item.sourceName} · ${factsLine(item) || whyLine(item)}`);
+      lines.push(
+        `  ${[kind, item.sourceName, factsLine(item) || whyLine(item)].filter(Boolean).join(" · ")}`,
+      );
+      if (item.isAcademic && item.digest[0]) lines.push(`  ${item.digest[0]}`);
       lines.push(`  ${item.url}`);
     }
     lines.push("");

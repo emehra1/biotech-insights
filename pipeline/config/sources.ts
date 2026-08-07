@@ -1,4 +1,5 @@
 import type { FocusLane, SourceKind } from "../../lib/types";
+import { JOURNAL_FAMILIES } from "./journals";
 import { cleanText } from "../normalize/text";
 import { parseFeedDate, type ParsedDate } from "../normalize/dates";
 
@@ -91,6 +92,93 @@ const FIERCE_EXCLUDE = {
 
 function eutc(date: Date): string {
   return date.toISOString().slice(0, 10);
+}
+
+/**
+ * Europe PMC lookback, in days, for the per-publisher literature sources.
+ *
+ * The run window is "time since the last digest" — about 24 hours in steady
+ * state — and that is far too narrow for this API. Measured on 2026-08-06 with
+ * the nine journals the old `europepmc-clinical` query named:
+ *
+ *   FIRST_PDATE window   1d=5   3d=40   7d=224   14d=400
+ *
+ * Five hits, all of them JAMA. That is the whole of `europepmc-clinical`'s
+ * recentCounts [36,13,4,5]: the 36 was the cold-start 3-day window on the first
+ * run, and every daily run since collapsed to 4-5.
+ *
+ * Widening is not optional and no other date field rescues it. FIRST_IDATE and
+ * CREATION_DATE key on when Europe PMC ingested the record, and those arrive in
+ * bulk batches with multi-day gaps of literally zero (07-27, 07-28, 07-29 and
+ * 08-01 were all empty), so a narrow window on any field produces dead days.
+ * The per-journal deposit lag runs 1 day (Sci Transl Med, JAMA) to 9 days (Cell
+ * Stem Cell), so the window has to clear the worst lag plus an issue period or
+ * whole journals silently vanish.
+ *
+ * Re-fetching two weeks every day is safe: the seen store gives each item a
+ * stable id, and anything an earlier digest already carried takes the
+ * `staleRepeat` penalty.
+ */
+const LITERATURE_LOOKBACK_DAYS = 14;
+
+/**
+ * A Europe PMC journal search that returns only records with an abstract.
+ *
+ * `HAS_ABSTRACT:Y` is the single highest-leverage term here. Without it, 73% of
+ * what these journals match has no abstract to return, because it is not
+ * research: a 7-day sample of JOURNAL:"Nature" was 68 News items, 5 errata, a
+ * retraction notice and an expression of concern against 25 research articles,
+ * and NEJM was 27 Comments and Letters against 6. With it, abstract coverage
+ * goes from 27% to 100% and the notices disappear at the source.
+ *
+ * `sort=P_PDATE_D desc` is load-bearing too: the API defaults to relevance
+ * order, so with a 14-day window an unsorted `maxItems` slice would keep an
+ * arbitrary subset and could drop today's papers entirely.
+ *
+ * Beware the silent-zero trap when editing this: PUB_DATE, EPUB_DATE, PPUB_DATE
+ * and INDEXED_DATE are not Europe PMC fields. They return HTTP 200 with
+ * hitCount 0 and no error, so a plausible-looking "fix" takes the source to zero
+ * without failing anything.
+ */
+function europePmcJournals(
+  journals: readonly string[],
+  window: RunWindow,
+  pageSize = 100,
+): string {
+  const clause = journals.map((journal) => `JOURNAL:"${journal}"`).join(" OR ");
+  const start = eutc(new Date(window.end.getTime() - LITERATURE_LOOKBACK_DAYS * 86_400_000));
+  return (
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search" +
+    `?format=json&resultType=core&pageSize=${pageSize}&sort=${encodeURIComponent("P_PDATE_D desc")}` +
+    "&query=" +
+    encodeURIComponent(
+      `(${clause}) AND HAS_ABSTRACT:Y AND (FIRST_PDATE:[${start} TO ${eutc(window.end)}])`,
+    )
+  );
+}
+
+/**
+ * Shared shape for the nature.com sub-journal feeds. Every non-flagship feed
+ * nature.com serves returns exactly 8 items, server-side, whatever you ask for —
+ * so `maxItems` here is headroom, not a target, and the old `maxItems: 30` on
+ * nbt/nm/nrd was always dead config.
+ */
+function natureJournal(
+  overrides: Pick<SourceDef, "id" | "name" | "homepage" | "endpoint" | "authority" | "laneHints"> &
+    Partial<SourceDef>,
+): SourceDef {
+  return {
+    publisherGroup: "springer-nature",
+    kind: "journal",
+    dialect: "rdf",
+    fullText: "feed-only",
+    paywalled: true,
+    crawlDelayMs: 700,
+    conditionalGet: true,
+    maxItems: 20,
+    enabled: true,
+    ...overrides,
+  };
 }
 
 export const SOURCES: SourceDef[] = [
@@ -230,7 +318,13 @@ export const SOURCES: SourceDef[] = [
     paywalled: true,
     crawlDelayMs: 700,
     conditionalGet: true,
-    maxItems: 40,
+    // The flagship feed carries ~75 items and is 59% magazine: a live pull was
+    // 44 `d41586` (News, News & Views, Careers, Books & Arts, Editorials, the
+    // Futures fiction column) against 31 `s41586` research articles. At
+    // maxItems: 40 the slice happened before any of that was assessed, so a third
+    // of the research was truncated away to make room for book reviews. Take the
+    // whole feed and let scoring decide; the per-source cap still keeps 8.
+    maxItems: 80,
     enabled: true,
     note: "RSS 1.0/RDF: no pubDate, no contentSnippet. Use dc:date + content:encoded.",
   },
@@ -270,21 +364,105 @@ export const SOURCES: SourceDef[] = [
   },
   {
     id: "nature-rev-drug-discovery",
-    name: "Nature Reviews Drug Discovery",
+    name: "Nature Reviews Drug Discovery (News & Analysis)",
     publisherGroup: "springer-nature",
     homepage: "https://www.nature.com/nrd/",
     kind: "journal",
     dialect: "rdf",
     endpoint: "https://www.nature.com/nrd.rss",
     authority: 0.85,
-    laneHints: { "frontier-science": 0.4, "business-deals": 0.25 },
+    // All 8 items this feed serves are `d41573` — NRDD's News & Analysis column,
+    // not the peer-reviewed reviews, and none of them carry an abstract. The
+    // content is good ("First dual BAFF and APRIL inhibitor nabs FDA approval",
+    // "Lilly spends US$2.8 billion on psychedelic drugs") but it is industry
+    // news, so the old frontier-science: 0.4 prior was filing pipeline business
+    // stories under basic science.
+    laneHints: { "business-deals": 0.4, "clinical-regulatory": 0.3 },
     fullText: "feed-only",
     paywalled: true,
     crawlDelayMs: 700,
     conditionalGet: true,
     maxItems: 20,
     enabled: true,
+    note: "News & Analysis column, not the reviews. Titles only, no abstracts.",
   },
+
+  /* ------------------- Nature sub-journals (research) -------------------
+   *
+   * Every one of these serves 8 items with a real editor's-summary abstract,
+   * which matters more than it sounds: the flagship nature.rss is title-only for
+   * a third of its items, and an item with no body has nothing for the lexicon
+   * to match, so it can only ever be scored on provenance. These are the feeds
+   * that actually let a paper be judged on what it says.
+   *
+   * Chosen against config/watchlist.yml rather than by impact factor. Also live
+   * and datacenter-safe, if the interests change: natcancer.rss, ncomms.rss
+   * (mega-journal, ~80 papers/day behind an 8-item feed), nsmb.rss,
+   * nmicrobiol.rss, ni.rss, nmeth.rss (only 2/8 carry abstracts).
+   */
+  natureJournal({
+    id: "nature-genetics",
+    name: "Nature Genetics",
+    homepage: "https://www.nature.com/ng/",
+    endpoint: "https://www.nature.com/ng.rss",
+    authority: 0.9,
+    // Chromatin architecture, enhancer–gene mapping and single-cell method work:
+    // three of the reader's four standing watchlist topics.
+    laneHints: { "aging-omics": 0.5, "frontier-science": 0.4 },
+    note: "8/8 items carry abstracts, median 265 chars.",
+  }),
+  natureJournal({
+    id: "nature-aging",
+    name: "Nature Aging",
+    homepage: "https://www.nature.com/nataging/",
+    endpoint: "https://www.nature.com/nataging.rss",
+    authority: 0.88,
+    laneHints: { "aging-omics": 0.7, "frontier-science": 0.25 },
+    note: "The aging-omics lane had no dedicated journal before this.",
+  }),
+  natureJournal({
+    id: "nature-metabolism",
+    name: "Nature Metabolism",
+    homepage: "https://www.nature.com/natmetab/",
+    endpoint: "https://www.nature.com/natmetab.rss",
+    authority: 0.86,
+    laneHints: { "aging-omics": 0.45, "frontier-science": 0.35 },
+  }),
+  natureJournal({
+    id: "nature-chem-biol",
+    name: "Nature Chemical Biology",
+    homepage: "https://www.nature.com/nchembio/",
+    endpoint: "https://www.nature.com/nchembio.rss",
+    authority: 0.86,
+    // Degraders, molecular glues and chemical probes — the frontier-science
+    // lexicon's highest-weighted terms live here.
+    laneHints: { "frontier-science": 0.6 },
+  }),
+  natureJournal({
+    id: "nature-biomed-eng",
+    name: "Nature Biomedical Engineering",
+    homepage: "https://www.nature.com/natbiomedeng/",
+    endpoint: "https://www.nature.com/natbiomedeng.rss",
+    authority: 0.85,
+    laneHints: { "frontier-science": 0.55, "clinical-regulatory": 0.2 },
+  }),
+  natureJournal({
+    id: "nature-cell-biol",
+    name: "Nature Cell Biology",
+    homepage: "https://www.nature.com/ncb/",
+    endpoint: "https://www.nature.com/ncb.rss",
+    authority: 0.86,
+    laneHints: { "frontier-science": 0.45, "aging-omics": 0.4 },
+    note: "Closest reachable substitute for the blocked cell-stem-cell feed.",
+  }),
+  natureJournal({
+    id: "nature-cancer",
+    name: "Nature Cancer",
+    homepage: "https://www.nature.com/natcancer/",
+    endpoint: "https://www.nature.com/natcancer.rss",
+    authority: 0.86,
+    laneHints: { "frontier-science": 0.45, "clinical-regulatory": 0.25 },
+  }),
   {
     id: "science-news",
     name: "Science (News)",
@@ -321,9 +499,13 @@ export const SOURCES: SourceDef[] = [
     // Disabled: returns HTTP 403 to GitHub Actions runners (Atypon fronts the
     // cell.com feeds and blocks datacenter ranges). It works from a laptop, so
     // a local `npm run pipeline` still picks it up — but a source that can only
-    // ever fail in CI is noise in the health panel. Coverage is replaced by
-    // europepmc-clinical below, which indexes these journals AND gives real
+    // ever fail in CI is noise in the health panel. Coverage comes from
+    // europepmc-elsevier below, which indexes these journals AND gives real
     // abstracts instead of RSS titles.
+    //
+    // Do not "fix" this with a proxy or a scraper: the same response carries
+    // `tdm-reservation: 1`, Elsevier's machine-readable opt-out from text and
+    // data mining. The block is a stated preference, not an obstacle.
     enabled: false,
   },
   {
@@ -350,7 +532,8 @@ export const SOURCES: SourceDef[] = [
     homepage: "https://www.nejm.org/",
     kind: "journal",
     dialect: "rss2",
-    // /rss 403s; this is the working feed URL.
+    // /rss 403s; this is the working feed URL — but see `enabled` below: it is
+    // also robots-disallowed, so "working" is not the same as "ours to fetch".
     endpoint: "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm",
     authority: 0.95,
     laneHints: { "clinical-regulatory": 0.5, "frontier-science": 0.3 },
@@ -359,35 +542,144 @@ export const SOURCES: SourceDef[] = [
     crawlDelayMs: 700,
     conditionalGet: true,
     maxItems: 25,
-    enabled: false, // HTTP 403 from Actions runners — see the note on `cell`.
+    // Disabled, and not to be re-enabled: nejm.org/robots.txt has both
+    // `Disallow: /action` and `Disallow: /rss` under `User-agent: *`, so every
+    // NEJM feed URL is off-limits by the site's own rules — the 403 is the
+    // enforcement, not the problem. science.org and thelancet.com both disallow
+    // `/action` the same way. Coverage comes from europepmc-nejm below.
+    enabled: false,
   },
+  /* ------------- publishers only reachable through Europe PMC -------------
+   *
+   * These three replace the single `europepmc-clinical` source, which named nine
+   * journals in one query and delivered 0-3 items a day. Two things were wrong
+   * with it and both are fixed above in `europePmcJournals`: the window was ~24h
+   * against an index whose deposit lag is 1-9 days, and it did not ask for
+   * abstracts, so three quarters of what it matched was News and Letters.
+   *
+   * The split is by publisher, not by topic, and that is deliberate. One source
+   * declares one `publisherGroup`, and publisherGroup is what corroboration
+   * counts and what the per-publisher cap limits — so lumping Elsevier, AAAS and
+   * NEJM together made all three look like a single outlet called "europepmc".
+   *
+   * Springer Nature and JAMA were in that old query and are deliberately NOT
+   * here: their own feeds work, are fresher (nature.com same-day vs 8 days
+   * through Europe PMC), and a publisher reachable by two paths would be
+   * ingested twice under two different canonical URLs. Same-run duplicates get
+   * clustered, but the two arrivals are 8 days apart, so nothing would catch it.
+   */
   {
-    // Replaces the three journal feeds that 403 from CI. Europe PMC indexes all
-    // of them, is happy to be queried from a datacenter, and returns abstracts —
-    // strictly better input than the titles-only RSS it replaces.
-    id: "europepmc-clinical",
-    name: "Europe PMC (high-impact journals)",
-    publisherGroup: "europepmc",
+    id: "europepmc-cellpress",
+    name: "Cell Press (via Europe PMC)",
+    // cell.com is Atypon/Cloudflare and 403s the runner. Elsevier also returns
+    // `tdm-reservation: 1` on those feeds — a machine-readable text-and-data-
+    // mining opt-out — so routing around the block would be ignoring an explicit
+    // "no". Europe PMC is the licensed index that says yes, and it hands back the
+    // abstract too. Items are credited to the journal, not to the index.
+    publisherGroup: "elsevier",
     homepage: "https://europepmc.org/",
     kind: "journal",
     dialect: "json",
-    endpoint: (window) =>
-      "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=40&query=" +
-      encodeURIComponent(
-        `(JOURNAL:"N Engl J Med" OR JOURNAL:"Lancet" OR JOURNAL:"Cell" OR ` +
-          `JOURNAL:"Cell Stem Cell" OR JOURNAL:"Cell Metab" OR JOURNAL:"Nat Med" OR ` +
-          `JOURNAL:"Nature" OR JOURNAL:"Science" OR JOURNAL:"JAMA") AND ` +
-          `(FIRST_PDATE:[${eutc(window.start)} TO ${eutc(window.end)}])`,
-      ),
-    authority: 0.8,
-    laneHints: { "clinical-regulatory": 0.35, "frontier-science": 0.45 },
+    // ~110 abstract-bearing papers per 14 days across the eleven titles, so ask
+    // for more than that: the query is date-sorted, but truncating it would still
+    // silently drop the tail of the window.
+    endpoint: (window) => europePmcJournals(JOURNAL_FAMILIES.cellpress, window, 130),
+    authority: 0.9,
+    laneHints: { "frontier-science": 0.45, "clinical-regulatory": 0.25 },
     fullText: "api-body",
     paywalled: false,
     crawlDelayMs: 1000,
     conditionalGet: false,
-    maxItems: 40,
+    maxItems: 130,
     enabled: true,
-    note: "Covers NEJM/Lancet/Cell/Nature/Science/JAMA with abstracts.",
+    note: "Verified: JOURNAL:\"Cell\" resolves to Cell alone and does not leak into Cell Reports.",
+  },
+  {
+    id: "europepmc-lancet",
+    name: "The Lancet (via Europe PMC)",
+    // Also Elsevier, so it shares a publisherGroup with Cell Press and cannot
+    // corroborate it. Separate source purely so the two families get separate
+    // daily allowances — bundled, Cell Press's volume would crowd Lancet out.
+    publisherGroup: "elsevier",
+    homepage: "https://europepmc.org/",
+    kind: "journal",
+    dialect: "json",
+    endpoint: (window) => europePmcJournals(JOURNAL_FAMILIES.lancet, window, 60),
+    authority: 0.93,
+    laneHints: { "clinical-regulatory": 0.55, "frontier-science": 0.2 },
+    fullText: "api-body",
+    paywalled: false,
+    crawlDelayMs: 1000,
+    conditionalGet: false,
+    maxItems: 60,
+    enabled: true,
+    note: "~35 papers/14d across the eight titles.",
+  },
+  {
+    id: "europepmc-aaas",
+    name: "Science journals (via Europe PMC)",
+    // Same publisherGroup as science-news on purpose: the newsroom and the
+    // research journals are one outlet, so corroboration must not count them
+    // twice. science.org is Atypon-fronted like cell.com, and its robots.txt
+    // disallows /action, which is where every eTOC feed lives.
+    publisherGroup: "aaas",
+    homepage: "https://europepmc.org/",
+    kind: "journal",
+    dialect: "json",
+    endpoint: (window) => europePmcJournals(JOURNAL_FAMILIES.aaas, window, 100),
+    authority: 0.92,
+    laneHints: { "frontier-science": 0.5, "clinical-regulatory": 0.2 },
+    fullText: "api-body",
+    paywalled: false,
+    crawlDelayMs: 1000,
+    conditionalGet: false,
+    maxItems: 100,
+    enabled: true,
+    note: "The only route to Science RESEARCH — science-news is the newsroom and carries no papers.",
+  },
+  {
+    id: "europepmc-nejm",
+    name: "NEJM (via Europe PMC)",
+    publisherGroup: "mms",
+    homepage: "https://europepmc.org/",
+    kind: "journal",
+    dialect: "json",
+    endpoint: (window) => europePmcJournals(JOURNAL_FAMILIES.nejm, window, 50),
+    authority: 0.95,
+    laneHints: { "clinical-regulatory": 0.5, "frontier-science": 0.25 },
+    fullText: "api-body",
+    paywalled: false,
+    crawlDelayMs: 1000,
+    conditionalGet: false,
+    maxItems: 20,
+    enabled: true,
+    // Low volume by nature — roughly 2 abstract-bearing papers per 14 days — but
+    // they are the highest-authority clinical papers published anywhere, and the
+    // cap is a ceiling rather than a quota.
+    note: "Deposit lag ~5 days. Its own feed is robots-disallowed; see the nejm entry above.",
+  },
+  {
+    id: "europepmc-jama",
+    name: "JAMA specialty journals (via Europe PMC)",
+    // JAMA itself is NOT in this query — it has a working RSS feed above, and a
+    // journal reachable two ways arrives under two canonical URLs that the
+    // deduper cannot merge.
+    publisherGroup: "ama",
+    homepage: "https://europepmc.org/",
+    kind: "journal",
+    dialect: "json",
+    endpoint: (window) => europePmcJournals(JOURNAL_FAMILIES.jama, window, 80),
+    authority: 0.88,
+    laneHints: { "clinical-regulatory": 0.55, "frontier-science": 0.15 },
+    fullText: "api-body",
+    paywalled: false,
+    crawlDelayMs: 1000,
+    conditionalGet: false,
+    maxItems: 80,
+    enabled: true,
+    // JAMA Network Open is excluded on volume — it alone publishes several
+    // thousand papers a year.
+    note: "JAMA Oncology, Cardiology, Neurology, Internal Medicine, Pediatrics, Psychiatry.",
   },
   {
     id: "jama",
@@ -446,34 +738,7 @@ export const SOURCES: SourceDef[] = [
     enabled: true,
   },
 
-  /* -------------------------- literature APIs -------------------------- */
-  {
-    id: "europepmc-aging",
-    name: "Europe PMC (aging & omics)",
-    publisherGroup: "europepmc",
-    homepage: "https://europepmc.org/",
-    kind: "journal",
-    dialect: "json",
-    // The only source that hands us real abstracts, and it covers preprints too.
-    endpoint: (window) =>
-      "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&pageSize=50&query=" +
-      encodeURIComponent(
-        `(("epigenetic clock" OR "biological age" OR senescence OR senolytic OR ` +
-          `"partial reprogramming" OR "Yamanaka factors" OR geroscience OR ` +
-          `"3D genome" OR "chromatin architecture" OR "single-cell atlas" OR ` +
-          `"spatial transcriptomics" OR "DNA methylation age")) AND ` +
-          `(FIRST_PDATE:[${eutc(window.start)} TO ${eutc(window.end)}])`,
-      ),
-    authority: 0.5,
-    laneHints: { "aging-omics": 0.7, "frontier-science": 0.3 },
-    fullText: "api-body",
-    paywalled: false,
-    crawlDelayMs: 1000,
-    conditionalGet: false,
-    maxItems: 50,
-    enabled: true,
-    note: "resultType=core returns abstractText — the abstract IS the summary.",
-  },
+  /* --------------------------- trial registry --------------------------- */
   {
     id: "clinicaltrials",
     name: "ClinicalTrials.gov",

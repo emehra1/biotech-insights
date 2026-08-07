@@ -1,11 +1,36 @@
+import { displayJournal } from "../config/journals";
 import { parseFeedDate } from "../normalize/dates";
-import { htmlToText } from "../normalize/html";
+import { cleanTitleMarkup, htmlToText } from "../normalize/html";
 import { canonicalizeUrl } from "../normalize/url";
 import { squish, truncateWords } from "../normalize/text";
 import type { SourceDef } from "../config/sources";
 import type { IngestResult, NormalizedItem } from "./types";
 
 /** JSON sources that hand us structured metadata instead of RSS. */
+
+/**
+ * Europe PMC returns the NLM catalogue title, which is a cataloguer's string
+ * rather than a name a reader recognises:
+ *
+ *   "Advanced materials (Deerfield Beach, Fla.)"
+ *   "Radiotherapy and oncology : journal of the European Society for
+ *    Therapeutic Radiology and Oncology"
+ *   "Cell reports. Medicine"
+ *
+ * Since these are now the byline the reader actually sees, trim the
+ * disambiguating parenthetical, drop the subtitle after the colon, and flatten
+ * the section separator. Order matters: the parenthetical is removed first so a
+ * title ending in one does not survive the colon rule.
+ */
+export function cleanJournalTitle(title: string): string {
+  return squish(
+    title
+      .replace(/\s*\([^)]*\)\s*$/, "")
+      .replace(/\s+:\s+.*$/, "")
+      .replace(/\.\s+/g, " ")
+      .replace(/\.$/, ""),
+  );
+}
 
 function base(source: SourceDef): Omit<
   NormalizedItem,
@@ -60,7 +85,7 @@ export function parseEuropePmc(json: string, source: SourceDef, now: Date): Inge
   const items: NormalizedItem[] = [];
 
   for (const result of results.slice(0, source.maxItems)) {
-    const title = squish(result.title ?? "");
+    const title = squish(cleanTitleMarkup(result.title ?? ""));
     if (!title) continue;
 
     const doi = result.doi?.toLowerCase();
@@ -75,9 +100,17 @@ export function parseEuropePmc(json: string, source: SourceDef, now: Date): Inge
     const date = parseFeedDate(result.firstPublicationDate, { now });
     // resultType=core returns a real abstract: the abstract IS the summary.
     const abstract = squish(htmlToText(result.abstractText ?? ""));
+    const journal = displayJournal(cleanJournalTitle(squish(result.journalInfo?.journal?.title ?? "")));
 
     items.push({
       ...base(source),
+      // Attribute the paper to the journal that published it, not to the index
+      // we happened to read it through. A Cell paper credited to "Europe PMC
+      // (high-impact journals)" reads like a database dump, which is a large part
+      // of why a digest full of real papers still felt like it had none. The
+      // registry name stays as the fallback, and `sourceId` — which is what the
+      // per-source cap and the health panel key on — is untouched.
+      sourceName: journal || source.name,
       title,
       url,
       canonicalUrl: canonicalizeUrl(url),
@@ -88,9 +121,7 @@ export function parseEuropePmc(json: string, source: SourceDef, now: Date): Inge
       bodyProvenance: abstract ? "abstract" : "none",
       authors: result.authorString ? [squish(result.authorString)] : [],
       doi,
-      categories: result.journalInfo?.journal?.title
-        ? [squish(result.journalInfo.journal.title)]
-        : [],
+      categories: journal ? [journal] : [],
     });
   }
 

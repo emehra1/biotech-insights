@@ -97,6 +97,33 @@ export function listWeeks(): string[] {
   return weeks.sort().reverse();
 }
 
+/**
+ * Ids an earlier digest actually delivered to the reader.
+ *
+ * Deliberately NOT the seen store, and the difference is load-bearing. `seen`
+ * records every id the pipeline has ever laid eyes on — which is most of them:
+ * of 526 items fetched on 2026-08-06, 80 were kept and the rest were stamped
+ * seen on their way to being dropped by the score gate or a cap. Penalising
+ * those as "repeats" would permanently bury everything a productive source could
+ * not fit into its 8 slots on the day it first appeared, which is the opposite
+ * of the intent — Europe PMC alone offers 60 papers a day for those 8 slots.
+ *
+ * A week is the horizon: long enough to stop the same paper running three days
+ * straight, short enough that something genuinely worth a second look can get
+ * one.
+ */
+export function recentlyDelivered(date: string, days = 7): Set<string> {
+  const ids = new Set<string>();
+  for (let back = 1; back <= days; back++) {
+    const day = new Date(`${date}T12:00:00Z`);
+    day.setUTCDate(day.getUTCDate() - back);
+    const digest = readDigest(day.toISOString().slice(0, 10));
+    if (!digest) continue;
+    for (const id of Object.keys(digest.items)) ids.add(id);
+  }
+  return ids;
+}
+
 /* --------------------------------- seen ---------------------------------- */
 
 type SeenShard = Record<string, string>;
