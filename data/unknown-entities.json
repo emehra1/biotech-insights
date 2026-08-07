@@ -1,12 +1,8 @@
 {
-  "generatedAt": "2026-08-07T12:00:32.121Z",
+  "generatedAt": "2026-08-07T18:45:35.079Z",
   "candidates": [
     {
       "term": "Demis Hassabis",
-      "count": 2
-    },
-    {
-      "term": "Reuters",
       "count": 2
     },
     {
@@ -19,10 +15,6 @@
     },
     {
       "term": "Drug Administration",
-      "count": 2
-    },
-    {
-      "term": "Lead",
       "count": 2
     }
   ]
