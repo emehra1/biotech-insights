@@ -3,10 +3,10 @@
   "week": "2026-W32",
   "start": "2026-08-03",
   "end": "2026-08-09",
-  "generatedAt": "2026-08-03T04:52:56.747Z",
+  "generatedAt": "2026-08-07T21:06:40.874Z",
   "themes": {
     "status": "warming-up",
-    "weeksObserved": 0,
+    "weeksObserved": 1,
     "items": []
   },
   "tallies": {
@@ -14,31 +14,133 @@
       {
         "itemId": "7adcf020b39fb37a",
         "title": "Fierce Pharma Asia—Legend CEO exits; Merck’s hush-hush PD-1xVEGF plan; Otsuka’s novel ADHD nod"
+      },
+      {
+        "itemId": "4282f98e79a8fd47",
+        "title": "FDA Approves First Oral PCSK9 Inhibitor to Lower LDL Cholesterol."
+      },
+      {
+        "itemId": "a209fab2c35232d0",
+        "title": "FDA Approves At-Home Starting Dose for Anti-Amyloid Therapy."
+      },
+      {
+        "itemId": "758d5752d7251098",
+        "title": "Eli Lilly to allow more patients to apply for special access to unapproved obesity drug"
+      },
+      {
+        "itemId": "ecc095303584e739",
+        "title": "Opinion: I’m using not-FDA-approved software to manage my diabetes. I’ve never felt better"
+      },
+      {
+        "itemId": "1f36aa886f9d7c43",
+        "title": "FDA expands Pluvicto label, making it available to most metastatic prostate cancer patients"
+      },
+      {
+        "itemId": "758d5752d7251098",
+        "title": "Eli Lilly to allow more patients to apply for special access to unapproved obesity drug"
+      },
+      {
+        "itemId": "1f36aa886f9d7c43",
+        "title": "FDA expands Pluvicto label, making it available to most metastatic prostate cancer patients"
+      },
+      {
+        "itemId": "ecc095303584e739",
+        "title": "Opinion: I’m using not-FDA-approved software to manage my diabetes. I’ve never felt better"
+      },
+      {
+        "itemId": "a30652bc3a92723d",
+        "title": "FDA Approves First Oral Carbapenem for Complicated UTIs"
+      },
+      {
+        "itemId": "bb44a14f21a99d54",
+        "title": "FDA Approves First Generic Single-Dose Flu Treatment"
+      },
+      {
+        "itemId": "dcec78f7267039bd",
+        "title": "Pharmalittle: We’re reading about Moderna’s flu shot, a death in a gene-editing trial in China, and more"
+      },
+      {
+        "itemId": "7da02751a73a5e05",
+        "title": "Takeda’s narcolepsy drug approved by the FDA, seen as a boon for new class of treatments"
+      },
+      {
+        "itemId": "f96705e43d913c54",
+        "title": "FDA approves Moderna flu vaccine after spat with past agency leaders"
+      },
+      {
+        "itemId": "2aea364d58d676bc",
+        "title": "FDA Approves First Drug to Treat the Full Range of Narcolepsy Type 1 Symptoms"
+      },
+      {
+        "itemId": "a30652bc3a92723d",
+        "title": "FDA Approves First Oral Carbapenem for Complicated UTIs"
+      },
+      {
+        "itemId": "bb44a14f21a99d54",
+        "title": "FDA Approves First Generic Single-Dose Flu Treatment"
+      },
+      {
+        "itemId": "5e26a0aa5c9180d2",
+        "title": "Replimune wins FDA approval after melanoma drug was twice rejected"
+      },
+      {
+        "itemId": "cf61d957a9cd5745",
+        "title": "FDA Approves New Engineered Viral Immunotherapy for Patients with Treatment-Resistant Advanced Melanoma"
+      },
+      {
+        "itemId": "9c7a211de412e56c",
+        "title": "Pharmalittle: We’re reading about Replimune’s melanoma drug, a Medicare policy change, and more"
+      },
+      {
+        "itemId": "fc9db03db27073c0",
+        "title": "Is the biotech capital of the world moving?"
+      },
+      {
+        "itemId": "a1fed78fd53c8b8b",
+        "title": "Takeda gains FDA nod for first-in-class narcolepsy treatment Orzeyful"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "6a3e121d09be622a",
+        "title": "UPDATED: Replimune secures FDA approval for melanoma therapy Tudriqev after long regulatory battle"
       }
     ],
     "crls": [],
     "readouts": {
       "met": [],
       "missed": [
-        "cc6b9a95dfd101b8"
+        "cc6b9a95dfd101b8",
+        "7cdf548d4c495015",
+        "f51c2331207908a0",
+        "7cdf548d4c495015",
+        "7cdf548d4c495015",
+        "fed22f1efa3bac03",
+        "5be12d8db444557b"
       ],
       "mixed": []
     },
     "ma": {
-      "count": 7,
-      "totalUsdM": 6463,
+      "count": 32,
+      "totalUsdM": 849383,
       "largest": {
-        "itemId": "63350f10228b3f6c",
-        "usdM": 2800
+        "itemId": "2253a5f1887229d8",
+        "usdM": 400000
       }
     },
     "financings": {
-      "count": 8,
-      "totalUsdM": 25029,
+      "count": 53,
+      "totalUsdM": 121480,
       "byRound": {
-        "financing": 5,
-        "Series C": 1,
-        "IPO": 2
+        "financing": 32,
+        "Series C": 2,
+        "IPO": 15,
+        "Series E": 1,
+        "Series A": 1,
+        "Series B": 1,
+        "Series D": 1
       }
     },
     "newPhase3": [
@@ -79,6 +181,26 @@
         "nct": "NCT06012240",
         "title": "A Study to Evaluate the Safety and Effectiveness of Upadacitinib Tablets in Adult and Adolescent Participants With Severe Alopecia Areata",
         "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT05312879",
+        "title": "Phase 2/3 Adaptive Study of VX-147 in Adult and Pediatric Participants With APOL1-Mediated Proteinuric Kidney Disease",
+        "sponsor": "Vertex Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07745504",
+        "title": "A Research Study to Compare Two Different Versions of Injectable Cagrilintide and Placebo in People With Excess Body Weight",
+        "sponsor": "Novo Nordisk"
+      },
+      {
+        "nct": "NCT04910685",
+        "title": "(HARBOR) Study to Evaluate Efficacy and Safety of BLU-263 Versus Placebo in Patients With Indolent Systemic Mastocytosis",
+        "sponsor": "Blueprint Medicines"
+      },
+      {
+        "nct": "NCT07581002",
+        "title": "A Study to Assess Adverse Events and Change in Disease Activity When Intravenous (IV) Pivekimab Sunirine is Given in Combination With Oral Venetoclax and IV or Subcutaneous Azacitidine in Adult Participants With Acute Myeloid Leukemia (AML)",
+        "sponsor": "AbbVie"
       }
     ]
   },
@@ -89,28 +211,63 @@
       "publisherCount": 3
     },
     {
-      "clusterId": "c_9ba19f8567",
-      "leadItemId": "97faba78fd1208d9",
-      "publisherCount": 2
+      "clusterId": "c_0a05cdfb12",
+      "leadItemId": "f96705e43d913c54",
+      "publisherCount": 3
     },
     {
-      "clusterId": "c_b4e62e9ad8",
-      "leadItemId": "491e274bd124d1e0",
+      "clusterId": "c_b374adcf95",
+      "leadItemId": "5d5fbf6140db145e",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_7e4a92ec25",
+      "leadItemId": "5e26a0aa5c9180d2",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_0904def3b0",
+      "leadItemId": "540131f7d31ec22d",
       "publisherCount": 2
     }
   ],
-  "preprintShift": [],
+  "preprintShift": [
+    {
+      "term": "aging",
+      "delta": 6.8
+    },
+    {
+      "term": "cancer",
+      "delta": 6.6
+    },
+    {
+      "term": "phase",
+      "delta": 6.3
+    },
+    {
+      "term": "astrazeneca",
+      "delta": 3.9
+    },
+    {
+      "term": "safety",
+      "delta": 3.2
+    },
+    {
+      "term": "merger",
+      "delta": 2.9
+    }
+  ],
   "degradedSources": [],
   "lexiconSuggestions": [
-    "aging",
+    "cancer",
+    "influenza",
+    "efficacy",
+    "randomized",
     "phase",
-    "spatial",
-    "microbiome",
-    "single",
-    "melanoma",
-    "participants",
-    "checkpoint",
-    "about",
-    "related"
+    "astrazeneca",
+    "aging",
+    "safety",
+    "vaccine",
+    "controlled"
   ]
 }
