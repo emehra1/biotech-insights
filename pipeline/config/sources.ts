@@ -67,6 +67,12 @@ export interface SourceDef {
   conditionalGet: boolean;
   maxItems: number;
   enabled: boolean;
+  /**
+   * Attempts after the first, when the default 2 is not enough. The backoff is
+   * exponential, so this buys time as well as tries: 2 spends ~5s, 4 spends
+   * ~30s. Only worth raising for a source whose failures are known-transient.
+   */
+  retries?: number;
   /** Zone for wall-clock dates that carry no offset. */
   timeZone?: string;
   exclude?: { urlPatterns?: RegExp[]; titlePatterns?: RegExp[] };
@@ -773,6 +779,13 @@ export const SOURCES: SourceDef[] = [
     conditionalGet: false,
     maxItems: 40,
     enabled: true,
+    // Answered HTTP 500 on one run and 200 on the next, with an unchanged
+    // query; five back-to-back probes of the same URL later returned five
+    // identical 200s. So the 500 is upstream flakiness, and the default budget
+    // — two retries, ~5s of backoff in total — was simply too short to ride it
+    // out. Four spends ~30s, which is nothing against a 30-minute job and is
+    // the difference between a trials section and an empty one.
+    retries: 4,
     note: "robots.txt Disallow: /api/ — documented public API, once-daily, 1s+ delay.",
   },
 ];

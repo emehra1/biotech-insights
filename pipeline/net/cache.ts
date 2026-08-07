@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 /**
@@ -88,6 +88,25 @@ export class HttpCache {
   async writeRaw(key: string, body: string): Promise<void> {
     await mkdir(this.rawDir, { recursive: true });
     await writeFile(this.rawPath(key), body, "utf8");
+  }
+
+  /**
+   * Forgets an entry entirely — the stored body AND the validator that would
+   * ask for it back.
+   *
+   * Dropping only the body is not enough, and this is the whole reason the
+   * method exists. `http-meta.json` is committed, so a bad ETag survives a
+   * cleared `.cache/raw`, a new runner, and a fresh clone. A source that once
+   * cached an interstitial would keep sending that ETag, keep earning a 304 for
+   * a page nobody wants, and keep failing with a status code that says the
+   * fetch went fine.
+   */
+  async purge(key: string): Promise<void> {
+    if (this.meta.entries[key]) {
+      delete this.meta.entries[key];
+      this.dirty = true;
+    }
+    await rm(this.rawPath(key), { force: true });
   }
 
   /**

@@ -119,6 +119,16 @@ negotiable:
   articles. `pipeline/extract/article-class.ts` tells them apart by the DOI
   prefix, so "it appeared in Nature" no longer scores a book review as a
   landmark paper.
+
+  These feeds need a cookie jar, which is why `pipeline/net/cookies.ts` exists.
+  When nature.com's edge cache misses, it answers a cookie-less client with a
+  303 into `idp.nature.com`, which mints an anonymous session and bounces you
+  back — and on 2026-08-07 that bounce returned a Fastly bot-management
+  challenge page (HTTP 200, `text/html`) for 8 of 11 feeds from the runner.
+  Keeping the session it hands out collapses the whole thing to one bounce per
+  run. Do not "optimise" it by inventing a cookie value: the IdP does not check
+  them today, and fabricating a session to skirt a mechanism the publisher is
+  deliberately running is a different thing from accepting one it offered.
 - **Cell Press, Lancet, Science, NEJM, JAMA's specialty titles** — via Europe
   PMC, one source per family so each gets its own daily allowance. Their own
   feeds return 403 to datacenter IPs, and that is enforcement rather than an
