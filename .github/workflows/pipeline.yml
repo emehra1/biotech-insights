@@ -56,16 +56,28 @@ jobs:
       weekly_outcome: ${{ steps.weekly.outcome }}
       date: ${{ steps.when.outputs.date }}
     steps:
-      - uses: actions/checkout@v4
+      # `ref:` is load-bearing, not tidiness. Without it checkout pins to
+      # `github.sha` — the SHA at QUEUE time — and two runs dispatched twelve
+      # seconds apart on 2026-08-07 both checked out the same commit, so the
+      # second regenerated data against a tree two commits stale and could not
+      # push it. `concurrency` does not help: it serializes the runs but not the
+      # SHA they were frozen at. Taking the branch tip means the pipeline reads
+      # the current seen-store and its push is a fast-forward.
+      #
+      # The trade: re-running an old run now uses today's code, not the code it
+      # was dispatched against. For a daily digest that is the wanted behaviour.
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
 
       - run: npm ci
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: |
             .next/cache
@@ -104,24 +116,21 @@ jobs:
 
       # Runs even on failure so state/last-run.json lands and the site can show
       # an honest staleness banner.
+      #
+      # `continue-on-error` for the same reason the digest step has it, one step
+      # later: everything below publishes the site, and a data commit that could
+      # not be pushed must not also take github.io down. Run 31208380147 failed
+      # here and skipped configure-pages, the Next build and the artifact
+      # upload, so `deploy` never ran either — one push conflict, and the site
+      # silently stopped republishing. Nothing downstream reads `build.result`;
+      # the email gate and the failure report both read `commit_outcome`.
       - id: commit
         if: always()
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data .cache/http-meta.json
-          if git diff --cached --quiet; then
-            echo "nothing to commit"
-            exit 0
-          fi
-          git commit -m "data: digest ${{ steps.when.outputs.date || 'run' }} [skip ci]"
-          for attempt in 1 2 3; do
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" \
-              && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
-            sleep $((attempt * 5))
-          done
-          echo "::error::could not push data commit after 3 attempts"
-          exit 1
+        continue-on-error: true
+        run: >-
+          bash scripts/commit-data.sh
+          "data: digest ${{ steps.when.outputs.date || 'run' }} [skip ci]"
+          error data .cache/http-meta.json
 
       - id: pages
         uses: actions/configure-pages@v6
@@ -226,10 +235,10 @@ jobs:
     env:
       TZ: America/New_York
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref_name }}
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -277,37 +286,32 @@ jobs:
       # arrived.
       - name: Record that the digest was emailed
         if: success()
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/digests
-          if git diff --cached --quiet; then
-            echo "nothing to record"
-            exit 0
-          fi
-          git commit -m "data: mark digest emailed [skip ci]"
-          for attempt in 1 2 3; do
-            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" \
-              && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
-            sleep $((attempt * 5))
-          done
-          echo "::warning::could not push the emailedAt marker — a re-run may resend this digest"
+        run: >-
+          bash scripts/commit-data.sh
+          "data: mark digest emailed [skip ci]"
+          warning data/digests
 
   report-failure:
     # `email` is in needs so a broken SMTP config is reported too — previously a
     # send failure was silent, which is the one failure the reader notices.
     needs: [build, deploy, email]
+    # commit_outcome is tested explicitly. The commit step is now
+    # `continue-on-error` so a failed data push cannot skip the site publish,
+    # which means `build.result` stays 'success' through exactly the failure
+    # this job most needs to report — the digest generated and then did not
+    # reach the repo, so nothing downstream can read it.
     if: >-
       !cancelled()
       && (needs.build.result == 'failure'
       || needs.build.outputs.digest_outcome == 'failure'
+      || needs.build.outputs.commit_outcome == 'failure'
       || needs.deploy.result == 'failure'
       || needs.email.result == 'failure')
     runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v9
         # Passed through env, not interpolated into the script body: these are
         # all fixed enums today, but a template hole in a `script:` block is a
         # bad habit to keep around.
