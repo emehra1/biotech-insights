@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-11T12:00:28.712Z",
+  "generatedAt": "2026-08-12T12:01:38.343Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 4
+      "count": 6
+    },
+    {
+      "term": "Epicrispr Biotechnologies",
+      "count": 2
+    },
+    {
+      "term": "Ex-Legend",
+      "count": 2
     },
     {
       "term": "MoonLake Immunotherapeutics",
-      "count": 2
-    },
-    {
-      "term": "PacBio",
-      "count": 2
-    },
-    {
-      "term": "Monday",
       "count": 2
     },
     {
