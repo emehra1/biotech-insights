@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-12T12:01:38.343Z",
+  "generatedAt": "2026-08-13T12:02:32.145Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 6
+      "count": 9
     },
     {
       "term": "Epicrispr Biotechnologies",
@@ -14,11 +14,23 @@
       "count": 2
     },
     {
-      "term": "MoonLake Immunotherapeutics",
+      "term": "Legend Biotech's",
+      "count": 2
+    },
+    {
+      "term": "AbCellera",
       "count": 2
     },
     {
       "term": "Drug Administration",
+      "count": 2
+    },
+    {
+      "term": "Otsuka Pharmaceutical Development",
+      "count": 2
+    },
+    {
+      "term": "Commercialization",
       "count": 2
     }
   ]
