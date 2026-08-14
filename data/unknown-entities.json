@@ -1,36 +1,16 @@
 {
-  "generatedAt": "2026-08-13T12:02:32.145Z",
+  "generatedAt": "2026-08-14T11:59:54.595Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 9
+      "count": 11
     },
     {
       "term": "Epicrispr Biotechnologies",
       "count": 2
     },
     {
-      "term": "Ex-Legend",
-      "count": 2
-    },
-    {
-      "term": "Legend Biotech's",
-      "count": 2
-    },
-    {
-      "term": "AbCellera",
-      "count": 2
-    },
-    {
       "term": "Drug Administration",
-      "count": 2
-    },
-    {
-      "term": "Otsuka Pharmaceutical Development",
-      "count": 2
-    },
-    {
-      "term": "Commercialization",
       "count": 2
     }
   ]
