@@ -1,16 +1,24 @@
 {
-  "generatedAt": "2026-08-14T11:59:54.595Z",
+  "generatedAt": "2026-08-15T11:37:16.598Z",
   "candidates": [
     {
-      "term": "Lead",
-      "count": 11
+      "term": "BioCryst",
+      "count": 2
     },
     {
-      "term": "Epicrispr Biotechnologies",
+      "term": "UnitedHealthcare",
+      "count": 2
+    },
+    {
+      "term": "Capricor",
       "count": 2
     },
     {
       "term": "Drug Administration",
+      "count": 2
+    },
+    {
+      "term": "Lead",
       "count": 2
     }
   ]
