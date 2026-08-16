@@ -1,0 +1,599 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W33",
+  "start": "2026-08-10",
+  "end": "2026-08-16",
+  "generatedAt": "2026-08-16T11:38:06.349Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 3,
+    "items": [
+      {
+        "label": "randomised",
+        "terms": [
+          "randomised",
+          "controlled",
+          "phase",
+          "multicentre",
+          "label",
+          "double",
+          "weekly",
+          "iqr 20",
+          "blind",
+          "psma-617",
+          "psma-11",
+          "iqr 62",
+          "iqr 14",
+          "psma",
+          "adt",
+          "apmn",
+          "177lu",
+          "modulator",
+          "naive",
+          "psmaddition",
+          "semaglutide",
+          "iqr 24",
+          "ruxolitinib",
+          "jak1",
+          "gvhd",
+          "hsct",
+          "ii-iv",
+          "graft",
+          "haploidentical",
+          "sensitive",
+          "funding uk medical",
+          "qol",
+          "postmastectomy",
+          "chest",
+          "radiotherapy",
+          "supremo",
+          "hpv31",
+          "immunogenicity",
+          "papillomavirus",
+          "japan",
+          "daily"
+        ],
+        "docCount": 44,
+        "lift": 4.56,
+        "score": 14.53,
+        "itemIds": [
+          "82c82d2f0988d43f",
+          "5be12d8db444557b",
+          "b689c07599f43202",
+          "5e4e3b88aa5da568",
+          "21c9e8dd21d34dcd",
+          "0087a585426414d7",
+          "0a83f1af8488b4c4",
+          "d4b2e8f3d5f5d052"
+        ]
+      },
+      {
+        "label": "cancer",
+        "terms": [
+          "cancer",
+          "breast",
+          "arpi",
+          "androgen",
+          "prevalence",
+          "chronology",
+          "colibactin",
+          "mutational",
+          "spectra",
+          "japanese",
+          "negative",
+          "breast cancer",
+          "prostate cancer",
+          "prostate",
+          "colorectal",
+          "colorectal cancer",
+          "protagonist therapeutics",
+          "ahead",
+          "triple",
+          "zealand pharma",
+          "sells",
+          "bond-003",
+          "iqr 22",
+          "cretostimogene",
+          "grenadenorepvec",
+          "eastern cooperative oncology",
+          "funding cg oncology",
+          "e2f",
+          "intravesical",
+          "unresponsive"
+        ],
+        "docCount": 68,
+        "lift": 2.77,
+        "score": 12.11,
+        "itemIds": [
+          "43929472a0bb6de5",
+          "2b3de4fc982d8054",
+          "e84c10768db2fa3b",
+          "c7b4954323c6ebe0",
+          "ee5151e611160587",
+          "5be12d8db444557b",
+          "5e4e3b88aa5da568",
+          "75e4904b2e2abddb"
+        ]
+      },
+      {
+        "label": "signaling",
+        "terms": [
+          "signaling",
+          "drive",
+          "jak-stat",
+          "tcmr",
+          "isg",
+          "distinguishes",
+          "rejection",
+          "tnfr1",
+          "connects",
+          "oxidation",
+          "ngf",
+          "ptn",
+          "somatosensory",
+          "nerves",
+          "pathologic",
+          "formation",
+          "physis",
+          "pleiotrophin",
+          "impaired",
+          "fatty",
+          "adiponectin"
+        ],
+        "docCount": 22,
+        "lift": 4.53,
+        "score": 10.22,
+        "itemIds": [
+          "c12ebffce5716466",
+          "71708f0e97869a2b",
+          "427ccb48f874bd79",
+          "9832a0e926f6b766",
+          "0727b8bcfb05d6a1"
+        ]
+      },
+      {
+        "label": "multiple myeloma",
+        "terms": [
+          "multiple myeloma",
+          "multiple",
+          "myeloma",
+          "successor"
+        ],
+        "docCount": 15,
+        "lift": 6,
+        "score": 10.01,
+        "itemIds": [
+          "8c83a0505cd2ecec",
+          "859329170f665e24",
+          "92a4739a83429471",
+          "fd12af70fd99f493",
+          "7a8a7e135b833064",
+          "3512deb819ee82a0",
+          "4639c03fcd8a37ae",
+          "a8b3900c6c224ba9"
+        ]
+      },
+      {
+        "label": "gene editing",
+        "terms": [
+          "gene editing",
+          "prime",
+          "mechanistic",
+          "crispr",
+          "screens",
+          "ptc",
+          "bankruptcy",
+          "h3k4",
+          "setd7",
+          "h3k4me1",
+          "solid",
+          "tumours",
+          "sensitivity"
+        ],
+        "docCount": 32,
+        "lift": 3.32,
+        "score": 9.8,
+        "itemIds": [
+          "e84c10768db2fa3b",
+          "39a5c8210155ef4e",
+          "eb042473c6bbbb6d",
+          "4c69e7fb2f081f72",
+          "76ab0b9d3647dd27",
+          "d71ce7573e904647",
+          "47aa826ed619a6c7",
+          "76d8b9cf380377f2"
+        ]
+      },
+      {
+        "label": "cell therapy",
+        "terms": [
+          "cell therapy",
+          "transplantation",
+          "bmal1",
+          "opc",
+          "guide",
+          "oligodendrocyte",
+          "precursor",
+          "haematopoietic",
+          "sclerosis",
+          "shortened",
+          "secrete",
+          "soluble",
+          "hypomyelination"
+        ],
+        "docCount": 29,
+        "lift": 3.05,
+        "score": 8.66,
+        "itemIds": [
+          "581c8b83659ec625",
+          "b689c07599f43202",
+          "55dc2755ff45dd75",
+          "21c9e8dd21d34dcd",
+          "7cfc71a58cfb3a98",
+          "9f45058b46ac89ca",
+          "dae0f72a092affcd",
+          "494e761e7d302b0d"
+        ]
+      },
+      {
+        "label": "blood",
+        "terms": [
+          "blood"
+        ],
+        "docCount": 13,
+        "lift": 4.93,
+        "score": 8.29,
+        "itemIds": [
+          "43929472a0bb6de5",
+          "bd0d69462b641ffb",
+          "fe47591a37244254",
+          "0e90f2eb6fcae1d0",
+          "1955899e5919921c",
+          "487149681dd1e7d3",
+          "0e45b1c7d7c02257",
+          "e2b4295d7fb96cb2"
+        ]
+      },
+      {
+        "label": "reveals",
+        "terms": [
+          "reveals",
+          "atlas",
+          "intact",
+          "ovaries",
+          "reserve",
+          "inflammasome",
+          "pyrin",
+          "t43i",
+          "asc",
+          "terminal"
+        ],
+        "docCount": 27,
+        "lift": 2.99,
+        "score": 8.22,
+        "itemIds": [
+          "f38d3988aea45501",
+          "52fc3e0291e0c1fa",
+          "d11521ff09541d9b",
+          "0b699f01eb0aa4c2",
+          "ba9836a62c15a119",
+          "a5c47c7f455edc44",
+          "c288be5224b6560f",
+          "693bca797b214134"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "5e26a0aa5c9180d2",
+        "title": "Replimune wins FDA approval after melanoma drug was twice rejected"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "cf61d957a9cd5745",
+        "title": "FDA Approves New Engineered Viral Immunotherapy for Patients with Treatment-Resistant Advanced Melanoma"
+      },
+      {
+        "itemId": "8ef73e68ad61443a",
+        "title": "Phase I Trial Representation and Geographical Distribution in Mesothelioma and Thymic Epithelial Tumors"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "1dfb770a0718dd76",
+        "title": "Oncolytic virus nabs FDA approval"
+      },
+      {
+        "itemId": "0948f0bc4418efed",
+        "title": "FDA Approves Hypertriglyceridemia Drug That May Reduce Pancreatitis Risk"
+      },
+      {
+        "itemId": "cd60610829dc6dd8",
+        "title": "FDA Authorizes 20 Nicotine Pouches to Be Marketed With Modified Risk Claim"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "d0475c3e569bf892",
+        "title": "CytoDyn’s leronlimab reaffirms HIV potential after combo treatment eradicates virus in infant macaques"
+      },
+      {
+        "itemId": "3e906a7db359c2ff",
+        "title": "Pharmalittle: We’re reading about Lilly ‘black market’ lawsuits, pushback over Trump vaccine plan, and more"
+      },
+      {
+        "itemId": "487149681dd1e7d3",
+        "title": "Zealand sells its rights to Takeda’s blood cancer drug for $100M ahead of FDA approval decision"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "92a4739a83429471",
+        "title": "FDA approves Bristol Myers' multiple myeloma successor"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "487149681dd1e7d3",
+        "title": "Zealand sells its rights to Takeda’s blood cancer drug for $100M ahead of FDA approval decision"
+      },
+      {
+        "itemId": "7a8a7e135b833064",
+        "title": "Biogen's monoclonal antibody felzartamab wins first global approval in China"
+      },
+      {
+        "itemId": "1cb2b3d59f6a5226",
+        "title": "PDE3A-SLFN12 Molecular Glues Target Multiple KIT D816V Cell Types in Preclinical Models of Mast Cell Malignancies"
+      },
+      {
+        "itemId": "3512deb819ee82a0",
+        "title": "BMS bags first FDA approval for CELMoD franchise with Zenbexus multiple myeloma nod"
+      },
+      {
+        "itemId": "f25f13fbaa04f226",
+        "title": "Capricor soars on plan to amend DMD filing after adcomm setback"
+      },
+      {
+        "itemId": "4639c03fcd8a37ae",
+        "title": "PBMs agree to display TrumpRx drug prices"
+      },
+      {
+        "itemId": "a8b3900c6c224ba9",
+        "title": "FDA approves Bristol multiple myeloma treatment, marking debut of novel drug class"
+      },
+      {
+        "itemId": "b6dd00a3c8ed553a",
+        "title": "Bristol Myers wins ‘milestone’ FDA approval of myeloma drug acquired from Celgene"
+      },
+      {
+        "itemId": "92a4739a83429471",
+        "title": "FDA approves Bristol Myers' multiple myeloma successor"
+      },
+      {
+        "itemId": "88bd469383cc85b0",
+        "title": "Assessing Drug Efficacy After Multiple Negative Trials-Gepirone's Journey Through the FDA."
+      },
+      {
+        "itemId": "7a8a7e135b833064",
+        "title": "Biogen's monoclonal antibody felzartamab wins first global approval in China"
+      },
+      {
+        "itemId": "3512deb819ee82a0",
+        "title": "BMS bags first FDA approval for CELMoD franchise with Zenbexus multiple myeloma nod"
+      },
+      {
+        "itemId": "f25f13fbaa04f226",
+        "title": "Capricor soars on plan to amend DMD filing after adcomm setback"
+      },
+      {
+        "itemId": "92a4739a83429471",
+        "title": "FDA approves Bristol Myers' multiple myeloma successor"
+      },
+      {
+        "itemId": "05302645c3a38375",
+        "title": "First dual BAFF and APRIL inhibitor nabs FDA approval"
+      },
+      {
+        "itemId": "4639c03fcd8a37ae",
+        "title": "PBMs agree to display TrumpRx drug prices"
+      },
+      {
+        "itemId": "a8b3900c6c224ba9",
+        "title": "FDA approves Bristol multiple myeloma treatment, marking debut of novel drug class"
+      },
+      {
+        "itemId": "b6dd00a3c8ed553a",
+        "title": "Bristol Myers wins ‘milestone’ FDA approval of myeloma drug acquired from Celgene"
+      },
+      {
+        "itemId": "487149681dd1e7d3",
+        "title": "Zealand sells its rights to Takeda’s blood cancer drug for $100M ahead of FDA approval decision"
+      },
+      {
+        "itemId": "838172675fb5697e",
+        "title": "Orexin receptor agonist secures landmark narcolepsy approval"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "43929472a0bb6de5",
+        "fe47591a37244254",
+        "d6b1872375ba9b11"
+      ],
+      "missed": [
+        "5be12d8db444557b",
+        "5be12d8db444557b",
+        "5be12d8db444557b",
+        "5be12d8db444557b",
+        "7f19c23c847950f6",
+        "5be12d8db444557b",
+        "4cf39b00b143a2e1",
+        "5be12d8db444557b",
+        "4cf39b00b143a2e1"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 24,
+      "totalUsdM": 17399,
+      "largest": {
+        "itemId": "abfedef866dc1a16",
+        "usdM": 2900
+      }
+    },
+    "financings": {
+      "count": 36,
+      "totalUsdM": 325698,
+      "byRound": {
+        "IPO": 5,
+        "financing": 25,
+        "Series B": 3,
+        "Series A": 2,
+        "seed": 1
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07754461",
+        "title": "A Study to Test Whether Survodutide Helps People With Type 2 Diabetes Control Their Blood Sugar",
+        "sponsor": "Boehringer Ingelheim"
+      },
+      {
+        "nct": "NCT07592689",
+        "title": "A Phase 3 Trial of DT120 for Major Depressive Disorder (Ascend)",
+        "sponsor": "Definium Therapeutics"
+      },
+      {
+        "nct": "NCT07342478",
+        "title": "ROCKET-CLL Global Phase 3 Study: Rocbrutinib vs Pirtobrutinib in cBTKi-Pretreated R/R CLL/SLL",
+        "sponsor": "Newave Pharmaceutical"
+      },
+      {
+        "nct": "NCT07587242",
+        "title": "A Phase 3 Study to Evaluate the Safety and Efficacy of AOC 1044 (Also Referred to as Delpacibart Zotadirsen) in Participants With DMD With Gene Mutations Amenable to Exon 44 Skipping",
+        "sponsor": "Avidity Biosciences"
+      },
+      {
+        "nct": "NCT07741045",
+        "title": "Phase Ⅲ Clinical Trial to Evaluate the Efficacy and Safety of TJ0113 Capsules in Patients With Early-Onset Parkinson's Disease"
+      },
+      {
+        "nct": "NCT07675135",
+        "title": "A Phase 3 Efficacy and Safety Study of HBS-301 in Participants With Narcolepsy",
+        "sponsor": "Harmony Biosciences"
+      },
+      {
+        "nct": "NCT07761117",
+        "title": "A Study to Investigate CV Outcomes With Elecoglipron Compared With Placebo in Adult Participants With HFpEF or HFmrEF",
+        "sponsor": "AstraZeneca"
+      },
+      {
+        "nct": "NCT06641089",
+        "title": "Evaluation of Sonelokimab in Patients With Active Psoriatic Arthritis and Anti-TNFα Inadequate Response"
+      },
+      {
+        "nct": "NCT07761429",
+        "title": "A Phase II/III Study of F520 Combined With Paclitaxel Plus Carboplatin in the Treatment of Cancer of Unknown Primary (CUP)",
+        "sponsor": "Shandong New Time Pharmaceutical"
+      },
+      {
+        "nct": "NCT07759128",
+        "title": "A Trial of the Efficacy and Safety of Fixed Doses of SEP-363856 in Adults With Generalized Anxiety Disorder",
+        "sponsor": "Otsuka"
+      },
+      {
+        "nct": "NCT06914609",
+        "title": "REVEAL: A Phase 3 Study of Obudanersen (ION582) in Angelman Syndrome",
+        "sponsor": "Ionis"
+      },
+      {
+        "nct": "NCT06463587",
+        "title": "Efficacy and Safety of a New Formulation of Oral Cladribine Compared With Placebo in Participants With Generalized Myasthenia Gravis (MyClad)",
+        "sponsor": "Merck KGaA"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_4ae9fcfbdf",
+      "leadItemId": "c4e399dd58a15808",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_333af8cdd1",
+      "leadItemId": "c4e399dd58a15808",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_333af8cdd1",
+      "leadItemId": "c4e399dd58a15808",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_99a8fa92d9",
+      "leadItemId": "43929472a0bb6de5",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_7e4a92ec25",
+      "leadItemId": "5e26a0aa5c9180d2",
+      "publisherCount": 3
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "phase",
+      "delta": 9.2
+    },
+    {
+      "term": "cancer",
+      "delta": 8.2
+    },
+    {
+      "term": "controlled",
+      "delta": 6.9
+    },
+    {
+      "term": "randomised",
+      "delta": 6.6
+    },
+    {
+      "term": "aging",
+      "delta": 6.4
+    },
+    {
+      "term": "gene editing",
+      "delta": 4.4
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov",
+    "NEJM (via Europe PMC)"
+  ],
+  "lexiconSuggestions": [
+    "randomised",
+    "controlled",
+    "phase",
+    "cancer",
+    "signaling",
+    "multiple",
+    "blood",
+    "reveals",
+    "myeloma",
+    "aging"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T11:37:16.598Z",
+  "generatedAt": "2026-08-16T11:38:05.796Z",
   "candidates": [
     {
       "term": "BioCryst",
@@ -15,10 +15,6 @@
     },
     {
       "term": "Drug Administration",
-      "count": 2
-    },
-    {
-      "term": "Lead",
       "count": 2
     }
   ]
