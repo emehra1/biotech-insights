@@ -1,12 +1,20 @@
 {
-  "generatedAt": "2026-08-18T11:44:23.105Z",
+  "generatedAt": "2026-08-19T11:44:03.392Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 4
+      "count": 6
+    },
+    {
+      "term": "Merck",
+      "count": 2
     },
     {
       "term": "BioCryst",
+      "count": 2
+    },
+    {
+      "term": "Amylyx",
       "count": 2
     },
     {
