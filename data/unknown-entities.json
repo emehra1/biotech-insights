@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T11:44:03.392Z",
+  "generatedAt": "2026-08-20T11:46:15.809Z",
   "candidates": [
     {
       "term": "Lead",
@@ -7,19 +7,7 @@
     },
     {
       "term": "Merck",
-      "count": 2
-    },
-    {
-      "term": "BioCryst",
-      "count": 2
-    },
-    {
-      "term": "Amylyx",
-      "count": 2
-    },
-    {
-      "term": "Capricor",
-      "count": 2
+      "count": 3
     },
     {
       "term": "Drug Administration",
