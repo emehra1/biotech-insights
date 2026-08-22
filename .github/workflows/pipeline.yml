@@ -291,6 +291,32 @@ jobs:
           "data: mark digest emailed [skip ci]"
           warning data/digests
 
+      # Dead-man's switch. Every other alarm in this file shares a failure domain
+      # with the thing it watches: a GitHub issue needs the workflow to run, and
+      # the "email failing" report needs the email job to be reached at all. If
+      # the schedule is silently dropped, the repo's cron is auto-disabled after
+      # 60 days, or the runner never starts, nothing here fires and the silence
+      # is indistinguishable from a quiet news day.
+      #
+      # So the last word belongs to somebody else's infrastructure: ping on
+      # success, and if no ping lands inside the grace window healthchecks.io
+      # emails a human. No-ops until HEALTHCHECK_URL is set, so this is inert
+      # until the check exists. Never fails the job — a monitoring call that
+      # can break a delivered digest is worse than no monitoring.
+      - name: Ping dead-man's switch
+        if: success()
+        continue-on-error: true
+        env:
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+        run: |
+          if [ -z "${HEALTHCHECK_URL:-}" ]; then
+            echo "HEALTHCHECK_URL unset - skipping (see README: Monitoring)."
+            exit 0
+          fi
+          curl -fsS -m 10 --retry 3 --retry-delay 2 \
+            "${HEALTHCHECK_URL}?rid=${GITHUB_RUN_ID}" \
+            && echo "pinged" || echo "ping failed (ignored)"
+
   report-failure:
     # `email` is in needs so a broken SMTP config is reported too — previously a
     # send failure was silent, which is the one failure the reader notices.

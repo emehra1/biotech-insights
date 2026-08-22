@@ -8,6 +8,7 @@
     "prebuild": "tsx pipeline/emit/build-site-data.ts",
     "build": "next build",
     "start": "next start",
+    "prepipeline": "bash scripts/assert-fresh.sh",
     "pipeline": "tsx pipeline/run.ts",
     "weekly": "tsx pipeline/rollup/run-weekly.ts",
     "email": "node --env-file-if-exists=.env --import tsx scripts/send-email.ts",
