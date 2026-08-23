@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W34",
+  "start": "2026-08-17",
+  "end": "2026-08-23",
+  "generatedAt": "2026-08-23T11:39:42.451Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 4,
+    "items": [
+      {
+        "label": "ovarian",
+        "terms": [
+          "ovarian",
+          "adiponectin",
+          "intact",
+          "ovaries",
+          "reserve",
+          "delays",
+          "physical",
+          "dimensional"
+        ],
+        "docCount": 21,
+        "lift": 3.75,
+        "score": 8.75,
+        "itemIds": [
+          "99c4a678884c0b8b",
+          "9832a0e926f6b766",
+          "693bca797b214134"
+        ]
+      },
+      {
+        "label": "type 2 diabetes",
+        "terms": [
+          "type 2 diabetes",
+          "overweight",
+          "weekly",
+          "step 12",
+          "codex",
+          "pancreas",
+          "semaglutide",
+          "chinese"
+        ],
+        "docCount": 25,
+        "lift": 2.94,
+        "score": 7.77,
+        "itemIds": [
+          "e43e446334e0dbeb",
+          "7a678b029ffab91a",
+          "175b4ad6abc1c067",
+          "96eb032ce14b2089",
+          "8146a36342a932df",
+          "9e31bdb9f755dd6b",
+          "e6588708dbcb1418",
+          "7d48dc8636c5be23"
+        ]
+      },
+      {
+        "label": "inflammation",
+        "terms": [
+          "inflammation",
+          "noncircadian",
+          "epidermis",
+          "amplifies",
+          "persistent",
+          "gdf15",
+          "gfral",
+          "hpa",
+          "independently",
+          "glucocorticoid"
+        ],
+        "docCount": 15,
+        "lift": 3.65,
+        "score": 7.23,
+        "itemIds": [
+          "427ccb48f874bd79",
+          "0727b8bcfb05d6a1",
+          "5794241eae50b24c",
+          "a3e97fa676f09095",
+          "dc0637bd62611784"
+        ]
+      },
+      {
+        "label": "multicentre",
+        "terms": [
+          "multicentre",
+          "randomised",
+          "inferiority",
+          "daily",
+          "tablet",
+          "islend",
+          "islatravir",
+          "lenacapavir"
+        ],
+        "docCount": 21,
+        "lift": 2.97,
+        "score": 7.2,
+        "itemIds": [
+          "e43e446334e0dbeb",
+          "4cf39b00b143a2e1",
+          "b267cb334a5569d0",
+          "7d48dc8636c5be23",
+          "779c2e314e485e14",
+          "a6ede12f1354a595",
+          "bd8797e390b7ce4f"
+        ]
+      },
+      {
+        "label": "regeneron",
+        "terms": [
+          "regeneron",
+          "turns",
+          "garetosmab",
+          "pasatru",
+          "scores"
+        ],
+        "docCount": 14,
+        "lift": 3.73,
+        "score": 7.1,
+        "itemIds": [
+          "6d040ce9d42419b9",
+          "2d29f9499d06d563",
+          "b1d9432061976129",
+          "1ac7aacf305475e3",
+          "3d431dacd8121ce4",
+          "f954b9899dadc43b"
+        ]
+      },
+      {
+        "label": "slows",
+        "terms": [
+          "slows",
+          "mrna",
+          "r394w",
+          "angiopoietin",
+          "glomerular",
+          "wt1"
+        ],
+        "docCount": 13,
+        "lift": 3.8,
+        "score": 6.95,
+        "itemIds": [
+          "92b7a99c0c796f57",
+          "99c4a678884c0b8b",
+          "7bef04e0aa1782ec"
+        ]
+      },
+      {
+        "label": "ultragenyx",
+        "terms": [
+          "ultragenyx",
+          "glycogen",
+          "storage",
+          "genglycos"
+        ],
+        "docCount": 10,
+        "lift": 4.33,
+        "score": 6.69,
+        "itemIds": [
+          "12600bf34f5c32e2",
+          "08fa1adf1d320641",
+          "1ac7aacf305475e3",
+          "f86974ea63cc544b",
+          "a6e7f8dc019044cd"
+        ]
+      },
+      {
+        "label": "label",
+        "terms": [
+          "label",
+          "iqr 23",
+          "lenvatinib",
+          "vegfr",
+          "belzutifan",
+          "litespark",
+          "gastric cancer",
+          "oxaliplatin",
+          "capital",
+          "cabozantinib",
+          "adjuvant"
+        ],
+        "docCount": 21,
+        "lift": 2.7,
+        "score": 6.58,
+        "itemIds": [
+          "4cf39b00b143a2e1",
+          "b208982006498257",
+          "8c541b768403984c",
+          "7d48dc8636c5be23",
+          "bd8797e390b7ce4f"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "7a8a7e135b833064",
+        "title": "Biogen's monoclonal antibody felzartamab wins first global approval in China"
+      },
+      {
+        "itemId": "3512deb819ee82a0",
+        "title": "BMS bags first FDA approval for CELMoD franchise with Zenbexus multiple myeloma nod"
+      },
+      {
+        "itemId": "92a4739a83429471",
+        "title": "FDA approves Bristol Myers' multiple myeloma successor"
+      },
+      {
+        "itemId": "f25f13fbaa04f226",
+        "title": "Capricor soars on plan to amend DMD filing after adcomm setback"
+      },
+      {
+        "itemId": "4639c03fcd8a37ae",
+        "title": "PBMs agree to display TrumpRx drug prices"
+      },
+      {
+        "itemId": "a8b3900c6c224ba9",
+        "title": "FDA approves Bristol multiple myeloma treatment, marking debut of novel drug class"
+      },
+      {
+        "itemId": "05302645c3a38375",
+        "title": "First dual BAFF and APRIL inhibitor nabs FDA approval"
+      },
+      {
+        "itemId": "310142481dd36b87",
+        "title": "FDA clears Lantheus’ Alzheimer’s PET imaging agent Tauklarify"
+      },
+      {
+        "itemId": "7a8a7e135b833064",
+        "title": "Biogen's monoclonal antibody felzartamab wins first global approval in China"
+      },
+      {
+        "itemId": "3512deb819ee82a0",
+        "title": "BMS bags first FDA approval for CELMoD franchise with Zenbexus multiple myeloma nod"
+      },
+      {
+        "itemId": "f25f13fbaa04f226",
+        "title": "Capricor soars on plan to amend DMD filing after adcomm setback"
+      },
+      {
+        "itemId": "bb9961730e105b96",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "8b62009325a0c8e1",
+        "title": "Leo Pharma buys rare skin disease drug in $435M deal"
+      },
+      {
+        "itemId": "12600bf34f5c32e2",
+        "title": "FDA approves Ultragenyx's gene therapy Genglycos for glycogen storage disorder"
+      },
+      {
+        "itemId": "a0130241e4fc8476",
+        "title": "Capricor Therapeutics’ Duchenne treatment is heading for an FDA rejection"
+      },
+      {
+        "itemId": "88f6f775ba99ac3d",
+        "title": "FDA Approves First Therapy for Patients aged 8 years and older with Glycogen Storage Disease Type Ia"
+      },
+      {
+        "itemId": "6d040ce9d42419b9",
+        "title": "Regeneron drug for disease that causes dangerous bone growth earns FDA approval"
+      },
+      {
+        "itemId": "2d29f9499d06d563",
+        "title": "FDA approves Regeneron’s garetosmab for disease that turns tissue to bone"
+      },
+      {
+        "itemId": "ea8d55248c30e6c4",
+        "title": "Blood-brain Barrier (BBB) Opening Using Exablate Focused Ultrasound With Standard of Care Treatment of NSCLC Brain Mets"
+      },
+      {
+        "itemId": "b1d9432061976129",
+        "title": "Regeneron's Pasatru scores FDA approval in ultra-rare bone lesions disorder"
+      },
+      {
+        "itemId": "91bea2dadf3cb620",
+        "title": "FDA Authorizes First-Of-Its-Kind Robotic Blood Draw Device"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "12600bf34f5c32e2",
+        "title": "FDA approves Ultragenyx's gene therapy Genglycos for glycogen storage disorder"
+      },
+      {
+        "itemId": "14cb51367611a721",
+        "title": "Meet Aletta: The first FDA approved robotic blood draw device"
+      },
+      {
+        "itemId": "e6588708dbcb1418",
+        "title": "Lilly’s long-acting insulin wins NICE blessing ahead of potential UK approval"
+      },
+      {
+        "itemId": "3d431dacd8121ce4",
+        "title": "Regeneron to challenge Ipsen as FDA clears bone disease drug"
+      },
+      {
+        "itemId": "f86974ea63cc544b",
+        "title": "Ultragenyx, after setbacks, nabs first gene therapy approval"
+      },
+      {
+        "itemId": "88f6f775ba99ac3d",
+        "title": "FDA Approves First Therapy for Patients aged 8 years and older with Glycogen Storage Disease Type Ia"
+      },
+      {
+        "itemId": "6d040ce9d42419b9",
+        "title": "Regeneron drug for disease that causes dangerous bone growth earns FDA approval"
+      },
+      {
+        "itemId": "a0130241e4fc8476",
+        "title": "Capricor Therapeutics’ Duchenne treatment is heading for an FDA rejection"
+      },
+      {
+        "itemId": "2d29f9499d06d563",
+        "title": "FDA approves Regeneron’s garetosmab for disease that turns tissue to bone"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "b1d9432061976129",
+        "title": "Regeneron's Pasatru scores FDA approval in ultra-rare bone lesions disorder"
+      },
+      {
+        "itemId": "a6e7f8dc019044cd",
+        "title": "FDA approves Ultragenyx gene therapy"
+      },
+      {
+        "itemId": "1cb2b3d59f6a5226",
+        "title": "PDE3A-SLFN12 Molecular Glues Target Multiple KIT D816V Cell Types in Preclinical Models of Mast Cell Malignancies"
+      },
+      {
+        "itemId": "12600bf34f5c32e2",
+        "title": "FDA approves Ultragenyx's gene therapy Genglycos for glycogen storage disorder"
+      },
+      {
+        "itemId": "2b9b2bc95df017a2",
+        "title": "Intracranial Targeting of Cholesterol Processing Reveals a Therapeutic Vulnerability that Reprograms Glioblastoma and Promotes Antitumor Immunity"
+      },
+      {
+        "itemId": "88f6f775ba99ac3d",
+        "title": "FDA Approves First Therapy for Patients aged 8 years and older with Glycogen Storage Disease Type Ia"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "2d29f9499d06d563",
+        "title": "FDA approves Regeneron’s garetosmab for disease that turns tissue to bone"
+      },
+      {
+        "itemId": "b1d9432061976129",
+        "title": "Regeneron's Pasatru scores FDA approval in ultra-rare bone lesions disorder"
+      },
+      {
+        "itemId": "12600bf34f5c32e2",
+        "title": "FDA approves Ultragenyx's gene therapy Genglycos for glycogen storage disorder"
+      },
+      {
+        "itemId": "88f6f775ba99ac3d",
+        "title": "FDA Approves First Therapy for Patients aged 8 years and older with Glycogen Storage Disease Type Ia"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "2d29f9499d06d563",
+        "title": "FDA approves Regeneron’s garetosmab for disease that turns tissue to bone"
+      },
+      {
+        "itemId": "1dfb770a0718dd76",
+        "title": "Oncolytic virus nabs FDA approval"
+      },
+      {
+        "itemId": "a0130241e4fc8476",
+        "title": "Capricor Therapeutics’ Duchenne treatment is heading for an FDA rejection"
+      },
+      {
+        "itemId": "e6588708dbcb1418",
+        "title": "Lilly’s long-acting insulin wins NICE blessing ahead of potential UK approval"
+      },
+      {
+        "itemId": "14cb51367611a721",
+        "title": "Meet Aletta: The first FDA approved robotic blood draw device"
+      },
+      {
+        "itemId": "05302645c3a38375",
+        "title": "First dual BAFF and APRIL inhibitor nabs FDA approval"
+      },
+      {
+        "itemId": "91bea2dadf3cb620",
+        "title": "FDA Authorizes First-Of-Its-Kind Robotic Blood Draw Device"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "ab251b3c17f6b8e9"
+      ],
+      "missed": [
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 18,
+      "totalUsdM": 6736,
+      "largest": {
+        "itemId": "abfedef866dc1a16",
+        "usdM": 2900
+      }
+    },
+    "financings": {
+      "count": 26,
+      "totalUsdM": 189433,
+      "byRound": {
+        "financing": 26
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07767942",
+        "title": "Phase III Trial of UBT251 in Moderate-to-Severe OSA With Obesity: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Study.",
+        "sponsor": "The United Bio"
+      },
+      {
+        "nct": "NCT06925321",
+        "title": "A Phase 3 Efficacy and Safety Study of Fosmanogepix for the Treatment of Adult Patients With Invasive Mold Infections."
+      },
+      {
+        "nct": "NCT07066826",
+        "title": "Clinical Study to Evaluate the Efficacy and Safety of Huperzine A Controlled-Release Tablets in Patients With Mild-to-Moderate Dementia of the Alzheimer's Type",
+        "sponsor": "Wanbangde Pharmaceutical"
+      },
+      {
+        "nct": "NCT07688772",
+        "title": "A Clinical Study Evaluating the Efficacy and Safety of SHR-1819 Injection in Patients With Seasonal Allergic Rhinitis",
+        "sponsor": "Hengrui"
+      },
+      {
+        "nct": "NCT07767903",
+        "title": "A Trial of the Efficacy and Safety of a Fixed Dose of SEP-363856 in Adults With Generalized Anxiety Disorder",
+        "sponsor": "Otsuka"
+      },
+      {
+        "nct": "NCT07503444",
+        "title": "A Phase 3 Study of Fenfluramine Hydrochloride in Rett Syndrome"
+      },
+      {
+        "nct": "NCT06077760",
+        "title": "A Study of Intismeran Autogene (V940) Plus Pembrolizumab (MK-3475) Versus Placebo Plus Pembrolizumab in Participants With Non-small Cell Lung Cancer (V940-002)"
+      },
+      {
+        "nct": "NCT07771439",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease",
+        "sponsor": "Sanofi"
+      },
+      {
+        "nct": "NCT07770841",
+        "title": "Research Study on How Well Oral Semaglutide Works for Weight Loss in Adults With Excess Body Weight",
+        "sponsor": "Novo Nordisk"
+      },
+      {
+        "nct": "NCT07770828",
+        "title": "Phase 3 Study to Assess Efficacy, Safety & Tolerability of OCU410 For Geographic Atrophy Secondary to Dry AMD"
+      },
+      {
+        "nct": "NCT07621809",
+        "title": "Two Arm, Double-blind, Phase III Study Assessing Efficacy and Safety of Ianalumab Versus Placebo, in Participants With Sjögren's Disease With High Symptom Burden",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07299019",
+        "title": "A Study of Orelabrutinib in Patients With Secondary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_333af8cdd1",
+      "leadItemId": "c4e399dd58a15808",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_771cc1a9d7",
+      "leadItemId": "7c8c75930390a21a",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_9dbbc80be1",
+      "leadItemId": "ac9eedaa655cdee7",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_b50e5ee82b",
+      "leadItemId": "126fb837e10b5168",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_30fdcc4a01",
+      "leadItemId": "997e239dde482a03",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "aging",
+      "delta": 6.8
+    },
+    {
+      "term": "phase",
+      "delta": 5.5
+    },
+    {
+      "term": "type 2 diabetes",
+      "delta": 3.4
+    },
+    {
+      "term": "randomised",
+      "delta": 3.4
+    },
+    {
+      "term": "cancer",
+      "delta": 3.4
+    },
+    {
+      "term": "ovarian",
+      "delta": 3.3
+    }
+  ],
+  "degradedSources": [
+    "NEJM (via Europe PMC)",
+    "ClinicalTrials.gov",
+    "The Lancet (via Europe PMC)"
+  ],
+  "lexiconSuggestions": [
+    "ovarian",
+    "inflammation",
+    "multicentre",
+    "regeneron",
+    "slows",
+    "ultragenyx",
+    "label",
+    "signaling",
+    "protein",
+    "across"
+  ]
+}
