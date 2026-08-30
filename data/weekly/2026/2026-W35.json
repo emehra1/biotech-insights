@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W35",
+  "start": "2026-08-24",
+  "end": "2026-08-30",
+  "generatedAt": "2026-08-30T15:22:32.351Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 5,
+    "items": [
+      {
+        "label": "pancreatic",
+        "terms": [
+          "pancreatic",
+          "pancreatic cancer",
+          "revolution medicines",
+          "comprises",
+          "universally",
+          "coexisting",
+          "revolution",
+          "states",
+          "ras",
+          "greenlights",
+          "responsive",
+          "landmark",
+          "clinical oncology",
+          "gamechanger"
+        ],
+        "docCount": 23,
+        "lift": 4.29,
+        "score": 10.08,
+        "itemIds": [
+          "b380c839690f47b9",
+          "797e499fe8881859",
+          "1235831d1d31fff2",
+          "e9696d12e8a331a4",
+          "e0f9c5ce037c5cbd",
+          "f527dadde7798d77",
+          "af851c21aed27882",
+          "614af88708cc301d"
+        ]
+      },
+      {
+        "label": "specific",
+        "terms": [
+          "specific",
+          "traits",
+          "underlie",
+          "phenome",
+          "primate",
+          "glycosphingolipid",
+          "gatekeeper"
+        ],
+        "docCount": 21,
+        "lift": 3.84,
+        "score": 8.9,
+        "itemIds": [
+          "b3bcb89b350fff94",
+          "307cba7c019be19e",
+          "bc641d5e19d1c072",
+          "4e288a293419db34",
+          "4de3ee0c1b2f3922",
+          "63261acae57aee14",
+          "d70c084531a2bf94",
+          "75d06276b62c95af"
+        ]
+      },
+      {
+        "label": "group",
+        "terms": [
+          "group",
+          "randomised",
+          "parallel",
+          "achieve",
+          "eastern cooperative oncology",
+          "japanese",
+          "iqr 37",
+          "crizotinib",
+          "alectinib",
+          "e4512",
+          "dfs",
+          "surgically",
+          "eastern",
+          "cooperative",
+          "oncology",
+          "radiology",
+          "observation",
+          "american",
+          "college",
+          "network",
+          "adapted",
+          "intermediate",
+          "chemoradiotherapy",
+          "rectal"
+        ],
+        "docCount": 15,
+        "lift": 4.49,
+        "score": 8.39,
+        "itemIds": [
+          "7d48dc8636c5be23",
+          "e59d3836894f47bc",
+          "680d64ab7581a638",
+          "aa01f6d12d69d41b"
+        ]
+      },
+      {
+        "label": "transcription",
+        "terms": [
+          "transcription",
+          "active",
+          "counteracts",
+          "coalescence",
+          "replication"
+        ],
+        "docCount": 16,
+        "lift": 4.17,
+        "score": 8.24,
+        "itemIds": [
+          "a21615acd9f1e222",
+          "632c0e5c2b9a56ef",
+          "bc641d5e19d1c072",
+          "1ec0f41e890c1bc4",
+          "b380c839690f47b9"
+        ]
+      },
+      {
+        "label": "genetic",
+        "terms": [
+          "genetic"
+        ],
+        "docCount": 15,
+        "lift": 3.97,
+        "score": 7.7,
+        "itemIds": [
+          "3f0cb9cc0ec7d01c",
+          "95d4aee0cab6f7f9",
+          "b380c839690f47b9",
+          "f7b37fce9e87f88f",
+          "75d06276b62c95af",
+          "b077124fa922c234"
+        ]
+      },
+      {
+        "label": "roche",
+        "terms": [
+          "roche",
+          "hanmi",
+          "explored",
+          "dualitybio",
+          "lawmaker",
+          "reflection"
+        ],
+        "docCount": 14,
+        "lift": 4.12,
+        "score": 7.64,
+        "itemIds": [
+          "3b866211c8abc808",
+          "ce1447de2246bc5e",
+          "2782a887bba49485",
+          "e8f3c7d9f1bd98a1",
+          "375450b40c734c7a",
+          "86a60f4615ae61f9",
+          "942b5696ae32f167"
+        ]
+      },
+      {
+        "label": "architecture",
+        "terms": [
+          "architecture",
+          "hidden",
+          "onset"
+        ],
+        "docCount": 13,
+        "lift": 4.18,
+        "score": 7.45,
+        "itemIds": [
+          "2bc4c557f14857e8",
+          "4b21ea2e2afb1ea3",
+          "f7b37fce9e87f88f",
+          "75d06276b62c95af"
+        ]
+      },
+      {
+        "label": "multicentre",
+        "terms": [
+          "multicentre",
+          "mazdutide",
+          "gip",
+          "iqr 30",
+          "ria2016v",
+          "newborn",
+          "comparison",
+          "vpm1002"
+        ],
+        "docCount": 27,
+        "lift": 2.47,
+        "score": 6.78,
+        "itemIds": [
+          "7d48dc8636c5be23",
+          "e43e446334e0dbeb",
+          "4cf39b00b143a2e1",
+          "779c2e314e485e14",
+          "a6ede12f1354a595",
+          "78cbf9ada1bafa6f",
+          "e59d3836894f47bc",
+          "bd8797e390b7ce4f"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "838172675fb5697e",
+        "title": "Orexin receptor agonist secures landmark narcolepsy approval"
+      },
+      {
+        "itemId": "05302645c3a38375",
+        "title": "First dual BAFF and APRIL inhibitor nabs FDA approval"
+      },
+      {
+        "itemId": "14cb51367611a721",
+        "title": "Meet Aletta: The first FDA approved robotic blood draw device"
+      },
+      {
+        "itemId": "f4e6b86d160e6aa5",
+        "title": "FDA Approves Gene Therapy for Younger Children With Sickle Cell Disease"
+      },
+      {
+        "itemId": "3418741450a23ef6",
+        "title": "FDA approves Jazz's Ziihera in frontline gastric cancer"
+      },
+      {
+        "itemId": "df074800147ad683",
+        "title": "Johnson & Johnson scores 1st FDA label expansion for Imaavy"
+      },
+      {
+        "itemId": "4d613329a0217ea1",
+        "title": "FDA Approves at-Home Starting Dose for Anti-Amyloid Therapy"
+      },
+      {
+        "itemId": "fae30fd99f7a4b71",
+        "title": "FDA Approves First Oral PCSK9 Inhibitor to Lower LDL Cholesterol"
+      },
+      {
+        "itemId": "df1f73b59713f07d",
+        "title": "FDA Authorizes First Wearable Device That Continuously Monitors Both Ketone Levels and Blood Sugar"
+      },
+      {
+        "itemId": "3c8467f4a77c0bb8",
+        "title": "Implantica finally nabs FDA approval 8 years after EU green light for reflux implant"
+      },
+      {
+        "itemId": "bac29847d0f61eb0",
+        "title": "FDA approves Roivant therapy for rare autoimmune disease"
+      },
+      {
+        "itemId": "1235831d1d31fff2",
+        "title": "FDA approves new pancreatic cancer drug expected to usher in new era of treatment"
+      },
+      {
+        "itemId": "e9696d12e8a331a4",
+        "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer"
+      },
+      {
+        "itemId": "e0f9c5ce037c5cbd",
+        "title": "FDA approves Revolution Medicines' pancreatic cancer drug"
+      },
+      {
+        "itemId": "e8f3c7d9f1bd98a1",
+        "title": "Roche nabs expanded FDA approval for diagnostic tied to Jazz’s cancer drug"
+      },
+      {
+        "itemId": "f527dadde7798d77",
+        "title": "RevMed’s RAS inhibitor gains landmark FDA approval for pancreatic cancer"
+      },
+      {
+        "itemId": "af851c21aed27882",
+        "title": "FDA greenlights Revolution Medicines' pancreatic cancer gamechanger"
+      },
+      {
+        "itemId": "ab77137b8d4ed6e7",
+        "title": "FDA greenlights Abbott’s wearable sensor for capturing diabetic ketoacidosis"
+      },
+      {
+        "itemId": "53fdfe7405269657",
+        "title": "Revolution drug heralded as a pancreatic cancer breakthrough cleared by FDA"
+      },
+      {
+        "itemId": "3e8cc5eb20df58a6",
+        "title": "Mounjaro scores FDA approval to reduce CV risk; Teva to buy an approved drug"
+      },
+      {
+        "itemId": "c86332de3292d8cc",
+        "title": "Roivant's dermatomyositis drug Lisraya snags FDA approval"
+      },
+      {
+        "itemId": "8fbeee708649e529",
+        "title": "Cytokinetics details trial win for what could be its next approval"
+      },
+      {
+        "itemId": "d96404b899338d05",
+        "title": "#ESC26: Data in hand, Cytokinetics looks to expanded Myqorzo approval"
+      },
+      {
+        "itemId": "8203985f284da6fb",
+        "title": "Lilly scores Novo-pressuring Mounjaro expansion to curb heart risks in diabetes patients"
+      },
+      {
+        "itemId": "6df442b365f6836f",
+        "title": "Moderna raises $2.6B to support cancer work; FDA clears updated COVID vaccines"
+      },
+      {
+        "itemId": "4cc3e771c1ca27b4",
+        "title": "Gilead gets another HIV treatment approval, extending lenacapavir's dominance"
+      },
+      {
+        "itemId": "0cfeef1dd4624cec",
+        "title": "AstraZeneca and Ionis detail surprise failure of heart disease drug, with Alnylam closely watching"
+      },
+      {
+        "itemId": "e9696d12e8a331a4",
+        "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer"
+      },
+      {
+        "itemId": "e468589789d26b80",
+        "title": "Priovant pushes ex-Pfizer asset across FDA finish line in rare skin and muscle disease"
+      },
+      {
+        "itemId": "fdc319ad126e043e",
+        "title": "FDA greenlights Revolution Medicines' pancreatic cancer gamechanger"
+      },
+      {
+        "itemId": "3e8cc5eb20df58a6",
+        "title": "Mounjaro scores FDA approval to reduce CV risk; Teva to buy an approved drug"
+      },
+      {
+        "itemId": "afaa1e55bedc11cf",
+        "title": "FDA Approves First Drug of Its Kind for Polycythemia Vera, a Rare Blood Disorder"
+      },
+      {
+        "itemId": "c86332de3292d8cc",
+        "title": "Roivant's dermatomyositis drug Lisraya snags FDA approval"
+      },
+      {
+        "itemId": "8fbeee708649e529",
+        "title": "Cytokinetics details trial win for what could be its next approval"
+      },
+      {
+        "itemId": "e9696d12e8a331a4",
+        "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer"
+      },
+      {
+        "itemId": "d96404b899338d05",
+        "title": "#ESC26: Data in hand, Cytokinetics looks to expanded Myqorzo approval"
+      },
+      {
+        "itemId": "8203985f284da6fb",
+        "title": "Lilly scores Novo-pressuring Mounjaro expansion to curb heart risks in diabetes patients"
+      },
+      {
+        "itemId": "4d613329a0217ea1",
+        "title": "FDA Approves at-Home Starting Dose for Anti-Amyloid Therapy"
+      },
+      {
+        "itemId": "fae30fd99f7a4b71",
+        "title": "FDA Approves First Oral PCSK9 Inhibitor to Lower LDL Cholesterol"
+      },
+      {
+        "itemId": "3e8cc5eb20df58a6",
+        "title": "Mounjaro scores FDA approval to reduce CV risk; Teva to buy an approved drug"
+      },
+      {
+        "itemId": "f96bdfe718e8cbcf",
+        "title": "FDA approves Takeda, Protagonist drug for rare blood disorder"
+      },
+      {
+        "itemId": "c86332de3292d8cc",
+        "title": "Roivant's dermatomyositis drug Lisraya snags FDA approval"
+      },
+      {
+        "itemId": "8fbeee708649e529",
+        "title": "Cytokinetics details trial win for what could be its next approval"
+      },
+      {
+        "itemId": "d96404b899338d05",
+        "title": "#ESC26: Data in hand, Cytokinetics looks to expanded Myqorzo approval"
+      },
+      {
+        "itemId": "4d613329a0217ea1",
+        "title": "FDA Approves at-Home Starting Dose for Anti-Amyloid Therapy"
+      },
+      {
+        "itemId": "fae30fd99f7a4b71",
+        "title": "FDA Approves First Oral PCSK9 Inhibitor to Lower LDL Cholesterol"
+      },
+      {
+        "itemId": "f527dadde7798d77",
+        "title": "RevMed’s RAS inhibitor gains landmark FDA approval for pancreatic cancer"
+      },
+      {
+        "itemId": "af851c21aed27882",
+        "title": "FDA greenlights Revolution Medicines' pancreatic cancer gamechanger"
+      },
+      {
+        "itemId": "8203985f284da6fb",
+        "title": "Lilly scores Novo-pressuring Mounjaro expansion to curb heart risks in diabetes patients"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "307cba7c019be19e",
+        "ab251b3c17f6b8e9"
+      ],
+      "missed": [
+        "4cf39b00b143a2e1",
+        "4cf39b00b143a2e1",
+        "40cfdd3479f50d78",
+        "4cf39b00b143a2e1",
+        "e44a4714e74c21a0",
+        "e44a4714e74c21a0",
+        "e44a4714e74c21a0",
+        "e44a4714e74c21a0"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 11,
+      "totalUsdM": 3363,
+      "largest": {
+        "itemId": "b137b1c668a56ad0",
+        "usdM": 1500
+      }
+    },
+    "financings": {
+      "count": 37,
+      "totalUsdM": 40437,
+      "byRound": {
+        "financing": 33,
+        "IPO": 4
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT06672939",
+        "title": "A Study of Orforglipron (LY3502970) in Adolescent Participants With Obesity, or Overweight With Related Comorbidities",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07241390",
+        "title": "A Study of Orforglipron (LY3502970) on Cardiovascular Outcomes in Adults With Atherosclerotic Cardiovascular Disease and/or Chronic Kidney Disease (ATTAIN-Outcomes)",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07000357",
+        "title": "A Phase III Study of AZD0780 on Major Adverse CV Events in Patients With a History of ASCVD Events or at High Risk for a First Event",
+        "sponsor": "AstraZeneca"
+      },
+      {
+        "nct": "NCT07499544",
+        "title": "A Phase III Study to Evaluate the Efficacy and Safety of Libevitug in Participants With Chronic HDV Infection (D-clear Study)",
+        "sponsor": "Huahui Health"
+      },
+      {
+        "nct": "NCT05899608",
+        "title": "Clinical Study of Ivonescimab for First-line Treatment of Metastatic NSCLC Patients",
+        "sponsor": "Summit Therapeutics"
+      },
+      {
+        "nct": "NCT05711394",
+        "title": "A Study to Assess the Adverse Events and Change in Disease Activity of Oral Atogepant Tablets in Pediatric Participants (6-17 Years of Age) With Episodic Migraine",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07623161",
+        "title": "A Study to Compare Elritercept to Placebo in Adults With Myelofibrosis and Anemia Who Are Taking Ruxolitinib",
+        "sponsor": "Takeda"
+      },
+      {
+        "nct": "NCT07570173",
+        "title": "A Clinical Trial of MK-1045 in People With B-cell Acute Lymphoblastic Leukemia (MK-1045-005)"
+      },
+      {
+        "nct": "NCT04613596",
+        "title": "Phase 2 Trial of Adagrasib Monotherapy and in Combination With Pembrolizumab and a Phase 3 Trial of Adagrasib in Combination in Patients With a KRAS G12C Mutation KRYSTAL-7",
+        "sponsor": "Mirati Therapeutics"
+      },
+      {
+        "nct": "NCT05312879",
+        "title": "Phase 2/3 Adaptive Study of VX-147 in Adult and Pediatric Participants With APOL1-Mediated Proteinuric Kidney Disease",
+        "sponsor": "Vertex Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07357727",
+        "title": "A Phase 3 Study of Pelabresib (DAK539) and Ruxolitinib in Myelofibrosis (MF)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07730489",
+        "title": "A Study Comparing BL-M07D1 With Physician's Choice Therapy in Patients With HER2 IHC3+ Advanced Colorectal Cancer Who Failed Prior Treatment With Oxaliplatin, Fluorouracil and Irinotecan",
+        "sponsor": "Sichuan Baili Pharmaceutical"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_dfea8684db",
+      "leadItemId": "d35c24d22621fab2",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_6796c2300c",
+      "leadItemId": "979c87e7946022a7",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_15c5090356",
+      "leadItemId": "afaa1e55bedc11cf",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_6796c2300c",
+      "leadItemId": "979c87e7946022a7",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_15c5090356",
+      "leadItemId": "afaa1e55bedc11cf",
+      "publisherCount": 3
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "aging",
+      "delta": 5.7
+    },
+    {
+      "term": "phase",
+      "delta": 4.6
+    },
+    {
+      "term": "randomised",
+      "delta": 4.1
+    },
+    {
+      "term": "pancreatic",
+      "delta": 3.7
+    },
+    {
+      "term": "obesity",
+      "delta": 3.5
+    },
+    {
+      "term": "cancer",
+      "delta": 3.4
+    }
+  ],
+  "degradedSources": [
+    "NEJM (via Europe PMC)",
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "pancreatic",
+    "specific",
+    "group",
+    "transcription",
+    "genetic",
+    "roche",
+    "architecture",
+    "multicentre",
+    "obesity",
+    "aberrant"
+  ]
+}
