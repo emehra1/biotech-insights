@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-08-31T18:01:45.753Z",
+  "generatedAt": "2026-09-01T15:29:43.392Z",
   "candidates": [
     {
+      "term": "President Trump",
+      "count": 3
+    },
+    {
       "term": "Lead",
-      "count": 5
+      "count": 3
+    },
+    {
+      "term": "Tuesday",
+      "count": 2
+    },
+    {
+      "term": "Monday",
+      "count": 2
     },
     {
       "term": "Drug Administration",
