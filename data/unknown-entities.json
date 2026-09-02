@@ -1,20 +1,16 @@
 {
-  "generatedAt": "2026-09-01T15:29:43.392Z",
+  "generatedAt": "2026-09-02T15:08:20.106Z",
   "candidates": [
     {
-      "term": "President Trump",
-      "count": 3
-    },
-    {
       "term": "Lead",
-      "count": 3
+      "count": 12
     },
     {
       "term": "Tuesday",
       "count": 2
     },
     {
-      "term": "Monday",
+      "term": "President Trump",
       "count": 2
     },
     {
@@ -23,6 +19,14 @@
     },
     {
       "term": "FoCUS",
+      "count": 2
+    },
+    {
+      "term": "Astellas Pharma Global",
+      "count": 2
+    },
+    {
+      "term": "Development",
       "count": 2
     }
   ]
