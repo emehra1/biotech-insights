@@ -1,36 +1,20 @@
 {
-  "generatedAt": "2026-09-03T15:02:08.380Z",
+  "generatedAt": "2026-09-04T14:59:44.423Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 5
-    },
-    {
-      "term": "Ultragenyx",
-      "count": 3
+      "count": 8
     },
     {
       "term": "Drug Administration",
       "count": 3
     },
     {
-      "term": "Tuesday",
+      "term": "Ultragenyx",
       "count": 2
     },
     {
       "term": "FoCUS",
-      "count": 2
-    },
-    {
-      "term": "Alkermes",
-      "count": 2
-    },
-    {
-      "term": "Astellas Pharma Global",
-      "count": 2
-    },
-    {
-      "term": "Development",
       "count": 2
     }
   ]
