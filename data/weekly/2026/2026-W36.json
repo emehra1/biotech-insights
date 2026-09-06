@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W36",
+  "start": "2026-08-31",
+  "end": "2026-09-06",
+  "generatedAt": "2026-09-06T14:13:53.469Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 6,
+    "items": [
+      {
+        "label": "eastern cooperative oncology",
+        "terms": [
+          "eastern cooperative oncology",
+          "resected",
+          "alectinib",
+          "alk",
+          "alina",
+          "iqr 53",
+          "shr",
+          "a2102",
+          "nectin",
+          "harmoni",
+          "bcl6",
+          "added",
+          "adjusted",
+          "epoch",
+          "a051701",
+          "tki",
+          "tyrosine",
+          "lymphomas",
+          "iiia",
+          "kinase",
+          "summit therapeutics",
+          "iqr 56",
+          "alliance",
+          "newly",
+          "diagnosed",
+          "hengrui",
+          "conjugate",
+          "pretreated",
+          "bcl2",
+          "iqr 30",
+          "solid",
+          "tumours",
+          "iqr 37",
+          "crizotinib",
+          "e4512",
+          "dfs",
+          "surgically",
+          "eastern",
+          "cooperative",
+          "radiology",
+          "egfr",
+          "observation",
+          "american",
+          "college",
+          "iqr 16",
+          "tremelimumab",
+          "chemoembolisation",
+          "embolisation",
+          "eligible",
+          "emerald",
+          "sponsor",
+          "durvalumab",
+          "blinded"
+        ],
+        "docCount": 36,
+        "lift": 7.12,
+        "score": 16.99,
+        "itemIds": [
+          "680d64ab7581a638",
+          "34d9a2df74c0cd68",
+          "6df2d0ba09a71b7a",
+          "b66196dbc824abce",
+          "3dc304196adf5c1a",
+          "f642892af9015f3f",
+          "beabe23d5acde15f",
+          "09ccbce955499298"
+        ]
+      },
+      {
+        "label": "non-small cell lung cancer",
+        "terms": [
+          "non-small cell lung cancer",
+          "small",
+          "nsclc",
+          "small cell lung cancer",
+          "adjuvant"
+        ],
+        "docCount": 30,
+        "lift": 3.62,
+        "score": 10.16,
+        "itemIds": [
+          "680d64ab7581a638",
+          "34d9a2df74c0cd68",
+          "6df2d0ba09a71b7a",
+          "b66196dbc824abce",
+          "b1d1bb9e85e90d8c",
+          "e8bfea8891f261e0",
+          "fcac6206fbabab2b",
+          "c8da9bc85c43fa52"
+        ]
+      },
+      {
+        "label": "car-t",
+        "terms": [
+          "car-t",
+          "autoimmune",
+          "cd19",
+          "arsenal biosciences",
+          "deaths",
+          "car",
+          "arsenalbio",
+          "pause",
+          "staff",
+          "acute lymphoblastic leukemia",
+          "all",
+          "offloading",
+          "shelved",
+          "prompt"
+        ],
+        "docCount": 27,
+        "lift": 3.37,
+        "score": 9.11,
+        "itemIds": [
+          "82d872285bf76dfd",
+          "1d192dc23a875df3",
+          "beabe23d5acde15f",
+          "0103de3e781e9dc2",
+          "2f7f34436c25cf49",
+          "0d5cea8229a09101",
+          "f4a045618dd8de6e",
+          "c01d4f6a9c28497e"
+        ]
+      },
+      {
+        "label": "gsk",
+        "terms": [
+          "gsk",
+          "hutchmed",
+          "kras-egfr",
+          "license"
+        ],
+        "docCount": 13,
+        "lift": 5.33,
+        "score": 8.71,
+        "itemIds": [
+          "2a855f325fbeed3c",
+          "a19d9d0bf93a027e",
+          "0322d0914c95c2f6",
+          "656ad73c1ec4de99",
+          "4d48142b1e361883",
+          "d988051e3fce2a3e",
+          "4030145cdc860984"
+        ]
+      },
+      {
+        "label": "chemotherapy",
+        "terms": [
+          "chemotherapy"
+        ],
+        "docCount": 18,
+        "lift": 3.58,
+        "score": 7.81,
+        "itemIds": [
+          "34d9a2df74c0cd68",
+          "b66196dbc824abce",
+          "b1d1bb9e85e90d8c",
+          "c1ebce34a542cd29",
+          "d79ede4079ceab73",
+          "aa52e7dd0488e114",
+          "2c8f9ff6cf54895e",
+          "ad4604f523acf0b9"
+        ]
+      },
+      {
+        "label": "breast cancer",
+        "terms": [
+          "breast cancer",
+          "her2",
+          "breast",
+          "trastuzumab",
+          "pertuzumab",
+          "anbenitamab",
+          "hb1801",
+          "erbb2",
+          "neoadjuvant"
+        ],
+        "docCount": 20,
+        "lift": 3.03,
+        "score": 7.14,
+        "itemIds": [
+          "2f5787e29eb53ff7",
+          "78063acf30d45c5a",
+          "6df2d0ba09a71b7a",
+          "6a71d34994456006",
+          "342bc5dcd28f91d3",
+          "8a4b8f9afe8bef03",
+          "40d5cc90f8e14aae",
+          "6f1e9caf08c3d834"
+        ]
+      },
+      {
+        "label": "network",
+        "terms": [
+          "network",
+          "senescence2030",
+          "roadmap",
+          "precision",
+          "consensus",
+          "liraglutide",
+          "exenatide",
+          "reduction",
+          "antipsychotics"
+        ],
+        "docCount": 13,
+        "lift": 3.81,
+        "score": 6.95,
+        "itemIds": [
+          "3abf9beb731027d9",
+          "680d64ab7581a638",
+          "fcb1e1851494c7ce",
+          "8c2d63d5bb6c2878"
+        ]
+      },
+      {
+        "label": "roche",
+        "terms": [
+          "roche",
+          "excited",
+          "analog",
+          "seeing",
+          "really",
+          "simcere"
+        ],
+        "docCount": 19,
+        "lift": 2.96,
+        "score": 6.83,
+        "itemIds": [
+          "375450b40c734c7a",
+          "86a60f4615ae61f9",
+          "34d9a2df74c0cd68",
+          "50f863e5530d8fd4",
+          "068db4cf6a0c1513",
+          "0e0bf095e99a4e1f",
+          "6f1e9caf08c3d834",
+          "d988051e3fce2a3e"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "d7075d3a43b411a4",
+        "title": "We’re reading about drug pricing deals, a new cancer therapy approval, and more"
+      },
+      {
+        "itemId": "3e8cc5eb20df58a6",
+        "title": "Mounjaro scores FDA approval to reduce CV risk; Teva to buy an approved drug"
+      },
+      {
+        "itemId": "b457dda0b3fb3b15",
+        "title": "FDA approves Protagonist and Takeda’s drug for rare blood cancer"
+      },
+      {
+        "itemId": "c86332de3292d8cc",
+        "title": "Roivant's dermatomyositis drug Lisraya snags FDA approval"
+      },
+      {
+        "itemId": "35c7160617e0744c",
+        "title": "FDA clears Stryker’s ‘surgical cockpit’ that uses Apple’s VR headset, Vision Pro"
+      },
+      {
+        "itemId": "ef38eac71670a32f",
+        "title": "Takeda bolsters blood cancer portfolio with FDA nod for Mimrylo in polycythemia vera"
+      },
+      {
+        "itemId": "d7075d3a43b411a4",
+        "title": "We’re reading about drug pricing deals, a new cancer therapy approval, and more"
+      },
+      {
+        "itemId": "aecc4136ad15e958",
+        "title": "CBER official overruled review team's rejection of new Replimune melanoma drug"
+      },
+      {
+        "itemId": "22477085940ddb9a",
+        "title": "Ionis wins FDA approval of Alexander disease drug zilganersen"
+      },
+      {
+        "itemId": "1544335e8429b612",
+        "title": "Ionis wins FDA approval for first drug for Alexander disease, a rare and deadly neurological disorder"
+      },
+      {
+        "itemId": "698f24a24e6adcb2",
+        "title": "Newest glue degrader nabs multiple myeloma approval"
+      },
+      {
+        "itemId": "f3b35d227e454f0b",
+        "title": "FDA Grants Accelerated Approval to a New Breast Cancer Treatment"
+      },
+      {
+        "itemId": "22477085940ddb9a",
+        "title": "Ionis wins FDA approval of Alexander disease drug zilganersen"
+      },
+      {
+        "itemId": "1544335e8429b612",
+        "title": "Ionis wins FDA approval for first drug for Alexander disease, a rare and deadly neurological disorder"
+      },
+      {
+        "itemId": "22477085940ddb9a",
+        "title": "Ionis wins FDA approval of Alexander disease drug zilganersen"
+      },
+      {
+        "itemId": "f3b35d227e454f0b",
+        "title": "FDA Grants Accelerated Approval to a New Breast Cancer Treatment"
+      },
+      {
+        "itemId": "1544335e8429b612",
+        "title": "Ionis wins FDA approval for first drug for Alexander disease, a rare and deadly neurological disorder"
+      }
+    ],
+    "crls": [
+      {
+        "itemId": "9bad37117aa6c0be",
+        "title": "The Microbiota Dictates Vendor-Derived Differences in a Murine Clostridioides difficile Infection Model"
+      }
+    ],
+    "readouts": {
+      "met": [
+        "de5512545944f6e1",
+        "dbc4468e8c2e2c5a"
+      ],
+      "missed": [
+        "8d9e600116338307",
+        "6a71d34994456006",
+        "e0c3ff6fdf8be5a7",
+        "6a71d34994456006",
+        "8d9e600116338307"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 20,
+      "totalUsdM": 31980,
+      "largest": {
+        "itemId": "a9e1a5778df15d4a",
+        "usdM": 2900
+      }
+    },
+    "financings": {
+      "count": 37,
+      "totalUsdM": 45037,
+      "byRound": {
+        "IPO": 9,
+        "financing": 25,
+        "Series B": 3
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07253285",
+        "title": "A Research Study on How Well Cagrilintide and CagriSema Work in Children and Adolescents With Excess Body Weight",
+        "sponsor": "Novo Nordisk"
+      },
+      {
+        "nct": "NCT07794579",
+        "title": "A Study of Orforglipron in Participants With Overweight at Risk of Development of Obesity-Related Complications or Progression to Class 1 Obesity",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07794397",
+        "title": "A Phase III, Multicenter, Randomized, Double-Blind, Placebo-Controlled Clinical Study to Evaluate the Efficacy and Safety of HDM1005 Injection in Subjects With Obstructive Sleep Apnea (OSA) and Obesity Receiving Positive Airway Pressure (PAP) Therapy",
+        "sponsor": "Hangzhou Zhongmei Huadong Pharmaceutical"
+      },
+      {
+        "nct": "NCT07795164",
+        "title": "Phase 3 Study of the Efficacy, Safety, and Clinical Outcomes of Pemvidutide in MASH"
+      },
+      {
+        "nct": "NCT07662044",
+        "title": "A Phase III Study to Investigate the Efficacy and Safety of Elecoglipron Alone or in Combination With Dapagliflozin Compared With Placebo in Adults With Type 2 Diabetes Mellitus",
+        "sponsor": "AstraZeneca"
+      },
+      {
+        "nct": "NCT06159673",
+        "title": "ACP-204 in Adults With Alzheimer's Disease Psychosis",
+        "sponsor": "ACADIA Pharmaceuticals"
+      },
+      {
+        "nct": "NCT06664619",
+        "title": "A Randomized, Double-Blind, Placebo-Controlled Trial on Efficacy and Safety of Fluticasone Propionate/Albuterol Sulfate Combination in Participants 12 Years and Older With Asthma",
+        "sponsor": "Teva"
+      },
+      {
+        "nct": "NCT07067463",
+        "title": "A Study of Orelabrutinib in Patients With Primary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      },
+      {
+        "nct": "NCT06948214",
+        "title": "Phase 3 Study of LUM-201 in Children With Growth Hormone Deficiency",
+        "sponsor": "Lumos Pharma"
+      },
+      {
+        "nct": "NCT07504458",
+        "title": "Pivotal Open-label Phase 3 Clinical Study of QTX-2101 in Adult Patients With Acute Promyelocytic Leukemia",
+        "sponsor": "Quetzal Therapeutics"
+      },
+      {
+        "nct": "NCT06875310",
+        "title": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+        "sponsor": "Mirati Therapeutics"
+      },
+      {
+        "nct": "NCT07797283",
+        "title": "Phase 3 Study of INCB123667 Plus Bevacizumab Versus Bevacizumab Alone as First-Line Maintenance Therapy in Ovarian Cancer Overexpressing Cyclin E1",
+        "sponsor": "Incyte"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_e82c89e8f4",
+      "leadItemId": "afaa1e55bedc11cf",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_e82c89e8f4",
+      "leadItemId": "afaa1e55bedc11cf",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_d08a95b02a",
+      "leadItemId": "8bfa4c6b7b66f23f",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_8dad2101ba",
+      "leadItemId": "0eedef201885d1ea",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_c2d3492c6e",
+      "leadItemId": "8bfa4c6b7b66f23f",
+      "publisherCount": 3
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "eastern cooperative oncology",
+      "delta": 6.1
+    },
+    {
+      "term": "cancer",
+      "delta": 4.9
+    },
+    {
+      "term": "phase",
+      "delta": 4.5
+    },
+    {
+      "term": "non-small cell lung cancer",
+      "delta": 4.3
+    },
+    {
+      "term": "car-t",
+      "delta": 3.8
+    },
+    {
+      "term": "small",
+      "delta": 3.2
+    }
+  ],
+  "degradedSources": [
+    "bioRxiv",
+    "medRxiv",
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "car-t",
+    "small",
+    "chemotherapy",
+    "nsclc",
+    "network",
+    "roche",
+    "tissues",
+    "defines",
+    "merida",
+    "positive"
+  ]
+}
