@@ -1,16 +1,28 @@
 {
-  "generatedAt": "2026-09-08T15:10:55.771Z",
+  "generatedAt": "2026-09-09T15:10:15.770Z",
   "candidates": [
-    {
-      "term": "Lead",
-      "count": 6
-    },
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
+      "term": "Department",
+      "count": 2
+    },
+    {
+      "term": "Health",
+      "count": 2
+    },
+    {
+      "term": "Human Services",
+      "count": 2
+    },
+    {
       "term": "Inhibrx",
+      "count": 2
+    },
+    {
+      "term": "American Medical Association",
       "count": 2
     },
     {
@@ -19,6 +31,10 @@
     },
     {
       "term": "FoCUS",
+      "count": 2
+    },
+    {
+      "term": "Lead",
       "count": 2
     }
   ]
