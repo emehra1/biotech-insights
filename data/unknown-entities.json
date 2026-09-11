@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-09-10T15:00:54.693Z",
+  "generatedAt": "2026-09-11T15:03:59.389Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 6
+    },
     {
       "term": "Drug Administration",
       "count": 4
@@ -18,19 +22,15 @@
       "count": 2
     },
     {
-      "term": "Wednesday",
-      "count": 2
-    },
-    {
-      "term": "American Medical Association",
-      "count": 2
-    },
-    {
       "term": "FoCUS",
       "count": 2
     },
     {
-      "term": "Lead",
+      "term": "Astellas Pharma Global",
+      "count": 2
+    },
+    {
+      "term": "Development",
       "count": 2
     }
   ]
