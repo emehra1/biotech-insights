@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W37",
+  "start": "2026-09-07",
+  "end": "2026-09-13",
+  "generatedAt": "2026-09-13T14:56:30.573Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 7,
+    "items": [
+      {
+        "label": "small",
+        "terms": [
+          "small",
+          "non-small cell lung cancer",
+          "iqr 67",
+          "iqr 18",
+          "stereotactic",
+          "s1914",
+          "superiority",
+          "radiation",
+          "alone",
+          "atezolizumab",
+          "osimertinib"
+        ],
+        "docCount": 26,
+        "lift": 2.75,
+        "score": 7.43,
+        "itemIds": [
+          "3077a55de044fd48",
+          "6e1799081ad5e427",
+          "f65ce62ec2dbd883",
+          "98847165e69fc824",
+          "680d64ab7581a638",
+          "34d9a2df74c0cd68",
+          "0e36740f88c1b6a7",
+          "f226531f514574bf"
+        ]
+      },
+      {
+        "label": "rises",
+        "terms": [
+          "rises",
+          "remains",
+          "illness",
+          "solstice"
+        ],
+        "docCount": 10,
+        "lift": 4.33,
+        "score": 6.69,
+        "itemIds": [
+          "c3a47624e6ca5236",
+          "a329ae52d59f9f5b"
+        ]
+      },
+      {
+        "label": "breast cancer",
+        "terms": [
+          "breast cancer",
+          "breast",
+          "pertuzumab",
+          "trastuzumab",
+          "anbenitamab",
+          "hb1801",
+          "operational",
+          "erbb2",
+          "iii"
+        ],
+        "docCount": 24,
+        "lift": 2.42,
+        "score": 6.23,
+        "itemIds": [
+          "f3b35d227e454f0b",
+          "dd8881810e2bc4ad",
+          "dc0fbebdc8c2ef9f",
+          "44c9e6be6d01fd67",
+          "a01fe3774611e553",
+          "178a074a6f3ca970",
+          "d2c6a78206e180e4",
+          "ba84957698797c52"
+        ]
+      },
+      {
+        "label": "astrazeneca",
+        "terms": [
+          "astrazeneca",
+          "durvalumab",
+          "leucovorin",
+          "gastro",
+          "oesophageal",
+          "junction",
+          "matterhorn",
+          "overall",
+          "iqr 54",
+          "perioperative",
+          "fluorouracil",
+          "docetaxel",
+          "final",
+          "resectable"
+        ],
+        "docCount": 25,
+        "lift": 2.25,
+        "score": 5.86,
+        "itemIds": [
+          "12d0babe1c1fa23a",
+          "c45d4010d2a42a0c",
+          "0eedef201885d1ea",
+          "44c9e6be6d01fd67",
+          "a01fe3774611e553",
+          "6152766ce232d132",
+          "178a074a6f3ca970",
+          "ef1afe9f08ba3c96"
+        ]
+      },
+      {
+        "label": "editing",
+        "terms": [
+          "editing",
+          "tdt",
+          "hemoglobinopathies",
+          "backgrounds",
+          "highly",
+          "embryo",
+          "efficient",
+          "dense",
+          "motif",
+          "efficiencies"
+        ],
+        "docCount": 18,
+        "lift": 2.59,
+        "score": 5.82,
+        "itemIds": [
+          "39639d80ce94b5f7",
+          "af05eebff85e2fa6",
+          "e3e01d7eaf40efd8",
+          "ee8556778bfb3907",
+          "2936276ced59f32c",
+          "83c1eb458a9a7a6f",
+          "0cdf4743fafb53d4",
+          "dd73c4f46baebaf6"
+        ]
+      },
+      {
+        "label": "novartis",
+        "terms": [
+          "novartis",
+          "pelacarsen",
+          "investor",
+          "shake",
+          "seeking"
+        ],
+        "docCount": 21,
+        "lift": 2.1,
+        "score": 4.91,
+        "itemIds": [
+          "12d0babe1c1fa23a",
+          "ed0b6d6e099104f1",
+          "c356ebf66ff0e2da",
+          "49b085e2c2b1c026",
+          "22239b60223c1238",
+          "f0b0624798bee899",
+          "c044903711358804",
+          "fd07c05159470e60"
+        ]
+      },
+      {
+        "label": "survival",
+        "terms": [
+          "survival"
+        ],
+        "docCount": 10,
+        "lift": 2.82,
+        "score": 4.73,
+        "itemIds": [
+          "cf253c4e624697a9",
+          "6950284414585f13",
+          "f12e531d2ad365bd",
+          "fe59bc317e9c9a76",
+          "5620007ccd1dcaed",
+          "0ca1c822c13497b0",
+          "0202d3aa2c36c134"
+        ]
+      },
+      {
+        "label": "induction",
+        "terms": [
+          "induction",
+          "consolidation"
+        ],
+        "docCount": 8,
+        "lift": 3.08,
+        "score": 4.6,
+        "itemIds": [
+          "3077a55de044fd48",
+          "35c61e524a72cb60",
+          "ad4604f523acf0b9"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "22477085940ddb9a",
+        "title": "Ionis wins FDA approval of Alexander disease drug zilganersen"
+      },
+      {
+        "itemId": "f3b35d227e454f0b",
+        "title": "FDA Grants Accelerated Approval to a New Breast Cancer Treatment"
+      },
+      {
+        "itemId": "1544335e8429b612",
+        "title": "Ionis wins FDA approval for first drug for Alexander disease, a rare and deadly neurological disorder"
+      },
+      {
+        "itemId": "44c9e6be6d01fd67",
+        "title": "FDA approves AstraZeneca breast cancer drug"
+      },
+      {
+        "itemId": "ace6341c8538884c",
+        "title": "A breakthrough pancreatic cancer drug won approval. They still struggle to access it"
+      },
+      {
+        "itemId": "a01fe3774611e553",
+        "title": "FDA approves AstraZeneca’s Etcamah, opening ctDNA-guided treatment paradigm in breast cancer"
+      },
+      {
+        "itemId": "178a074a6f3ca970",
+        "title": "FDA approves AstraZeneca’s oral SERD for breast cancer despite negative adcomm vote"
+      },
+      {
+        "itemId": "ddedc794e37ee488",
+        "title": "Opinion: Autonomous AI will beat AI-assisted physicians at some medical tasks by 2030"
+      },
+      {
+        "itemId": "ba84957698797c52",
+        "title": "FDA approves AstraZeneca’s Etcamah, opening ctDNA-guided treatment paradigm in breast cancer"
+      },
+      {
+        "itemId": "178a074a6f3ca970",
+        "title": "FDA approves AstraZeneca’s oral SERD for breast cancer despite negative adcomm vote"
+      },
+      {
+        "itemId": "ee89a3bc6b29968f",
+        "title": "FDA Approves New ADHD Medication"
+      },
+      {
+        "itemId": "0ba5a536cef9bd28",
+        "title": "FDA clears Bayer’s Hyrnuo in first-line lung cancer, amping up Hernexeos rivalry"
+      },
+      {
+        "itemId": "779e149d348aa362",
+        "title": "Scholar Rock wins FDA approval for first drug to target SMA muscle loss"
+      },
+      {
+        "itemId": "03e6366301366ee6",
+        "title": "Breast cancer pill from AstraZeneca misses mark in pivotal trial"
+      },
+      {
+        "itemId": "993fef94796e4ae7",
+        "title": "Moderna flu vaccine wins FDA approval"
+      },
+      {
+        "itemId": "779e149d348aa362",
+        "title": "Scholar Rock wins FDA approval for first drug to target SMA muscle loss"
+      },
+      {
+        "itemId": "03e6366301366ee6",
+        "title": "Breast cancer pill from AstraZeneca misses mark in pivotal trial"
+      },
+      {
+        "itemId": "698f24a24e6adcb2",
+        "title": "Newest glue degrader nabs multiple myeloma approval"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "7e2ad940cf251723",
+        "daffe62c7d58b32a",
+        "f38be5dfe1fdffb5",
+        "daffe62c7d58b32a",
+        "3aba4836046190a4",
+        "dbc4468e8c2e2c5a"
+      ],
+      "missed": [
+        "e44a4714e74c21a0",
+        "22239b60223c1238",
+        "f0b0624798bee899",
+        "22239b60223c1238",
+        "e0c3ff6fdf8be5a7"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 16,
+      "totalUsdM": 74048,
+      "largest": {
+        "itemId": "22239b60223c1238",
+        "usdM": 12000
+      }
+    },
+    "financings": {
+      "count": 40,
+      "totalUsdM": 67846,
+      "byRound": {
+        "IPO": 2,
+        "financing": 30,
+        "Series B": 1,
+        "Series A": 5,
+        "Series F": 2
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07807995",
+        "title": "A Phase 3 Open-Label Study of Long-term Treatment With Povetacicept in Adults With Immunoglobulin A Nephropathy",
+        "sponsor": "Vertex Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07223593",
+        "title": "Efficacy and Safety of Orforglipron in Participants With Peripheral Artery Disease",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07153471",
+        "title": "A Study of Orforglipron (LY3502970) in Participants With Obesity or Overweight and Osteoarthritis (OA) of the Knee",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07202884",
+        "title": "A Study of Orforglipron in Female Participants With Stress Urinary Incontinence Who Have Obesity or Overweight",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07781293",
+        "title": "Study of Lurasidone as Adjunctive Treatment in Patients With Major Depressive Disorder With Inadequate Response to Antidepressant Monotherapy",
+        "sponsor": "Bukwang Pharmaceutical"
+      },
+      {
+        "nct": "NCT07587242",
+        "title": "A Phase 3 Study to Evaluate the Safety and Efficacy of AOC 1044 (Also Referred to as Delpacibart Zotadirsen) in Participants With DMD With Gene Mutations Amenable to Exon 44 Skipping",
+        "sponsor": "Avidity Biosciences"
+      },
+      {
+        "nct": "NCT07076407",
+        "title": "A Randomized Study of Azetukalner Versus Placebo in Major Depressive Disorder (X-NOVA3)",
+        "sponsor": "Xenon Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07726992",
+        "title": "A Study of SHR-1501 Combination With BCG Versus Placebo Combined With BCG in Subjects With Papillary-Only NMIBC",
+        "sponsor": "Suzhou Suncadia Biopharmaceuticals"
+      },
+      {
+        "nct": "NCT06430801",
+        "title": "A Study to Evaluate the Efficacy and Safety of Tulisokibart (MK-7240) in Participants With Moderate to Severe Crohn's Disease (MK-7240-008)"
+      },
+      {
+        "nct": "NCT05711394",
+        "title": "A Study to Assess the Adverse Events and Change in Disease Activity of Oral Atogepant Tablets in Pediatric Participants (6-17 Years of Age) With Episodic Migraine",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07357727",
+        "title": "A Phase 3 Study of Pelabresib (DAK539) and Ruxolitinib in Myelofibrosis (MF)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07708727",
+        "title": "Study of an Injectable Regimen of GS-3242 With Lenacapavir Compared to Biktarvy in People New to HIV-1 Treatment",
+        "sponsor": "Gilead"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_fdafca8564",
+      "leadItemId": "398f66fd78b31f58",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_19b33f0d7a",
+      "leadItemId": "2f55968f3caae208",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_2ef053c3bf",
+      "leadItemId": "398f66fd78b31f58",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_a275e58b8b",
+      "leadItemId": "12d0babe1c1fa23a",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_0502b3b085",
+      "leadItemId": "55f97ea4aaa05a23",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "phase",
+      "delta": 3.8
+    },
+    {
+      "term": "cancer",
+      "delta": 3.7
+    },
+    {
+      "term": "small",
+      "delta": 3.5
+    },
+    {
+      "term": "randomized",
+      "delta": 3.1
+    },
+    {
+      "term": "breast cancer",
+      "delta": 3
+    },
+    {
+      "term": "astrazeneca",
+      "delta": 2.9
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov",
+    "Cell Press (via Europe PMC)",
+    "The Lancet (via Europe PMC)",
+    "Science journals (via Europe PMC)",
+    "NEJM (via Europe PMC)"
+  ],
+  "lexiconSuggestions": [
+    "small",
+    "rises",
+    "breast",
+    "astrazeneca",
+    "editing",
+    "novartis",
+    "survival",
+    "induction",
+    "consolidation",
+    "remains"
+  ]
+}
