@@ -1,21 +1,13 @@
 {
-  "generatedAt": "2026-09-13T14:56:30.123Z",
+  "generatedAt": "2026-09-14T16:58:51.925Z",
   "candidates": [
     {
       "term": "Drug Administration",
       "count": 5
     },
     {
-      "term": "Department",
-      "count": 2
-    },
-    {
-      "term": "Health",
-      "count": 2
-    },
-    {
-      "term": "Human Services",
-      "count": 2
+      "term": "Lead",
+      "count": 5
     }
   ]
 }
