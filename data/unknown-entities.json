@@ -1,13 +1,17 @@
 {
-  "generatedAt": "2026-09-14T16:58:51.925Z",
+  "generatedAt": "2026-09-15T15:35:43.609Z",
   "candidates": [
     {
-      "term": "Drug Administration",
-      "count": 5
+      "term": "Lead",
+      "count": 7
     },
     {
-      "term": "Lead",
-      "count": 5
+      "term": "Drug Administration",
+      "count": 4
+    },
+    {
+      "term": "Vera",
+      "count": 2
     }
   ]
 }
