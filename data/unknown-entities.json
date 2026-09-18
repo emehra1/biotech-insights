@@ -1,13 +1,25 @@
 {
-  "generatedAt": "2026-09-17T15:34:21.134Z",
+  "generatedAt": "2026-09-18T15:02:09.546Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 5
+      "count": 4
     },
     {
       "term": "Drug Administration",
-      "count": 4
+      "count": 3
+    },
+    {
+      "term": "July",
+      "count": 2
+    },
+    {
+      "term": "Legend",
+      "count": 2
+    },
+    {
+      "term": "Ingrid Zhang",
+      "count": 2
     },
     {
       "term": "Bavarian Nordic",
@@ -15,10 +27,6 @@
     },
     {
       "term": "Paul Chaplin",
-      "count": 2
-    },
-    {
-      "term": "Wednesday",
       "count": 2
     },
     {
