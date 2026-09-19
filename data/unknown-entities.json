@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-18T15:02:09.546Z",
+  "generatedAt": "2026-09-19T14:29:09.527Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 4
+      "count": 6
     },
     {
       "term": "Drug Administration",
@@ -22,19 +22,15 @@
       "count": 2
     },
     {
-      "term": "Bavarian Nordic",
-      "count": 2
-    },
-    {
-      "term": "Paul Chaplin",
-      "count": 2
-    },
-    {
       "term": "Still",
       "count": 2
     },
     {
       "term": "Novo's",
+      "count": 2
+    },
+    {
+      "term": "Self-",
       "count": 2
     }
   ]
