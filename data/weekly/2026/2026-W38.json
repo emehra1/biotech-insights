@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W38",
+  "start": "2026-09-14",
+  "end": "2026-09-20",
+  "generatedAt": "2026-09-20T14:43:23.794Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 8,
+    "items": [
+      {
+        "label": "sanfilippo",
+        "terms": [
+          "sanfilippo",
+          "approves",
+          "syndrome",
+          "ultragenyx",
+          "rebisufligene",
+          "etisparvovec",
+          "ux111",
+          "shelves"
+        ],
+        "docCount": 12,
+        "lift": 5,
+        "score": 8.04,
+        "itemIds": [
+          "463a07f32cd10e25",
+          "e076912519a69fd8",
+          "b238eee90dc1d0ff",
+          "f8c1946c89ebc5b4"
+        ]
+      },
+      {
+        "label": "pd-l1",
+        "terms": [
+          "pd-l1",
+          "checkpoint",
+          "pd-l2",
+          "cps",
+          "gog-3036",
+          "iqr 52",
+          "iqr 43",
+          "olaparib",
+          "brca",
+          "followed",
+          "engot",
+          "keylynk",
+          "parp"
+        ],
+        "docCount": 20,
+        "lift": 2.71,
+        "score": 6.44,
+        "itemIds": [
+          "942ed51b6daf10dc",
+          "8cc7ea83a571008f",
+          "35a6b7a2210a8f92",
+          "38166f9c4a6a6eb9",
+          "1c6685782ba0adbe",
+          "f12e531d2ad365bd",
+          "54f4fdba6cd119f6",
+          "b76a408b2d7a884e"
+        ]
+      },
+      {
+        "label": "electra",
+        "terms": [
+          "electra",
+          "ql biopharm. electra therapeutics",
+          "become",
+          "ipo. electra therapeutics"
+        ],
+        "docCount": 12,
+        "lift": 3.17,
+        "score": 5.77,
+        "itemIds": [
+          "383cfc457c1c7381",
+          "ce50363c8e8a6249",
+          "69048c25bb88ee27",
+          "9a5b541cb51f9a2f",
+          "a77cc991e6547c61"
+        ]
+      },
+      {
+        "label": "clonal",
+        "terms": [
+          "clonal",
+          "perturbates",
+          "reshaping",
+          "designing",
+          "indeterminate",
+          "hematopoiesis",
+          "interferon"
+        ],
+        "docCount": 12,
+        "lift": 3.07,
+        "score": 5.6,
+        "itemIds": [
+          "da3efc916fe68f06",
+          "303407c05f10fc38"
+        ]
+      },
+      {
+        "label": "years",
+        "terms": [
+          "years",
+          "vx21",
+          "tezacaftor",
+          "vanzacaftor",
+          "deutivacaftor",
+          "ivacaftor",
+          "elexacaftor",
+          "timberline",
+          "cftr",
+          "cystic",
+          "cystic fibrosis"
+        ],
+        "docCount": 16,
+        "lift": 2.63,
+        "score": 5.57,
+        "itemIds": [
+          "d01e4e31aeceef19",
+          "f966ea4bdcdc7407",
+          "087715273b20fff7",
+          "9f791a7aa9940a12",
+          "bb9961730e105b96",
+          "3c441d2164a9584a",
+          "1c36786f72a482ef",
+          "663b180cf3f4b12b"
+        ]
+      },
+      {
+        "label": "biotech",
+        "terms": [
+          "biotech",
+          "altis labs",
+          "matisse pharmaceuticals",
+          "connexus therapeutics",
+          "ariadne bio",
+          "fundraising",
+          "debut"
+        ],
+        "docCount": 17,
+        "lift": 2.48,
+        "score": 5.39,
+        "itemIds": [
+          "b3d4cc98734a046f",
+          "ebc0f0ab8db8e36d",
+          "656081acb418eb74",
+          "104227fbf0f81714",
+          "69048c25bb88ee27",
+          "9a5b541cb51f9a2f",
+          "a77cc991e6547c61",
+          "c9018ae914d2799f"
+        ]
+      },
+      {
+        "label": "sanofi",
+        "terms": [
+          "sanofi",
+          "bavarian",
+          "nordic",
+          "iqr 33",
+          "iqr 89",
+          "rilzabrutinib",
+          "luna3"
+        ],
+        "docCount": 15,
+        "lift": 2.54,
+        "score": 5.21,
+        "itemIds": [
+          "383cfc457c1c7381",
+          "bb9961730e105b96",
+          "be4d981c2bff2207",
+          "1a57494e72084f82",
+          "3aa72aa513039836",
+          "5eb5199c01637ad1",
+          "d21f6d080a6c2655"
+        ]
+      },
+      {
+        "label": "als",
+        "terms": [
+          "als",
+          "wgcna",
+          "subgroups",
+          "identified"
+        ],
+        "docCount": 9,
+        "lift": 3.22,
+        "score": 5.07,
+        "itemIds": [
+          "5fd89127f78c9d89",
+          "6ff38a9ce54e9655",
+          "83fc4f60adea60cb",
+          "1d509536c75df8b2",
+          "9fedf72eae9a1fab",
+          "5a63e3b0a5c1b531"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "cbef8ba2ebc9c3a4",
+        "title": "Pharmalittle: We’re reading about another AstraZeneca trial failure, a Novo name change, and more"
+      },
+      {
+        "itemId": "db2ca762c3f43a61",
+        "title": "Scholar Rock gets FDA nod for spinal muscular atrophy drug"
+      },
+      {
+        "itemId": "18f85c52f39fb14a",
+        "title": "Scholar Rock SMA drug approved by FDA"
+      },
+      {
+        "itemId": "8bbcaae45acbf46a",
+        "title": "AstraZeneca’s next-gen SERD Etcamah disappoints in untreated advanced breast cancer"
+      },
+      {
+        "itemId": "4f180d2667c0f67b",
+        "title": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial"
+      },
+      {
+        "itemId": "bb9961730e105b96",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease"
+      },
+      {
+        "itemId": "2a7d5c98dd1ebf73",
+        "title": "FDA approves first radioligand equivalent, Curium’s copycat of Novartis’ Lutathera"
+      },
+      {
+        "itemId": "f89d54898500e49c",
+        "title": "After rejection, FDA approves Telix’s Pixclara, the first FET-PET imaging drug for brain cancer"
+      },
+      {
+        "itemId": "1b7b7a250f727ea9",
+        "title": "Scholar Rock scores long-awaited FDA approval, the first for muscle loss in SMA"
+      },
+      {
+        "itemId": "db2ca762c3f43a61",
+        "title": "Scholar Rock gets FDA nod for spinal muscular atrophy drug"
+      },
+      {
+        "itemId": "a4b805d432fb3bdb",
+        "title": "FDA approves first radioligand generic, setting up rivalry with Novartis"
+      },
+      {
+        "itemId": "4f180d2667c0f67b",
+        "title": "Vera kidney drug Trutakna shows strong final results in Phase 3 trial"
+      },
+      {
+        "itemId": "bb9961730e105b96",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease"
+      },
+      {
+        "itemId": "0926996c4bbd8627",
+        "title": "FDA Approves First Freeze-Dried Plasma Product in the US"
+      },
+      {
+        "itemId": "11bcbd0daab59138",
+        "title": "FDA Approves First Acetaminophen and Naproxen Sodium Combination Drug"
+      },
+      {
+        "itemId": "36bf4080cf12250d",
+        "title": "FDA clears first generic radioligand drug; Sionna turns to layoffs"
+      },
+      {
+        "itemId": "ff74a04ec7da12ae",
+        "title": "FDA approves pioneering breast cancer drug that nips resistance in the bud"
+      },
+      {
+        "itemId": "a4b805d432fb3bdb",
+        "title": "FDA approves first radioligand generic, setting up rivalry with Novartis"
+      },
+      {
+        "itemId": "463a07f32cd10e25",
+        "title": "FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A"
+      },
+      {
+        "itemId": "e076912519a69fd8",
+        "title": "FDA approves Ultragenyx's gene therapy for Sanfilippo syndrome type A"
+      },
+      {
+        "itemId": "b238eee90dc1d0ff",
+        "title": "FDA approves a new gene therapy for Sanfilippo syndrome, an ultra-rare disease"
+      },
+      {
+        "itemId": "e2f944aeb88a3d2c",
+        "title": "FDA approves Ultragenyx’s gene therapy Fayuvi for rare neurodegenerative disorder"
+      },
+      {
+        "itemId": "1c36786f72a482ef",
+        "title": "Bayer’s Kerendia secures FDA nod as first drug in 30 years for Type 1 diabetes-associated kidney disease"
+      },
+      {
+        "itemId": "1a4952e13ea1f99b",
+        "title": "FDA approves Lilly's oral SERD combo for second-line breast cancer therapy"
+      },
+      {
+        "itemId": "fa03f8e9db394324",
+        "title": "FDA clears Aptitude’s latest Metrix molecular dx to test for COVID"
+      },
+      {
+        "itemId": "463a07f32cd10e25",
+        "title": "FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A"
+      },
+      {
+        "itemId": "6b915efc8650e5a5",
+        "title": "Medtronic earns FDA clearance for LigaSure use with its Hugo robotic system"
+      },
+      {
+        "itemId": "e076912519a69fd8",
+        "title": "FDA approves Ultragenyx's gene therapy for Sanfilippo syndrome type A"
+      },
+      {
+        "itemId": "b238eee90dc1d0ff",
+        "title": "FDA approves a new gene therapy for Sanfilippo syndrome, an ultra-rare disease"
+      },
+      {
+        "itemId": "1a4952e13ea1f99b",
+        "title": "FDA approves Lilly's oral SERD combo for second-line breast cancer therapy"
+      },
+      {
+        "itemId": "463a07f32cd10e25",
+        "title": "FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A"
+      },
+      {
+        "itemId": "e076912519a69fd8",
+        "title": "FDA approves Ultragenyx's gene therapy for Sanfilippo syndrome type A"
+      },
+      {
+        "itemId": "fa03f8e9db394324",
+        "title": "FDA clears Aptitude’s latest Metrix molecular dx to test for COVID"
+      },
+      {
+        "itemId": "993fef94796e4ae7",
+        "title": "Moderna flu vaccine wins FDA approval"
+      },
+      {
+        "itemId": "b238eee90dc1d0ff",
+        "title": "FDA approves a new gene therapy for Sanfilippo syndrome, an ultra-rare disease"
+      },
+      {
+        "itemId": "0926996c4bbd8627",
+        "title": "FDA Approves First Freeze-Dried Plasma Product in the US"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "946d1ae6b8f21e13",
+        "946d1ae6b8f21e13",
+        "d44a9306e6c45e00",
+        "d44a9306e6c45e00"
+      ],
+      "missed": [
+        "ebc0f0ab8db8e36d",
+        "6f88caa083b8c435",
+        "f070fa28c98a9467",
+        "9fedf72eae9a1fab",
+        "f070fa28c98a9467",
+        "f070fa28c98a9467"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 10,
+      "totalUsdM": 375,
+      "largest": {
+        "itemId": "4649fcd415a9a1a3",
+        "usdM": 125
+      }
+    },
+    "financings": {
+      "count": 43,
+      "totalUsdM": 39538,
+      "byRound": {
+        "IPO": 15,
+        "financing": 28
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07653477",
+        "title": "Phase III Study of UBT251 Injection in Patients With Type 2 Diabetes With Inadequate Glycemic Control on Metformin ± Sulfonylurea/SGLT2 Inhibitor Therapy (UNIGUIDE-2)",
+        "sponsor": "The United Bio"
+      },
+      {
+        "nct": "NCT07817875",
+        "title": "Efficacy, Safety, and Pharmacokinetics of Tirzepatide (LY3298176) Once Weekly Versus Placebo in Pediatric Participants 6 to Less Than 12 Years of Age Who Have Obesity (ADVANCE-SURMOUNT-KIDS)",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07581002",
+        "title": "A Study to Assess Adverse Events and Change in Disease Activity When Intravenous (IV) Pivekimab Sunirine is Given in Combination With Oral Venetoclax and IV or Subcutaneous Azacitidine in Adult Participants With Acute Myeloid Leukemia (AML)",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07690371",
+        "title": "A Phase 3 Study of Rezpegaldesleukin (NKTR-358) for Patients ≥ 12 Years of Age With Moderate-to-Severe Atopic Dermatitis",
+        "sponsor": "Nektar Therapeutics"
+      },
+      {
+        "nct": "NCT07817108",
+        "title": "Phase III Clinical Trial of Lyophilized Herpes Zoster mRNA Vaccine in Adults Aged 40 Years or Above",
+        "sponsor": "Suzhou Abogen Biosciences"
+      },
+      {
+        "nct": "NCT06925321",
+        "title": "A Phase 3 Efficacy and Safety Study of Fosmanogepix for the Treatment of Adult Patients With Invasive Mold Infections."
+      },
+      {
+        "nct": "NCT07063745",
+        "title": "A Study to Compare the Combination of Navlimetostat (BMS-986504) With Pembrolizumab and Chemotherapy Versus Placebo Plus Pembrolizumab and Chemotherapy in First-line Metastatic Non-small Cell Lung Cancer Participants With Homozygous MTAP Deletion",
+        "sponsor": "Bristol Myers Squibb"
+      },
+      {
+        "nct": "NCT05065216",
+        "title": "Treatment of Acute Ischemic Stroke (ReMEDy2 Trial)",
+        "sponsor": "DiaMedica Therapeutics"
+      },
+      {
+        "nct": "NCT07771439",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease",
+        "sponsor": "Sanofi"
+      },
+      {
+        "nct": "NCT07659574",
+        "title": "Phase III Study of UBT251 Injection in Patients With Type 2 Diabetes Mellitus With Inadequate Glycemic Control on Diet and Exercise Alone（UNIGUIDE-1）",
+        "sponsor": "The United Bio"
+      },
+      {
+        "nct": "NCT07816380",
+        "title": "A Phase III Study to Evaluate the Efficacy and Safety of JYP0322 in Previously Untreated ROS1-Positive Locally Advanced or Metastatic Non-Small Cell Lung Cancer",
+        "sponsor": "Guangzhou JOYO Pharma"
+      },
+      {
+        "nct": "NCT07820085",
+        "title": "A Study to Investigate PORT-77 Oral Dosing Compared With Placebo in Participants With Erythropoietic Protoporphyria (EPP) or X-linked Protoporphyria (XLP)",
+        "sponsor": "Portal Therapeutics"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_baab5eb095",
+      "leadItemId": "0bbd6d50def995e5",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_3b858ba75c",
+      "leadItemId": "0c06ec256a6163ec",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_6027dc2b42",
+      "leadItemId": "cbef8ba2ebc9c3a4",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_dbd85e1aaf",
+      "leadItemId": "18d4cfe51c4d0692",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_0b09118b11",
+      "leadItemId": "342bc5dcd28f91d3",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "phase",
+      "delta": 4.8
+    },
+    {
+      "term": "gene editing",
+      "delta": 3.2
+    },
+    {
+      "term": "safety",
+      "delta": 2.7
+    },
+    {
+      "term": "checkpoint",
+      "delta": 2.7
+    },
+    {
+      "term": "pd-l1",
+      "delta": 2.7
+    },
+    {
+      "term": "brain",
+      "delta": 2.4
+    }
+  ],
+  "degradedSources": [
+    "Science (News)",
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "sanfilippo",
+    "electra",
+    "clonal",
+    "years",
+    "biotech",
+    "sanofi",
+    "checkpoint",
+    "brain",
+    "bispecific",
+    "pembrolizumab"
+  ]
+}

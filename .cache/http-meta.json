@@ -8,9 +8,9 @@
       "contentHash": "5c20415e94ae2887"
     },
     "biorxiv": {
-      "fetchedAt": "2026-09-19T14:29:03.615Z",
+      "fetchedAt": "2026-09-20T14:43:19.999Z",
       "status": 200,
-      "contentHash": "f416e72d400c3f87"
+      "contentHash": "18783d8eb55020cc"
     },
     "cell": {
       "fetchedAt": "2026-08-03T03:50:06.396Z",
@@ -24,9 +24,9 @@
     },
     "clinicaltrials": {
       "etag": "\"0/0.34.1/mu6q9sf4-gzip\"",
-      "fetchedAt": "2026-09-19T14:28:55.241Z",
+      "fetchedAt": "2026-09-20T14:43:12.252Z",
       "status": 200,
-      "contentHash": "9154387f2cc27d79"
+      "contentHash": "e5660ca1fb1bc482"
     },
     "endpoints": {
       "etag": "\"aab244d2ebe0121ac6080fb9ce9475c1-gzip\"",
@@ -36,9 +36,9 @@
       "contentHash": "f930b82772c5ccc3"
     },
     "europepmc-aaas": {
-      "fetchedAt": "2026-09-19T14:29:04.990Z",
+      "fetchedAt": "2026-09-20T14:43:16.718Z",
       "status": 200,
-      "contentHash": "d423d13a6d545578"
+      "contentHash": "76f9b00bcd0d6f7a"
     },
     "europepmc-aging": {
       "fetchedAt": "2026-08-07T12:00:30.224Z",
@@ -46,9 +46,9 @@
       "contentHash": "5695619d079fa2bc"
     },
     "europepmc-cellpress": {
-      "fetchedAt": "2026-09-19T14:28:59.467Z",
+      "fetchedAt": "2026-09-20T14:43:13.356Z",
       "status": 200,
-      "contentHash": "8d43559e767b281a"
+      "contentHash": "2039fdc232bcbc7b"
     },
     "europepmc-clinical": {
       "fetchedAt": "2026-08-07T12:00:28.790Z",
@@ -56,38 +56,38 @@
       "contentHash": "4a320a7730d641ce"
     },
     "europepmc-jama": {
-      "fetchedAt": "2026-09-19T14:29:08.599Z",
+      "fetchedAt": "2026-09-20T14:43:19.182Z",
       "status": 200,
-      "contentHash": "9874b22e2a4f42e0"
+      "contentHash": "64c664c79505de34"
     },
     "europepmc-lancet": {
-      "fetchedAt": "2026-09-19T14:29:03.005Z",
+      "fetchedAt": "2026-09-20T14:43:15.240Z",
       "status": 200,
-      "contentHash": "2cc58f79b03cea7f"
+      "contentHash": "a30718cabcf63a2b"
     },
     "europepmc-nejm": {
-      "fetchedAt": "2026-09-19T14:29:06.587Z",
+      "fetchedAt": "2026-09-20T14:43:17.892Z",
       "status": 200,
-      "contentHash": "7e0f482aeb220f4b"
+      "contentHash": "2548a2744845b8df"
     },
     "fda-press": {
-      "etag": "\"1789827840\"",
-      "lastModified": "Sat, 19 Sep 2026 14:24:00 GMT",
-      "fetchedAt": "2026-09-19T14:28:56.122Z",
+      "etag": "\"1789913443\"",
+      "lastModified": "Sun, 20 Sep 2026 14:10:43 GMT",
+      "fetchedAt": "2026-09-20T14:43:13.287Z",
       "status": 200,
       "contentHash": "8777e4e1db96c739"
     },
     "fierce-biotech": {
-      "etag": "W/\"1789766893\"",
-      "lastModified": "Fri, 18 Sep 2026 21:28:13 GMT",
-      "fetchedAt": "2026-09-19T14:28:55.557Z",
+      "etag": "W/\"1789905319\"",
+      "lastModified": "Sun, 20 Sep 2026 11:55:19 GMT",
+      "fetchedAt": "2026-09-20T14:43:12.756Z",
       "status": 200,
-      "contentHash": "6cce637c030ebbc6"
+      "contentHash": "cb392402ddb438f9"
     },
     "fierce-pharma": {
-      "etag": "W/\"1789767737\"",
-      "lastModified": "Fri, 18 Sep 2026 21:42:17 GMT",
-      "fetchedAt": "2026-09-19T14:28:55.672Z",
+      "etag": "W/\"1789886600\"",
+      "lastModified": "Sun, 20 Sep 2026 06:43:20 GMT",
+      "fetchedAt": "2026-09-20T14:43:12.849Z",
       "status": 200,
       "contentHash": "4f109f28cdc3f25f"
     },
@@ -99,7 +99,7 @@
       "contentHash": "ea666af4aff64b0a"
     },
     "medrxiv": {
-      "fetchedAt": "2026-09-19T14:29:03.766Z",
+      "fetchedAt": "2026-09-20T14:43:20.658Z",
       "status": 200,
       "contentHash": "e0c8a51e15c556c4"
     },
@@ -182,11 +182,11 @@
       "contentHash": "162446924d577540"
     },
     "statnews": {
-      "etag": "W/\"e526e843871b4c4c7fd933a81f9e3974\"",
-      "lastModified": "Sat, 19 Sep 2026 14:13:15 GMT",
-      "fetchedAt": "2026-09-19T14:28:55.805Z",
+      "etag": "W/\"572e21afcb103717f2727cb5174ecf32\"",
+      "lastModified": "Sat, 19 Sep 2026 14:41:47 GMT",
+      "fetchedAt": "2026-09-20T14:43:13.043Z",
       "status": 200,
-      "contentHash": "bf65d7841a494971"
+      "contentHash": "e86c655962730204"
     }
   }
 }
