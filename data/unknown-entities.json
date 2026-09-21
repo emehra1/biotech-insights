@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-09-20T14:43:23.254Z",
+  "generatedAt": "2026-09-21T17:06:27.959Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 4
+    },
     {
       "term": "Drug Administration",
       "count": 3
@@ -14,10 +18,6 @@
       "count": 2
     },
     {
-      "term": "Ingrid Zhang",
-      "count": 2
-    },
-    {
       "term": "Still",
       "count": 2
     },
@@ -26,7 +26,11 @@
       "count": 2
     },
     {
-      "term": "Self-",
+      "term": "CEO Mike Doustdar",
+      "count": 2
+    },
+    {
+      "term": "Karius",
       "count": 2
     }
   ]
