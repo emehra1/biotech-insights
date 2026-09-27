@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W39",
+  "start": "2026-09-21",
+  "end": "2026-09-27",
+  "generatedAt": "2026-09-27T15:41:08.577Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 9,
+    "items": [
+      {
+        "label": "squamous",
+        "terms": [
+          "squamous",
+          "head and neck cancer",
+          "pds0101",
+          "hnscc",
+          "hpv16",
+          "ici",
+          "nonrandomized",
+          "recurrent",
+          "score",
+          "bayesian"
+        ],
+        "docCount": 15,
+        "lift": 3.34,
+        "score": 6.73,
+        "itemIds": [
+          "54f4fdba6cd119f6",
+          "4512a48e2078e159",
+          "b1d1bb9e85e90d8c",
+          "623da31dc56ab590"
+        ]
+      },
+      {
+        "label": "adarx pharmaceuticals",
+        "terms": [
+          "adarx pharmaceuticals",
+          "adarx",
+          "sirna",
+          "city therapeutics",
+          "filing",
+          "alumni",
+          "continuing",
+          "fellow"
+        ],
+        "docCount": 11,
+        "lift": 3.67,
+        "score": 6.22,
+        "itemIds": [
+          "dc1fb3cd0404f977",
+          "7d07b5734bf0f033",
+          "1295677be2a0adc3",
+          "2c076cc3e9578a0c"
+        ]
+      },
+      {
+        "label": "chemical",
+        "terms": [
+          "chemical",
+          "fingerprint"
+        ],
+        "docCount": 10,
+        "lift": 3.78,
+        "score": 6.06,
+        "itemIds": [
+          "a1202cc5c6851c30",
+          "8a188ea5d5d0dcd3",
+          "afa2b00e378af0aa",
+          "017f76cb3d33d159"
+        ]
+      },
+      {
+        "label": "kidney",
+        "terms": [
+          "kidney",
+          "eisai",
+          "welireg",
+          "dominant",
+          "lenvima"
+        ],
+        "docCount": 14,
+        "lift": 2.97,
+        "score": 5.88,
+        "itemIds": [
+          "a9fdbd2a1fd340f2",
+          "8fd7e83c92d4a89b",
+          "1d785b3566171e25",
+          "644eaec2d55aaae1",
+          "db84f1e6373eb0b2",
+          "e690f1e8dc334988"
+        ]
+      },
+      {
+        "label": "thrombocytopenia",
+        "terms": [
+          "thrombocytopenia",
+          "iqr 33",
+          "iqr 89",
+          "rilzabrutinib",
+          "luna3",
+          "period"
+        ],
+        "docCount": 11,
+        "lift": 3.29,
+        "score": 5.69,
+        "itemIds": [
+          "d21f6d080a6c2655",
+          "1b4598c44acd5103",
+          "ea94e627d90ab2ff"
+        ]
+      },
+      {
+        "label": "facial",
+        "terms": [
+          "facial",
+          "atlas",
+          "illuminates",
+          "individuality",
+          "underlying"
+        ],
+        "docCount": 8,
+        "lift": 3.67,
+        "score": 5.3,
+        "itemIds": [
+          "d20e8026a12ee52c",
+          "30740a26dd9c5d68"
+        ]
+      },
+      {
+        "label": "endpoints",
+        "terms": [
+          "endpoints",
+          "newlimit",
+          "winner",
+          "anew labs",
+          "azalea therapeutics",
+          "car-t corsera health",
+          "kali therapeutics",
+          "medici therapeutics",
+          "stipple bio",
+          "searches",
+          "startups"
+        ],
+        "docCount": 8,
+        "lift": 3.67,
+        "score": 5.3,
+        "itemIds": [
+          "be8059a8268893a1",
+          "116015112f3408da",
+          "93cd794772f7e804",
+          "81667c1bd532911e"
+        ]
+      },
+      {
+        "label": "intra",
+        "terms": [
+          "intra",
+          "iqr 90",
+          "iqr 32",
+          "topical",
+          "incyte",
+          "cutaneous",
+          "centre"
+        ],
+        "docCount": 9,
+        "lift": 3.2,
+        "score": 5.03,
+        "itemIds": [
+          "5745517af68ac277",
+          "bae0635172718073",
+          "65a79c5060b3794a",
+          "dcdbb3538d61a30c"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "9914b9010e5232bb",
+        "title": "FDA approves ataxia-telangiectasia drug; Alkermes reports ADHD data"
+      },
+      {
+        "itemId": "3254224ed9cd313e",
+        "title": "Lilly’s breast cancer combo wins approval"
+      },
+      {
+        "itemId": "c1821dc98fa3e608",
+        "title": "How J&J paved the way for Compass’ coming psychedelic drug launch"
+      },
+      {
+        "itemId": "9914b9010e5232bb",
+        "title": "FDA approves ataxia-telangiectasia drug; Alkermes reports ADHD data"
+      },
+      {
+        "itemId": "a9fdbd2a1fd340f2",
+        "title": "Roche kidney drug's Phase 3 win sets up path to accelerated approval"
+      },
+      {
+        "itemId": "9914b9010e5232bb",
+        "title": "FDA approves ataxia-telangiectasia drug; Alkermes reports ADHD data"
+      },
+      {
+        "itemId": "ea78168c19e5fb58",
+        "title": "Elevar wins FDA nod for bile duct cancer drug Lyrfigtu, a first for a Korean firm"
+      },
+      {
+        "itemId": "a9fdbd2a1fd340f2",
+        "title": "Roche kidney drug's Phase 3 win sets up path to accelerated approval"
+      },
+      {
+        "itemId": "db84f1e6373eb0b2",
+        "title": "Merck expands Welireg's use to broader set of kidney cancer patients"
+      },
+      {
+        "itemId": "6bc3a92b6d4f597c",
+        "title": "Lilly wins approval for once-weekly insulin shot"
+      },
+      {
+        "itemId": "d47b6f0454b6899f",
+        "title": "Elevar wins first FDA approval with second-line drug for bile duct cancer"
+      },
+      {
+        "itemId": "e690f1e8dc334988",
+        "title": "Merck, Eisai’s Welireg-Lenvima combo lands FDA nod to jump the kidney cancer queue"
+      },
+      {
+        "itemId": "6b8031d7f4309447",
+        "title": "FDA approves Eli Lilly's once-weekly insulin pen, setting up rivalry with Novo"
+      },
+      {
+        "itemId": "1e04d45cb4238f4a",
+        "title": "FDA approves Mirum’s drug for ultra-rare soft tissue disease"
+      },
+      {
+        "itemId": "db84f1e6373eb0b2",
+        "title": "Merck expands Welireg's use to broader set of kidney cancer patients"
+      },
+      {
+        "itemId": "d47b6f0454b6899f",
+        "title": "Elevar wins first FDA approval with second-line drug for bile duct cancer"
+      },
+      {
+        "itemId": "6bc3a92b6d4f597c",
+        "title": "Lilly wins approval for once-weekly insulin shot"
+      },
+      {
+        "itemId": "56d08ecc3a4b2cdc",
+        "title": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron"
+      },
+      {
+        "itemId": "e690f1e8dc334988",
+        "title": "Merck, Eisai’s Welireg-Lenvima combo lands FDA nod to jump the kidney cancer queue"
+      },
+      {
+        "itemId": "2362011041276caf",
+        "title": "AbbVie's next-gen dopamine therapy for Parkinson's gets FDA approval"
+      },
+      {
+        "itemId": "1e04d45cb4238f4a",
+        "title": "FDA approves Mirum’s drug for ultra-rare soft tissue disease"
+      },
+      {
+        "itemId": "db84f1e6373eb0b2",
+        "title": "Merck expands Welireg's use to broader set of kidney cancer patients"
+      },
+      {
+        "itemId": "6bc3a92b6d4f597c",
+        "title": "Lilly wins approval for once-weekly insulin shot"
+      },
+      {
+        "itemId": "e690f1e8dc334988",
+        "title": "Merck, Eisai’s Welireg-Lenvima combo lands FDA nod to jump the kidney cancer queue"
+      },
+      {
+        "itemId": "56d08ecc3a4b2cdc",
+        "title": "Mirum bags FDA approval for ultra-rare bone lesion disorder, heating up rivalry with Regeneron"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "7aeea1e90ef9d4eb",
+        "60ab2402647a3d5e",
+        "405f05878f8febfe",
+        "2dcd53858c3e0eea",
+        "60ab2402647a3d5e",
+        "405f05878f8febfe",
+        "4b5f375cd1e789ce",
+        "60ab2402647a3d5e",
+        "405f05878f8febfe",
+        "4b5f375cd1e789ce",
+        "4b5f375cd1e789ce",
+        "4b5f375cd1e789ce"
+      ],
+      "missed": [
+        "69730f409aee88a2",
+        "69730f409aee88a2",
+        "69730f409aee88a2",
+        "69730f409aee88a2"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 19,
+      "totalUsdM": 26416,
+      "largest": {
+        "itemId": "4b5f375cd1e789ce",
+        "usdM": 3000
+      }
+    },
+    "financings": {
+      "count": 51,
+      "totalUsdM": 160334,
+      "byRound": {
+        "IPO": 19,
+        "financing": 32
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07285005",
+        "title": "A Study to Investigate Efficacy and Safety of KP-001 Compared With Placebo in Patients Aged ≥2 Years With Common VM, Common LM, or KTS/CLOVES Syndrome",
+        "sponsor": "Kaken Pharmaceutical"
+      },
+      {
+        "nct": "NCT05485961",
+        "title": "Combined Dose-Finding and CV Outcomes Study With CSL300 (Clazakizumab) in Adult Subjects With ESKD Undergoing Dialysis (POSIBIL6ESKD)",
+        "sponsor": "CSL"
+      },
+      {
+        "nct": "NCT07431827",
+        "title": "MK-3475A±Calderasib (MK-1084) in Completely Resected Stage IIA-IIIB (N2) KRAS G12Cm NSCLC (MK-1084-013)"
+      },
+      {
+        "nct": "NCT07831824",
+        "title": "Dose Optimization and Diagnostic Performance in Prostate Cancer (SPARROW [Staging Prostate Cancer With Advanced RM2 Radiotracer Oncologic Workup])",
+        "sponsor": "Lantheus Medical"
+      },
+      {
+        "nct": "NCT06990867",
+        "title": "Optimizing Reperfusion to Improve Outcomes and Neurologic Function",
+        "sponsor": "Corxel Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07831577",
+        "title": "Efficacy and Safety of GNSC-001 Intra-articular Injection for Knee Osteoarthritis"
+      },
+      {
+        "nct": "NCT07266805",
+        "title": "Study of Oral Deucrictibant XR Tablet for Prophylaxis and Deucrictibant Soft Capsule for On-Demand Treatment of Angioedema Attacks in Adults With Acquired Angioedema Due to C1 Inhibitor Deficiency"
+      },
+      {
+        "nct": "NCT07281079",
+        "title": "A Study of NNZ-2591 in Pediatric Participants With Phelan-McDermid Syndrome",
+        "sponsor": "Neuren Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07587242",
+        "title": "A Phase 3 Study to Evaluate the Safety and Efficacy of AOC 1044 (Also Referred to as Delpacibart Zotadirsen) in Participants With DMD With Gene Mutations Amenable to Exon 44 Skipping",
+        "sponsor": "Avidity Biosciences"
+      },
+      {
+        "nct": "NCT06875310",
+        "title": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+        "sponsor": "Mirati Therapeutics"
+      },
+      {
+        "nct": "NCT06905210",
+        "title": "Study of New Antiandrogenic Progestogen + Low-dose Estrogen for Moderate Acne Vulgaris"
+      },
+      {
+        "nct": "NCT07112196",
+        "title": "Visugromab in Cachexia International Trial"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_98f43b5b5f",
+      "leadItemId": "63d66f54b795adef",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_b2c20fceb4",
+      "leadItemId": "8cdc3c60d5b8ec51",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_9f6595b999",
+      "leadItemId": "996fe893558789fd",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_9da0a87f16",
+      "leadItemId": "0bbd6d50def995e5",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_db5cc84760",
+      "leadItemId": "73f620d2548923d5",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "safety",
+      "delta": 3.4
+    },
+    {
+      "term": "single",
+      "delta": 2.9
+    },
+    {
+      "term": "gene editing",
+      "delta": 2.7
+    },
+    {
+      "term": "brain",
+      "delta": 2.5
+    },
+    {
+      "term": "atlas",
+      "delta": 2.5
+    },
+    {
+      "term": "crispr",
+      "delta": 2.4
+    }
+  ],
+  "degradedSources": [
+    "Science (News)",
+    "Cell Press (via Europe PMC)",
+    "Science journals (via Europe PMC)",
+    "NEJM (via Europe PMC)",
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "squamous",
+    "chemical",
+    "kidney",
+    "thrombocytopenia",
+    "facial",
+    "endpoints",
+    "intra",
+    "adarx",
+    "vulnerability",
+    "atlas"
+  ]
+}
