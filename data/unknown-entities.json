@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-27T15:41:07.984Z",
+  "generatedAt": "2026-09-28T18:37:46.043Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 7
+    },
     {
       "term": "Drug Administration",
       "count": 3
-    },
-    {
-      "term": "Travere",
-      "count": 2
     }
   ]
 }
