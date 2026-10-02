@@ -1,24 +1,20 @@
 {
-  "generatedAt": "2026-10-01T17:24:44.465Z",
+  "generatedAt": "2026-10-02T16:40:56.788Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 5
+    },
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
-      "term": "Lead",
-      "count": 4
-    },
-    {
-      "term": "Last",
+      "term": "Cantor",
       "count": 2
     },
     {
       "term": "PhRMA",
-      "count": 2
-    },
-    {
-      "term": "Results",
       "count": 2
     }
   ]
