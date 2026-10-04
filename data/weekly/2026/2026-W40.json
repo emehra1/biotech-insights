@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W40",
+  "start": "2026-09-28",
+  "end": "2026-10-04",
+  "generatedAt": "2026-10-04T15:49:48.498Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 10,
+    "items": [
+      {
+        "label": "regeneron",
+        "terms": [
+          "regeneron",
+          "sanofi",
+          "alliance",
+          "dupixent",
+          "ignite",
+          "broaden",
+          "eccogene"
+        ],
+        "docCount": 20,
+        "lift": 3.89,
+        "score": 8.77,
+        "itemIds": [
+          "eb8b50915c06ca70",
+          "e5894c6e41006305",
+          "1896490eccedc864",
+          "7a85adf3318dc999",
+          "e86df93cc2aefd6a",
+          "a85bf7316f013ca6",
+          "c5767dafea5ab61e",
+          "94ce7207ea14795e"
+        ]
+      },
+      {
+        "label": "inhibitor",
+        "terms": [
+          "inhibitor",
+          "influence",
+          "history",
+          "parp",
+          "sar443820",
+          "himalaya",
+          "amyotrophic",
+          "lateral",
+          "ripk1",
+          "ramp 203",
+          "avutometinib",
+          "defactinib",
+          "mek",
+          "raf",
+          "clamp"
+        ],
+        "docCount": 20,
+        "lift": 3.53,
+        "score": 8.13,
+        "itemIds": [
+          "ac64755f7bc2cd21",
+          "2869e7acc3db5ae0",
+          "b4edd1f28a90a3d2",
+          "f6eca9415ac82ae2",
+          "986a0ddb938b3c85",
+          "8be9e3ef0247440a",
+          "ef9898b52dcf2e13",
+          "4b0a947f6881238e"
+        ]
+      },
+      {
+        "label": "abogen biosciences",
+        "terms": [
+          "abogen biosciences",
+          "abogen",
+          "engager",
+          "bypasses",
+          "australian",
+          "pharmacies"
+        ],
+        "docCount": 11,
+        "lift": 4.67,
+        "score": 7.37,
+        "itemIds": [
+          "f9a268a88b3ea33b",
+          "744aa3ae12e77336",
+          "5ab436beb2c6ce0b",
+          "c00fa9462bb7bc40"
+        ]
+      },
+      {
+        "label": "upfront",
+        "terms": [
+          "upfront"
+        ],
+        "docCount": 15,
+        "lift": 3.66,
+        "score": 7.25,
+        "itemIds": [
+          "ac64755f7bc2cd21",
+          "975abcdc96370382",
+          "e5894c6e41006305",
+          "7a85adf3318dc999",
+          "f9a268a88b3ea33b",
+          "c5767dafea5ab61e"
+        ]
+      },
+      {
+        "label": "glp-1",
+        "terms": [
+          "glp-1",
+          "obesity",
+          "gip",
+          "amylin",
+          "hengrui",
+          "petrelintide",
+          "bmi 36",
+          "funding zealand pharma",
+          "analogue",
+          "zupreme",
+          "zealand",
+          "iqr 11",
+          "triumph"
+        ],
+        "docCount": 27,
+        "lift": 2.38,
+        "score": 6.51,
+        "itemIds": [
+          "0bdbe4a380454d27",
+          "0bbd6d50def995e5",
+          "b34f4f127c067586",
+          "9b3440e747d50fb0",
+          "a51dcbee13348833",
+          "1dbde9f7d5495095",
+          "975abcdc96370382",
+          "cb2d78ea1732d56c"
+        ]
+      },
+      {
+        "label": "receptor",
+        "terms": [
+          "receptor",
+          "immunosurveillance",
+          "cardiolipin",
+          "fiber",
+          "estrogen",
+          "unique",
+          "define",
+          "modality",
+          "antagonism",
+          "gpcr"
+        ],
+        "docCount": 19,
+        "lift": 2.78,
+        "score": 6.44,
+        "itemIds": [
+          "bd7a10851a76be53",
+          "a51dcbee13348833",
+          "8bf114d540543ecd",
+          "6dc40e3eac0efbec",
+          "04ec2dafabeaaf1e",
+          "66921a7b72ac03ef",
+          "e22e9530eb7f2b9e",
+          "2f37b175bf173167"
+        ]
+      },
+      {
+        "label": "promote",
+        "terms": [
+          "promote",
+          "rad51c",
+          "scrmp",
+          "mir7-3hg",
+          "orf",
+          "sumoylation",
+          "csnk2b",
+          "facilitates",
+          "cisplatin",
+          "damage"
+        ],
+        "docCount": 11,
+        "lift": 3.6,
+        "score": 6.12,
+        "itemIds": [
+          "92dd60598141524d",
+          "895f4b1f76c28015",
+          "dc4cc56e5d325176",
+          "908b80729438e8a1",
+          "b4a7105d176fd588"
+        ]
+      },
+      {
+        "label": "type 2 diabetes",
+        "terms": [
+          "type 2 diabetes",
+          "underwhelms",
+          "survodutide"
+        ],
+        "docCount": 23,
+        "lift": 2.27,
+        "score": 5.68,
+        "itemIds": [
+          "ef7c7a56dcf80e87",
+          "a51dcbee13348833",
+          "cb2d78ea1732d56c",
+          "3dd7cc6e591f85aa",
+          "1b0e0d8e5bbfff2d",
+          "1af48d85c6e45fdf",
+          "fd53f40ea5345700",
+          "6e8dba109923dbe5"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "0bdbe4a380454d27",
+        "title": "AbbVie wins FDA nod for Parkinson’s pill"
+      },
+      {
+        "itemId": "2362011041276caf",
+        "title": "AbbVie's next-gen dopamine therapy for Parkinson's gets FDA approval"
+      },
+      {
+        "itemId": "d2674c5a4f395eda",
+        "title": "FDA Approves First Treatment for MCT8 Deficiency"
+      },
+      {
+        "itemId": "94ee6fb0ea919231",
+        "title": "Egetis Therapeutics' Emcitate cleared by FDA for rare X-linked genetic disease"
+      },
+      {
+        "itemId": "dc7f72ccd239344f",
+        "title": "Roche’s Gazyva secures FDA nod for idiopathic nephrotic syndrome, extending autoimmune pivot"
+      },
+      {
+        "itemId": "2362011041276caf",
+        "title": "AbbVie's next-gen dopamine therapy for Parkinson's gets FDA approval"
+      },
+      {
+        "itemId": "e5e21657e2004734",
+        "title": "Combination of Osemitamab (TST001), Pembrolizumab and Chemotherapy as First-line Therapy in Advanced or Metastatic GC/GEJ Adenocarcinoma"
+      },
+      {
+        "itemId": "d2674c5a4f395eda",
+        "title": "FDA Approves First Treatment for MCT8 Deficiency"
+      },
+      {
+        "itemId": "83e34b9db61bc9cc",
+        "title": "FDA Approves First Heart Valve Designed to Grow with Children"
+      },
+      {
+        "itemId": "f69aa769cc2fe49d",
+        "title": "With FDA approval, Lilly’s BTK drug Jaypirca enters first-line CLL"
+      },
+      {
+        "itemId": "83e34b9db61bc9cc",
+        "title": "FDA Approves First Heart Valve Designed to Grow with Children"
+      },
+      {
+        "itemId": "f69aa769cc2fe49d",
+        "title": "With FDA approval, Lilly’s BTK drug Jaypirca enters first-line CLL"
+      },
+      {
+        "itemId": "83e34b9db61bc9cc",
+        "title": "FDA Approves First Heart Valve Designed to Grow with Children"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "29acb2ae5c5d8ed4",
+        "4b5f375cd1e789ce",
+        "29acb2ae5c5d8ed4",
+        "3dd7cc6e591f85aa",
+        "3dd7cc6e591f85aa",
+        "3dd7cc6e591f85aa"
+      ],
+      "missed": [
+        "7fb8b33061b34339",
+        "7fb8b33061b34339",
+        "8be9e3ef0247440a",
+        "8df02cadf9a95cb5",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 6,
+      "totalUsdM": 11700,
+      "largest": {
+        "itemId": "7563654bb6377244",
+        "usdM": 8700
+      }
+    },
+    "financings": {
+      "count": 67,
+      "totalUsdM": 227374,
+      "byRound": {
+        "financing": 62,
+        "IPO": 2,
+        "Series G": 3
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07668414",
+        "title": "A Research Study Investigating How Well the Medicine Zenagamtide Helps People With Excess Body Weight Lose Weight Compared to Semaglutide",
+        "sponsor": "Novo Nordisk"
+      },
+      {
+        "nct": "NCT07794579",
+        "title": "A Study of Orforglipron in Participants With Overweight at Risk of Development of Obesity-Related Complications or Progression to Class 1 Obesity",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT06096116",
+        "title": "Phase 3 Study on the Efficacy and Safety of Human Plasma Derived Antithrombin (Atenativ) in Heparin-Resistant Patients Scheduled to Undergo Cardiac Surgery Necessitating Cardiopulmonary Bypass"
+      },
+      {
+        "nct": "NCT07705555",
+        "title": "A Clinical Trial of MK-8748 Compared to Aflibercept in Participants With Diabetic Macular Edema (MK-8748-004)"
+      },
+      {
+        "nct": "NCT06742996",
+        "title": "A Study to Investigate the Efficacy and Safety of Sonrotoclax Plus Zanubrutinib Compared With Placebo Plus Zanubrutinib in Adults With Relapsed/Refractory Mantle Cell Lymphoma (CELESTIAL-RRMCL)",
+        "sponsor": "BeiGene"
+      },
+      {
+        "nct": "NCT07513376",
+        "title": "A Clinical Trial of Adjuvant Intismeran (V940) With or Without Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) in High-Risk Stage I Non-Small Cell Lung Cancer (V940-014)"
+      },
+      {
+        "nct": "NCT06711887",
+        "title": "Phase III Extension Study of Efficacy and Safety of Ianalumab With or Without Study Treatment Withdrawal in Participants With Lupus Nephritis (SIRIUS-LN Extension)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07782996",
+        "title": "A Study to Investigate the Efficacy and Safety of GSK5784283 Compared With Placebo in Participants With Uncontrolled Asthma (PERSIST ASTHMA-2)",
+        "sponsor": "GSK"
+      },
+      {
+        "nct": "NCT07011719",
+        "title": "Study of Casdatifan and Cabozantinib Versus Placebo and Cabozantinib in Patients With Advanced Clear Cell Renal Cell Carcinoma",
+        "sponsor": "Arcus Biosciences"
+      },
+      {
+        "nct": "NCT07700979",
+        "title": "Phase 3 Study of Cadonilimab Combined With Chemotherapy vs Chemotherapy in Combination With or Without Nivolumab for the 1L Treatment of Participants With HER2-negative, Previously Untreated, Unresectable or Metastatic Gastric/GEJ Adenocarcinoma",
+        "sponsor": "Akeso"
+      },
+      {
+        "nct": "NCT07357727",
+        "title": "A Phase 3 Study of Pelabresib (DAK539) and Ruxolitinib in Myelofibrosis (MF)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07095465",
+        "title": "Phase 3, Open Label Extension Study of ACP-204 in Lewy Body Dementia Psychosis",
+        "sponsor": "ACADIA Pharmaceuticals"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_a35ee71721",
+      "leadItemId": "14529d419de9dce4",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_a35ee71721",
+      "leadItemId": "14529d419de9dce4",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_36aaf26925",
+      "leadItemId": "b214d824a16dc516",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_32e17321ed",
+      "leadItemId": "95082c418a1cb605",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_5913ad3d04",
+      "leadItemId": "e22e9530eb7f2b9e",
+      "publisherCount": 3
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "single",
+      "delta": 3.5
+    },
+    {
+      "term": "obesity",
+      "delta": 3.1
+    },
+    {
+      "term": "glp-1",
+      "delta": 3.1
+    },
+    {
+      "term": "regeneron",
+      "delta": 3.1
+    },
+    {
+      "term": "inhibitor",
+      "delta": 2.9
+    },
+    {
+      "term": "sanofi",
+      "delta": 2.8
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "regeneron",
+    "inhibitor",
+    "upfront",
+    "receptor",
+    "sanofi",
+    "promote",
+    "obesity",
+    "adaptations",
+    "intervention",
+    "macrophages"
+  ]
+}

@@ -8,7 +8,7 @@
       "contentHash": "f8da084ec9af3a66"
     },
     "biorxiv": {
-      "fetchedAt": "2026-10-03T15:09:43.877Z",
+      "fetchedAt": "2026-10-04T15:49:45.809Z",
       "status": 200,
       "contentHash": "832ca7a814200d65"
     },
@@ -24,9 +24,9 @@
     },
     "clinicaltrials": {
       "etag": "\"0/0.34.1/muqqfpr4-gzip\"",
-      "fetchedAt": "2026-10-03T15:09:33.249Z",
+      "fetchedAt": "2026-10-04T15:49:37.359Z",
       "status": 200,
-      "contentHash": "b0c50100568edce1"
+      "contentHash": "e5660ca1fb1bc482"
     },
     "endpoints": {
       "etag": "\"04e6aace37a6605d467bf7731c777d67-gzip\"",
@@ -36,9 +36,9 @@
       "contentHash": "88ba8eeef984854b"
     },
     "europepmc-aaas": {
-      "fetchedAt": "2026-10-03T15:09:39.635Z",
+      "fetchedAt": "2026-10-04T15:49:41.529Z",
       "status": 200,
-      "contentHash": "62bc52f053bef64c"
+      "contentHash": "421ef3239eb61801"
     },
     "europepmc-aging": {
       "fetchedAt": "2026-08-07T12:00:30.224Z",
@@ -46,9 +46,9 @@
       "contentHash": "5695619d079fa2bc"
     },
     "europepmc-cellpress": {
-      "fetchedAt": "2026-10-03T15:09:34.832Z",
+      "fetchedAt": "2026-10-04T15:49:38.639Z",
       "status": 200,
-      "contentHash": "1d94d9753202c648"
+      "contentHash": "6766f0ec1cbb8c2b"
     },
     "europepmc-clinical": {
       "fetchedAt": "2026-08-07T12:00:28.790Z",
@@ -56,24 +56,24 @@
       "contentHash": "4a320a7730d641ce"
     },
     "europepmc-jama": {
-      "fetchedAt": "2026-10-03T15:09:42.311Z",
+      "fetchedAt": "2026-10-04T15:49:44.222Z",
       "status": 200,
-      "contentHash": "6ef35fb7798291d0"
+      "contentHash": "1442afabb383a6e1"
     },
     "europepmc-lancet": {
-      "fetchedAt": "2026-10-03T15:09:36.202Z",
+      "fetchedAt": "2026-10-04T15:49:40.259Z",
       "status": 200,
-      "contentHash": "760a094c2c8fb144"
+      "contentHash": "b7e41591bbafd9f2"
     },
     "europepmc-nejm": {
-      "fetchedAt": "2026-10-03T15:09:40.934Z",
+      "fetchedAt": "2026-10-04T15:49:42.906Z",
       "status": 200,
-      "contentHash": "ff41917fe47b5d0f"
+      "contentHash": "0003b711615f6b0b"
     },
     "fda-press": {
-      "etag": "\"1791037815\"",
-      "lastModified": "Sat, 03 Oct 2026 14:30:15 GMT",
-      "fetchedAt": "2026-10-03T15:09:34.999Z",
+      "etag": "\"1791117451\"",
+      "lastModified": "Sun, 04 Oct 2026 12:37:31 GMT",
+      "fetchedAt": "2026-10-04T15:49:38.127Z",
       "status": 200,
       "contentHash": "09ad2f8fd0fb094b"
     },
@@ -85,9 +85,9 @@
       "contentHash": "8f91432ef091ff08"
     },
     "fierce-pharma": {
-      "etag": "W/\"1790983636\"",
-      "lastModified": "Fri, 02 Oct 2026 23:27:16 GMT",
-      "fetchedAt": "2026-10-03T15:09:33.740Z",
+      "etag": "W/\"1791042928\"",
+      "lastModified": "Sat, 03 Oct 2026 15:55:28 GMT",
+      "fetchedAt": "2026-10-04T15:49:37.701Z",
       "status": 200,
       "contentHash": "7a00bb8c3c6de1af"
     },
@@ -99,9 +99,9 @@
       "contentHash": "2e078af9bae9051a"
     },
     "medrxiv": {
-      "fetchedAt": "2026-10-03T15:09:44.107Z",
+      "fetchedAt": "2026-10-04T15:49:44.986Z",
       "status": 200,
-      "contentHash": "5df806010f353ed9"
+      "contentHash": "4c75668621061463"
     },
     "nature": {
       "etag": "\"95c58a91fed2035153969a164a67c0bf\"",
@@ -176,15 +176,15 @@
       "contentHash": "4d83bbaab183e9ff"
     },
     "science-news": {
-      "lastModified": "Sat, 03 Oct 2026 14:38:26 GMT",
-      "fetchedAt": "2026-10-03T15:09:42.995Z",
+      "lastModified": "Sun, 04 Oct 2026 15:39:26 GMT",
+      "fetchedAt": "2026-10-04T15:49:44.403Z",
       "status": 200,
       "contentHash": "378e0a953b2ba1d3"
     },
     "statnews": {
-      "etag": "W/\"90b899bbdb71828e28d5af780e3223d6\"",
-      "lastModified": "Fri, 02 Oct 2026 21:31:21 GMT",
-      "fetchedAt": "2026-10-03T15:09:34.726Z",
+      "etag": "W/\"503008d504afa12d29a74e7f42bb9007\"",
+      "lastModified": "Sat, 03 Oct 2026 13:39:16 GMT",
+      "fetchedAt": "2026-10-04T15:49:37.917Z",
       "status": 200,
       "contentHash": "2cf2c2ee159bb79b"
     }
