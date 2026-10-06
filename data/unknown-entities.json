@@ -1,12 +1,24 @@
 {
-  "generatedAt": "2026-10-04T15:49:48.046Z",
+  "generatedAt": "2026-10-06T17:15:35.615Z",
   "candidates": [
     {
       "term": "Drug Administration",
-      "count": 4
+      "count": 6
+    },
+    {
+      "term": "Lead",
+      "count": 5
+    },
+    {
+      "term": "Monday",
+      "count": 2
     },
     {
       "term": "PhRMA",
+      "count": 2
+    },
+    {
+      "term": "Trump",
       "count": 2
     }
   ]
