@@ -1,6 +1,6 @@
 {
   "endpoints": {
-    "lastSuccessAt": "2026-10-06T17:15:24.845Z",
+    "lastSuccessAt": "2026-10-07T17:50:46.965Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       24,
@@ -36,11 +36,10 @@
     ]
   },
   "fierce-biotech": {
-    "lastSuccessAt": "2026-10-06T17:15:24.963Z",
+    "lastSuccessAt": "2026-10-07T17:50:47.046Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       25,
-      25,
       24,
       24,
       25,
@@ -68,14 +67,14 @@
       25,
       25,
       25,
+      23,
       23
     ]
   },
   "fierce-pharma": {
-    "lastSuccessAt": "2026-10-06T17:15:25.173Z",
+    "lastSuccessAt": "2026-10-07T17:50:47.129Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      25,
       24,
       24,
       24,
@@ -104,11 +103,12 @@
       25,
       25,
       25,
+      22,
       22
     ]
   },
   "statnews": {
-    "lastSuccessAt": "2026-10-06T17:15:25.285Z",
+    "lastSuccessAt": "2026-10-07T17:50:47.204Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       20,
@@ -144,7 +144,7 @@
     ]
   },
   "biopharmadive": {
-    "lastSuccessAt": "2026-10-06T17:15:25.450Z",
+    "lastSuccessAt": "2026-10-07T17:50:47.324Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       10,
@@ -180,7 +180,7 @@
     ]
   },
   "fda-press": {
-    "lastSuccessAt": "2026-10-06T17:15:25.561Z",
+    "lastSuccessAt": "2026-10-07T17:50:50.501Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       20,
@@ -216,7 +216,7 @@
     ]
   },
   "nature": {
-    "lastSuccessAt": "2026-10-06T17:15:27.921Z",
+    "lastSuccessAt": "2026-10-07T17:50:49.616Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       75,
@@ -252,7 +252,7 @@
     ]
   },
   "nature-biotech": {
-    "lastSuccessAt": "2026-10-06T17:15:27.186Z",
+    "lastSuccessAt": "2026-10-07T17:50:50.313Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -288,7 +288,7 @@
     ]
   },
   "nature-medicine": {
-    "lastSuccessAt": "2026-10-06T17:15:28.748Z",
+    "lastSuccessAt": "2026-10-07T17:50:51.021Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -324,7 +324,7 @@
     ]
   },
   "nature-rev-drug-discovery": {
-    "lastSuccessAt": "2026-10-06T17:15:29.571Z",
+    "lastSuccessAt": "2026-10-07T17:50:57.096Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -360,7 +360,7 @@
     ]
   },
   "science-news": {
-    "lastSuccessAt": "2026-10-06T17:15:31.720Z",
+    "lastSuccessAt": "2026-10-07T17:50:55.271Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       10,
@@ -371,7 +371,6 @@
       10,
       10,
       10,
-      10,
       0,
       10,
       0,
@@ -385,6 +384,7 @@
       0,
       0,
       0,
+      10,
       10,
       10,
       10,
@@ -426,7 +426,7 @@
     ]
   },
   "jama": {
-    "lastSuccessAt": "2026-10-06T17:15:31.927Z",
+    "lastSuccessAt": "2026-10-07T17:50:55.828Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       25,
@@ -462,7 +462,7 @@
     ]
   },
   "biorxiv": {
-    "lastSuccessAt": "2026-10-06T17:15:32.015Z",
+    "lastSuccessAt": "2026-10-07T17:50:55.918Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       30,
@@ -498,7 +498,7 @@
     ]
   },
   "medrxiv": {
-    "lastSuccessAt": "2026-10-06T17:15:33.324Z",
+    "lastSuccessAt": "2026-10-07T17:50:56.135Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       30,
@@ -549,11 +549,10 @@
     ]
   },
   "clinicaltrials": {
-    "lastSuccessAt": "2026-10-06T17:15:24.753Z",
+    "lastSuccessAt": "2026-10-07T17:50:46.665Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       0,
-      0,
       40,
       40,
       40,
@@ -581,6 +580,7 @@
       40,
       40,
       0,
+      40,
       40
     ]
   },
@@ -596,7 +596,7 @@
     ]
   },
   "nature-genetics": {
-    "lastSuccessAt": "2026-10-06T17:15:30.284Z",
+    "lastSuccessAt": "2026-10-07T17:50:51.727Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -632,7 +632,7 @@
     ]
   },
   "nature-aging": {
-    "lastSuccessAt": "2026-10-06T17:15:30.996Z",
+    "lastSuccessAt": "2026-10-07T17:50:52.437Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -668,7 +668,7 @@
     ]
   },
   "nature-metabolism": {
-    "lastSuccessAt": "2026-10-06T17:15:31.708Z",
+    "lastSuccessAt": "2026-10-07T17:50:53.150Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -704,7 +704,7 @@
     ]
   },
   "nature-chem-biol": {
-    "lastSuccessAt": "2026-10-06T17:15:32.432Z",
+    "lastSuccessAt": "2026-10-07T17:50:54.051Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -740,7 +740,7 @@
     ]
   },
   "nature-biomed-eng": {
-    "lastSuccessAt": "2026-10-06T17:15:33.143Z",
+    "lastSuccessAt": "2026-10-07T17:50:54.973Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -776,7 +776,7 @@
     ]
   },
   "nature-cell-biol": {
-    "lastSuccessAt": "2026-10-06T17:15:34.083Z",
+    "lastSuccessAt": "2026-10-07T17:50:55.679Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -812,7 +812,7 @@
     ]
   },
   "nature-cancer": {
-    "lastSuccessAt": "2026-10-06T17:15:34.979Z",
+    "lastSuccessAt": "2026-10-07T17:50:56.384Z",
     "consecutiveFailures": 0,
     "recentCounts": [
       8,
@@ -848,10 +848,9 @@
     ]
   },
   "europepmc-cellpress": {
-    "lastSuccessAt": "2026-10-06T17:15:25.990Z",
+    "lastSuccessAt": "2026-10-07T17:50:51.744Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      87,
       87,
       81,
       0,
@@ -880,14 +879,14 @@
       107,
       99,
       99,
-      98
+      98,
+      91
     ]
   },
   "europepmc-lancet": {
-    "lastSuccessAt": "2026-10-06T17:15:27.397Z",
+    "lastSuccessAt": "2026-10-07T17:50:54.048Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      56,
       59,
       57,
       0,
@@ -916,14 +915,14 @@
       44,
       42,
       42,
-      44
+      44,
+      39
     ]
   },
   "europepmc-aaas": {
-    "lastSuccessAt": "2026-10-06T17:15:28.856Z",
+    "lastSuccessAt": "2026-10-07T17:50:59.367Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      84,
       84,
       84,
       0,
@@ -952,14 +951,14 @@
       88,
       89,
       89,
+      89,
       89
     ]
   },
   "europepmc-nejm": {
-    "lastSuccessAt": "2026-10-06T17:15:30.020Z",
+    "lastSuccessAt": "2026-10-07T17:51:00.493Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      20,
       20,
       20,
       0,
@@ -988,14 +987,14 @@
       4,
       4,
       4,
-      4
+      4,
+      3
     ]
   },
   "europepmc-jama": {
-    "lastSuccessAt": "2026-10-06T17:15:31.338Z",
+    "lastSuccessAt": "2026-10-07T17:51:02.198Z",
     "consecutiveFailures": 0,
     "recentCounts": [
-      34,
       34,
       29,
       54,
@@ -1024,6 +1023,7 @@
       24,
       23,
       23,
+      19,
       19
     ]
   }
