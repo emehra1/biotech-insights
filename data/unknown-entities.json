@@ -1,20 +1,24 @@
 {
-  "generatedAt": "2026-10-07T17:51:03.088Z",
+  "generatedAt": "2026-10-08T17:54:09.074Z",
   "candidates": [
     {
-      "term": "Drug Administration",
+      "term": "Lead",
       "count": 6
     },
     {
-      "term": "Lead",
+      "term": "Drug Administration",
       "count": 5
     },
     {
-      "term": "EMD Serono Research",
+      "term": "Argenx",
       "count": 2
     },
     {
-      "term": "Development Institute",
+      "term": "Wednesday",
+      "count": 2
+    },
+    {
+      "term": "STAT",
       "count": 2
     }
   ]
