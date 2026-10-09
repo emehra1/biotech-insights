@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T17:54:09.074Z",
+  "generatedAt": "2026-10-09T17:28:04.072Z",
   "candidates": [
     {
       "term": "Lead",
@@ -14,11 +14,15 @@
       "count": 2
     },
     {
-      "term": "Wednesday",
+      "term": "Thursday",
       "count": 2
     },
     {
-      "term": "STAT",
+      "term": "Health",
+      "count": 2
+    },
+    {
+      "term": "Human Services",
       "count": 2
     }
   ]
