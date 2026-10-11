@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W41",
+  "start": "2026-10-05",
+  "end": "2026-10-11",
+  "generatedAt": "2026-10-11T16:40:16.896Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 11,
+    "items": [
+      {
+        "label": "viatris",
+        "terms": [
+          "viatris",
+          "pacira",
+          "pacira biosciences",
+          "boosts"
+        ],
+        "docCount": 15,
+        "lift": 6,
+        "score": 10.01,
+        "itemIds": [
+          "881f3bcb974f6647",
+          "36c72dc9d80fc39a",
+          "6a7d831fb29b73fa",
+          "c606e3fd8b24c971"
+        ]
+      },
+      {
+        "label": "relapsed",
+        "terms": [
+          "relapsed",
+          "refractory",
+          "multiple myeloma",
+          "myeloma",
+          "cd38",
+          "extended",
+          "follow",
+          "bcma",
+          "dexamethasone",
+          "felzartamab",
+          "iqr 16"
+        ],
+        "docCount": 15,
+        "lift": 3.38,
+        "score": 6.81,
+        "itemIds": [
+          "02fab5892fc27fde",
+          "94af076751129ed1",
+          "fe4eebc9547990be",
+          "89b0a73bf3e4afdd"
+        ]
+      },
+      {
+        "label": "protein",
+        "terms": [
+          "protein",
+          "pii",
+          "nitrogenase",
+          "supercomplex",
+          "methanogen",
+          "adc therapeutics",
+          "atrium therapeutics",
+          "tokyo-based ono pharmaceutical",
+          "valneva",
+          "chikungunya",
+          "pulls",
+          "ampk",
+          "zak",
+          "nik",
+          "deprived",
+          "adoptively",
+          "transferred",
+          "glucose",
+          "amp"
+        ],
+        "docCount": 17,
+        "lift": 2.69,
+        "score": 5.89,
+        "itemIds": [
+          "bd7a10851a76be53",
+          "aa41e596eac38e0f",
+          "d982b25f66355f1d",
+          "0b5ebf07e51980b9",
+          "d9ee85258553bd6f",
+          "4dc24fb4fbf55346",
+          "73026b9e46384118"
+        ]
+      },
+      {
+        "label": "clinic",
+        "terms": [
+          "clinic",
+          "matchpoint therapeutics",
+          "matchpoint",
+          "series",
+          "covalent",
+          "iambic therapeutics"
+        ],
+        "docCount": 12,
+        "lift": 3.2,
+        "score": 5.81,
+        "itemIds": [
+          "7e4ac0d40b7be0c2",
+          "349d828e1dc925f6",
+          "ebdab3323e953634",
+          "e2bb05ac0c9188c0"
+        ]
+      },
+      {
+        "label": "retension",
+        "terms": [
+          "retension",
+          "retension pharmaceuticals",
+          "trexbio",
+          "lycia therapeutics",
+          "lycia",
+          "rakes"
+        ],
+        "docCount": 10,
+        "lift": 3.56,
+        "score": 5.79,
+        "itemIds": [
+          "cb6081a541cbbbd7",
+          "0e15b5b43d18510e",
+          "7ff76930449055c4",
+          "c9122e7862a9a6c3"
+        ]
+      },
+      {
+        "label": "type 2 diabetes",
+        "terms": [
+          "type 2 diabetes",
+          "diabetes",
+          "iqr 11",
+          "triumph",
+          "bmi 36",
+          "funding zealand pharma",
+          "analogue",
+          "zupreme",
+          "sglt2",
+          "survodutide",
+          "comparator"
+        ],
+        "docCount": 26,
+        "lift": 2.17,
+        "score": 5.72,
+        "itemIds": [
+          "fd53f40ea5345700",
+          "1b0e0d8e5bbfff2d",
+          "1d01169b31ddb733",
+          "d299f02fd18f90a5",
+          "95082c418a1cb605",
+          "6fdbe90a05840244",
+          "5f6d780c1021a395",
+          "6e8dba109923dbe5"
+        ]
+      },
+      {
+        "label": "adults",
+        "terms": [
+          "adults"
+        ],
+        "docCount": 20,
+        "lift": 2.37,
+        "score": 5.57,
+        "itemIds": [
+          "fd53f40ea5345700",
+          "95082c418a1cb605",
+          "6fdbe90a05840244",
+          "f83a17c5d4c51ad7",
+          "5f6d780c1021a395",
+          "5d9aae21431e4ecf",
+          "171575f2ac3aef54",
+          "cc31da11ac79b9fe"
+        ]
+      },
+      {
+        "label": "beyond",
+        "terms": [
+          "beyond"
+        ],
+        "docCount": 11,
+        "lift": 3,
+        "score": 5.26,
+        "itemIds": [
+          "12a3f65301298826",
+          "881f3bcb974f6647",
+          "45f562c333f4a569"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "2e6c2279f264a79d",
+        "title": "Opinion: Why the FDA should not approve an ineffective multicancer screening test"
+      },
+      {
+        "itemId": "5a0f620b6da4264a",
+        "title": "FDA Authorizes First Autonomous Robotic Blood Draw Device"
+      },
+      {
+        "itemId": "3788f7f145b9974a",
+        "title": "Gene therapy for rare lysosomal storage disorder nabs FDA approval"
+      },
+      {
+        "itemId": "97cf1552acd0113a",
+        "title": "Abbott nabs FDA approval for new CardioMEMS HF System that allows heart readings to be seen at home"
+      },
+      {
+        "itemId": "f0449994d15fe66b",
+        "title": "Scaling psychedelics comes with uncertainty ‘baked into the sauce’"
+      },
+      {
+        "itemId": "881f3bcb974f6647",
+        "title": "Roche goes beyond licensing in deal with Chinese biotech"
+      },
+      {
+        "itemId": "881f3bcb974f6647",
+        "title": "Roche goes beyond licensing in deal with Chinese biotech"
+      },
+      {
+        "itemId": "881f3bcb974f6647",
+        "title": "Roche goes beyond licensing in deal with Chinese biotech"
+      },
+      {
+        "itemId": "881f3bcb974f6647",
+        "title": "Roche goes beyond licensing in deal with Chinese biotech"
+      },
+      {
+        "itemId": "3788f7f145b9974a",
+        "title": "Gene therapy for rare lysosomal storage disorder nabs FDA approval"
+      },
+      {
+        "itemId": "5a0f620b6da4264a",
+        "title": "FDA Authorizes First Autonomous Robotic Blood Draw Device"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "b0cca5b226d33160",
+        "43ddf494796e6645",
+        "43ddf494796e6645",
+        "43ddf494796e6645",
+        "43ddf494796e6645"
+      ],
+      "missed": [
+        "1203f0bf194ca562",
+        "1203f0bf194ca562",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a",
+        "8df02cadf9a95cb5",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 27,
+      "totalUsdM": 59040,
+      "largest": {
+        "itemId": "98a383426f1b4cd2",
+        "usdM": 7800
+      }
+    },
+    "financings": {
+      "count": 60,
+      "totalUsdM": 72791,
+      "byRound": {
+        "IPO": 22,
+        "financing": 34,
+        "Series A": 1,
+        "Series B": 3
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT04256317",
+        "title": "A Multi-phase Study of ASTX030 (Azacitidine and Cedazuridine) in Myeloid Neoplasm Alone or in Combination With Venetoclax in AML (AZTOUND Study)",
+        "sponsor": "Taiho Oncology"
+      },
+      {
+        "nct": "NCT06087276",
+        "title": "Essential 3 - Decentralized, Phase 3 Study Evaluating the Safety and Efficacy of Ulixacaltamide in Essential Tremor (ET)",
+        "sponsor": "Praxis Precision Medicines"
+      },
+      {
+        "nct": "NCT07339111",
+        "title": "Phase 3 Pivotal Trial Comparing CARTISTEM® and Surgical Comparator for Knee Cartilage Lesions and Osteoarthritis"
+      },
+      {
+        "nct": "NCT05711394",
+        "title": "A Study to Assess the Adverse Events and Change in Disease Activity of Oral Atogepant Tablets in Pediatric Participants (6-17 Years of Age) With Episodic Migraine",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07634471",
+        "title": "A Clinical Trial of MK-1045 and Rituximab in People With Follicular Lymphoma (MK-1045-007)"
+      },
+      {
+        "nct": "NCT06216301",
+        "title": "LUNAR-2: TTFields With Pembrolizumab + Platinum-based Chemotherapy for Metastatic NSCLC"
+      },
+      {
+        "nct": "NCT07214311",
+        "title": "Evaluation of PLG0206 in Prevention of Recurrent Infection in Patients Undergoing Debridement, Antibiotics, and Implant Retention (DAIR) for Treatment of a Periprosthetic Joint Infection (PJI) Following Knee Arthroplasty"
+      },
+      {
+        "nct": "NCT07604766",
+        "title": "An Extension Study to Assess the Efficacy of Rina-S Compared to Treatment of Investigator's Choice in Participants With Platinum Resistant Ovarian Cancer in China"
+      },
+      {
+        "nct": "NCT04910685",
+        "title": "(HARBOR) Study to Evaluate Efficacy and Safety of BLU-263 Versus Placebo in Patients With Indolent Systemic Mastocytosis",
+        "sponsor": "Blueprint Medicines"
+      },
+      {
+        "nct": "NCT07863193",
+        "title": "Phase 3 Study of Denifanstat in Participants With Moderate to Severe Acne",
+        "sponsor": "Sagimet Biosciences"
+      },
+      {
+        "nct": "NCT07843472",
+        "title": "A Phase III Study to Evaluate the Efficacy and Safety of Petrelintide in Participants With Overweight or Obesity and Established Cardiovascular Disease",
+        "sponsor": "Roche"
+      },
+      {
+        "nct": "NCT07819435",
+        "title": "Phase 2/3 Efficacy and Safety of PP405 in Adult Males",
+        "sponsor": "Pelage Pharmaceuticals"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_80d14ad60b",
+      "leadItemId": "abb5a8f3ca17f928",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_37294dd7f9",
+      "leadItemId": "c5e00752bab35358",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_f25c2ab313",
+      "leadItemId": "35a0b7a3da92bc3d",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_f9ac1eb83d",
+      "leadItemId": "87422c514b157b53",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_6e4d9b8564",
+      "leadItemId": "626600643f364dcf",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "controlled",
+      "delta": 3.9
+    },
+    {
+      "term": "randomised",
+      "delta": 3.8
+    },
+    {
+      "term": "type 2 diabetes",
+      "delta": 3.3
+    },
+    {
+      "term": "adults",
+      "delta": 2.8
+    },
+    {
+      "term": "cancer",
+      "delta": 2.7
+    },
+    {
+      "term": "refractory",
+      "delta": 2.7
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "viatris",
+    "pacira",
+    "relapsed",
+    "refractory",
+    "protein",
+    "clinic",
+    "retension",
+    "adults",
+    "beyond",
+    "argenx"
+  ]
+}
