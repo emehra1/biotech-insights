@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-14T15:50:59.856Z",
+  "generatedAt": "2026-10-15T15:37:58.523Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 7
+    },
     {
       "term": "Drug Administration",
       "count": 5
     },
     {
-      "term": "Lead",
-      "count": 5
-    },
-    {
-      "term": "Bausch",
+      "term": "Compass Pathways",
       "count": 2
     },
     {
-      "term": "Lomb",
+      "term": "Kornbluth",
       "count": 2
     }
   ]
