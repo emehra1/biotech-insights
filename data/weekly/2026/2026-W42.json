@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W42",
+  "start": "2026-10-12",
+  "end": "2026-10-18",
+  "generatedAt": "2026-10-18T14:39:19.753Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 12,
+    "items": [
+      {
+        "label": "omass therapeutics",
+        "terms": [
+          "omass therapeutics",
+          "omass",
+          "big biotech",
+          "fantastic",
+          "britain",
+          "chase",
+          "adrenal"
+        ],
+        "docCount": 11,
+        "lift": 4.67,
+        "score": 7.37,
+        "itemIds": [
+          "33737310bd2015ab",
+          "0761013428900618",
+          "6d43f3473f4bcc2a"
+        ]
+      },
+      {
+        "label": "activated",
+        "terms": [
+          "activated",
+          "buffers",
+          "optimize",
+          "fertility",
+          "contribute",
+          "follicle",
+          "rheumatoid"
+        ],
+        "docCount": 17,
+        "lift": 2.83,
+        "score": 6.19,
+        "itemIds": [
+          "7f0ffab46fdd7f2d",
+          "aa41e596eac38e0f",
+          "af6cc2fc2c972030",
+          "b011b49f1241b82d"
+        ]
+      },
+      {
+        "label": "tumor",
+        "terms": [
+          "tumor",
+          "micronuclear",
+          "ecdna",
+          "favorable",
+          "fitness",
+          "ductal"
+        ],
+        "docCount": 22,
+        "lift": 2.38,
+        "score": 5.88,
+        "itemIds": [
+          "f0cdcb0ecd54dfb7",
+          "aa41e596eac38e0f",
+          "93c5dde1cfe12787",
+          "f4724b033df06af6",
+          "a5db8b6779dcbbbd",
+          "165084c2a6aded5d",
+          "8607a7fe47880776",
+          "5a364e72fe0cd64f"
+        ]
+      },
+      {
+        "label": "bladder",
+        "terms": [
+          "bladder",
+          "bladder cancer",
+          "certain",
+          "immunitybio",
+          "anktiva",
+          "whiplash",
+          "disitamab",
+          "vhr",
+          "t1hg",
+          "bcg",
+          "transurethrally",
+          "tislelizumab",
+          "nmibc"
+        ],
+        "docCount": 12,
+        "lift": 3.15,
+        "score": 5.73,
+        "itemIds": [
+          "6129483e4257e705",
+          "daf856294b1dd08a",
+          "0abade695f36e8a8",
+          "494d056b561bc807"
+        ]
+      },
+      {
+        "label": "heterogeneity",
+        "terms": [
+          "heterogeneity"
+        ],
+        "docCount": 13,
+        "lift": 2.87,
+        "score": 5.49,
+        "itemIds": [
+          "7f0ffab46fdd7f2d",
+          "a5db8b6779dcbbbd"
+        ]
+      },
+      {
+        "label": "constrains",
+        "terms": [
+          "constrains"
+        ],
+        "docCount": 8,
+        "lift": 3.67,
+        "score": 5.3,
+        "itemIds": [
+          "f0cdcb0ecd54dfb7",
+          "49932cb8e749bb7f"
+        ]
+      },
+      {
+        "label": "paragon",
+        "terms": [
+          "paragon",
+          "velaris therapeutics",
+          "apogee",
+          "builder",
+          "imports",
+          "brass"
+        ],
+        "docCount": 8,
+        "lift": 3.67,
+        "score": 5.3,
+        "itemIds": [
+          "d4638163dbb54541",
+          "d29f601cb1dffb58",
+          "7ac1c31281be992a",
+          "fbda567f39cccff5"
+        ]
+      },
+      {
+        "label": "naive",
+        "terms": [
+          "naive",
+          "contraction",
+          "compromised"
+        ],
+        "docCount": 14,
+        "lift": 2.55,
+        "score": 5.06,
+        "itemIds": [
+          "abcba21cbb7edff9",
+          "f4f87aea17e08200",
+          "3fc26e2014ed8b8a",
+          "af6cc2fc2c972030"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "881f3bcb974f6647",
+        "title": "Roche goes beyond licensing in deal with Chinese biotech"
+      },
+      {
+        "itemId": "3788f7f145b9974a",
+        "title": "Gene therapy for rare lysosomal storage disorder nabs FDA approval"
+      },
+      {
+        "itemId": "f12acc02a0f4a08a",
+        "title": "FDA Approves New Treatment for Advanced Pancreatic Cancer"
+      },
+      {
+        "itemId": "d0c542d0e8309b5f",
+        "title": "FDA Approves 2 New Alzheimer Disease Blood Tests"
+      },
+      {
+        "itemId": "6129483e4257e705",
+        "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer"
+      },
+      {
+        "itemId": "f12acc02a0f4a08a",
+        "title": "FDA Approves New Treatment for Advanced Pancreatic Cancer"
+      },
+      {
+        "itemId": "daf856294b1dd08a",
+        "title": "FDA clears ImmunityBio’s Anktiva expansion in bladder cancer after regulatory whiplash"
+      },
+      {
+        "itemId": "6129483e4257e705",
+        "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer"
+      },
+      {
+        "itemId": "56cd1294a0ff27fe",
+        "title": "Roche makes class-first push into thyroid eye disease with new FDA nod for Enspryng"
+      },
+      {
+        "itemId": "1bdf0fa615d02637",
+        "title": "Network-enabled drug repurposing identifies lithium to promote cardiomyocyte proliferation"
+      },
+      {
+        "itemId": "daf856294b1dd08a",
+        "title": "FDA clears ImmunityBio’s Anktiva expansion in bladder cancer after regulatory whiplash"
+      },
+      {
+        "itemId": "daf856294b1dd08a",
+        "title": "FDA clears ImmunityBio’s Anktiva expansion in bladder cancer after regulatory whiplash"
+      },
+      {
+        "itemId": "56cd1294a0ff27fe",
+        "title": "Roche makes class-first push into thyroid eye disease with new FDA nod for Enspryng"
+      },
+      {
+        "itemId": "6129483e4257e705",
+        "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer"
+      },
+      {
+        "itemId": "daf856294b1dd08a",
+        "title": "FDA clears ImmunityBio’s Anktiva expansion in bladder cancer after regulatory whiplash"
+      },
+      {
+        "itemId": "6129483e4257e705",
+        "title": "FDA Approves First Treatment for Certain People With BCG-Unresponsive Bladder Cancer"
+      },
+      {
+        "itemId": "f12acc02a0f4a08a",
+        "title": "FDA Approves New Treatment for Advanced Pancreatic Cancer"
+      },
+      {
+        "itemId": "3788f7f145b9974a",
+        "title": "Gene therapy for rare lysosomal storage disorder nabs FDA approval"
+      },
+      {
+        "itemId": "d0c542d0e8309b5f",
+        "title": "FDA Approves 2 New Alzheimer Disease Blood Tests"
+      },
+      {
+        "itemId": "56cd1294a0ff27fe",
+        "title": "Roche makes class-first push into thyroid eye disease with new FDA nod for Enspryng"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "b1dce978211ca6ef"
+      ],
+      "missed": [
+        "8be9e3ef0247440a",
+        "8df02cadf9a95cb5",
+        "3058e42ee5caf4f7",
+        "8be9e3ef0247440a",
+        "8be9e3ef0247440a",
+        "4ab21ee56ffd9c5b",
+        "bba1fbac92f18297",
+        "188d21334b97b8bd",
+        "8be9e3ef0247440a",
+        "4ab21ee56ffd9c5b",
+        "4ab21ee56ffd9c5b",
+        "4ab21ee56ffd9c5b",
+        "bba1fbac92f18297"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 17,
+      "totalUsdM": 17320,
+      "largest": {
+        "itemId": "36c72dc9d80fc39a",
+        "usdM": 1700
+      }
+    },
+    "financings": {
+      "count": 63,
+      "totalUsdM": 62847,
+      "byRound": {
+        "financing": 42,
+        "IPO": 18,
+        "Series A": 3
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07817875",
+        "title": "Efficacy, Safety, and Pharmacokinetics of Tirzepatide (LY3298176) Once Weekly Versus Placebo in Pediatric Participants 6 to Less Than 12 Years of Age Who Have Obesity (ADVANCE-SURMOUNT-KIDS)",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07872423",
+        "title": "Phase III Trial of VDJ001 In Patients With Idiopathic Multicentric Castleman Disease"
+      },
+      {
+        "nct": "NCT06641414",
+        "title": "Lisaftoclax (APG-2575) Combined With Azacytidine (AZA) in the Treatment of Patients With Higher-risk Myelodysplastic Syndrome (GLORA-4).",
+        "sponsor": "Ascentage Pharma"
+      },
+      {
+        "nct": "NCT07621809",
+        "title": "Two Arm, Double-blind, Phase III Study Assessing Efficacy and Safety of Ianalumab Versus Placebo, in Participants With Sjögren's Disease With High Symptom Burden",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT06875310",
+        "title": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+        "sponsor": "Mirati Therapeutics"
+      },
+      {
+        "nct": "NCT07181109",
+        "title": "Zilebesiran in Patients With Hypertension Not Adequately Controlled and With Either Established Cardiovascular Disease or High Risk for Cardiovascular Disease",
+        "sponsor": "Alnylam"
+      },
+      {
+        "nct": "NCT07667803",
+        "title": "A Master Protocol to Investigate Efficacy and Safety of Elecoglipron in Participants With Obesity or Overweight With or Without T2DM",
+        "sponsor": "AstraZeneca"
+      },
+      {
+        "nct": "NCT07717892",
+        "title": "Forward Treatment of Attention Deficit and Hyperactivity Using Solriamfetol (FOCUS-3)",
+        "sponsor": "Axsome Therapeutics"
+      },
+      {
+        "nct": "NCT06632457",
+        "title": "LIVERAGE™ - Cirrhosis: A Study to Test Whether Survodutide Helps People With a Liver Disease Called NASH/MASH Who Have Cirrhosis",
+        "sponsor": "Boehringer Ingelheim"
+      },
+      {
+        "nct": "NCT07285655",
+        "title": "A Phase 3 Study to Evaluate the Safety and Efficacy L606 in Participants With PH-ILD"
+      },
+      {
+        "nct": "NCT07729462",
+        "title": "A Study to Learn About the Study Medicine Called Rimegepant in Adults When Used for the Prevention of Chronic Migraine",
+        "sponsor": "Pfizer"
+      },
+      {
+        "nct": "NCT06952803",
+        "title": "A Study of Metastases Free Survival With Saruparib vs Placebo Added to a Standard RT/ADT in Men With High-risk Prostate Cancer With a BRCA Mutation",
+        "sponsor": "AstraZeneca"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_58586ea289",
+      "leadItemId": "8f29ecbe83a62f99",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_2ea46e5674",
+      "leadItemId": "c9c3ebbfc5a67a27",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_c353c608f2",
+      "leadItemId": "e22e9530eb7f2b9e",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_c353c608f2",
+      "leadItemId": "e22e9530eb7f2b9e",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_e7c7adee41",
+      "leadItemId": "fccce41ff69001a7",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "cancer",
+      "delta": 3.4
+    },
+    {
+      "term": "tumor",
+      "delta": 2.6
+    },
+    {
+      "term": "activated",
+      "delta": 2.4
+    },
+    {
+      "term": "pancreatic cancer",
+      "delta": 2
+    },
+    {
+      "term": "patient",
+      "delta": 1.9
+    },
+    {
+      "term": "heterogeneity",
+      "delta": 1.9
+    }
+  ],
+  "degradedSources": [
+    "Fierce Pharma",
+    "ClinicalTrials.gov",
+    "Science journals (via Europe PMC)",
+    "NEJM (via Europe PMC)"
+  ],
+  "lexiconSuggestions": [
+    "activated",
+    "tumor",
+    "bladder",
+    "heterogeneity",
+    "constrains",
+    "paragon",
+    "omass",
+    "naive",
+    "patient",
+    "pipeline"
+  ]
+}
