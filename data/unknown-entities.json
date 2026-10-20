@@ -1,20 +1,24 @@
 {
-  "generatedAt": "2026-10-19T17:32:09.223Z",
+  "generatedAt": "2026-10-20T15:40:43.848Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 8
+    },
     {
       "term": "Drug Administration",
       "count": 5
     },
     {
-      "term": "Lead",
-      "count": 3
-    },
-    {
-      "term": "Bausch",
+      "term": "Klemmer",
       "count": 2
     },
     {
-      "term": "Klemmer",
+      "term": "Otsuka Pharmaceutical Development",
+      "count": 2
+    },
+    {
+      "term": "Commercialization",
       "count": 2
     }
   ]
