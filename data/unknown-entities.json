@@ -1,24 +1,28 @@
 {
-  "generatedAt": "2026-10-20T15:40:43.848Z",
+  "generatedAt": "2026-10-21T15:59:21.689Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 8
-    },
-    {
-      "term": "Drug Administration",
       "count": 5
     },
     {
-      "term": "Klemmer",
+      "term": "Drug Administration",
+      "count": 4
+    },
+    {
+      "term": "Roivant",
+      "count": 3
+    },
+    {
+      "term": "Deborah Waterhouse",
       "count": 2
     },
     {
-      "term": "Otsuka Pharmaceutical Development",
+      "term": "Priovant",
       "count": 2
     },
     {
-      "term": "Commercialization",
+      "term": "Self-",
       "count": 2
     }
   ]
