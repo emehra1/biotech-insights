@@ -1,17 +1,13 @@
 {
-  "generatedAt": "2026-10-21T15:59:21.689Z",
+  "generatedAt": "2026-10-22T15:54:40.313Z",
   "candidates": [
     {
-      "term": "Lead",
-      "count": 5
+      "term": "Roivant",
+      "count": 4
     },
     {
       "term": "Drug Administration",
       "count": 4
-    },
-    {
-      "term": "Roivant",
-      "count": 3
     },
     {
       "term": "Deborah Waterhouse",
@@ -22,7 +18,7 @@
       "count": 2
     },
     {
-      "term": "Self-",
+      "term": "Lead",
       "count": 2
     }
   ]
