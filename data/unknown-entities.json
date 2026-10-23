@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-10-22T15:54:40.313Z",
+  "generatedAt": "2026-10-23T15:46:34.765Z",
   "candidates": [
-    {
-      "term": "Roivant",
-      "count": 4
-    },
     {
       "term": "Drug Administration",
       "count": 4
+    },
+    {
+      "term": "Lead",
+      "count": 3
+    },
+    {
+      "term": "Al Sandrock",
+      "count": 2
     },
     {
       "term": "Deborah Waterhouse",
       "count": 2
     },
     {
-      "term": "Priovant",
-      "count": 2
-    },
-    {
-      "term": "Lead",
+      "term": "Merck",
       "count": 2
     }
   ]
