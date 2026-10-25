@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W43",
+  "start": "2026-10-19",
+  "end": "2026-10-25",
+  "generatedAt": "2026-10-25T14:58:25.041Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 13,
+    "items": [
+      {
+        "label": "argonaute",
+        "terms": [
+          "argonaute",
+          "alter"
+        ],
+        "docCount": 9,
+        "lift": 4,
+        "score": 6,
+        "itemIds": [
+          "f3f964b888229d0b",
+          "c188c9852ecef4a3"
+        ]
+      },
+      {
+        "label": "nivolumab",
+        "terms": [
+          "nivolumab",
+          "ipilimumab",
+          "neonipiga",
+          "colon",
+          "gastroesophageal"
+        ],
+        "docCount": 10,
+        "lift": 3.17,
+        "score": 5.27,
+        "itemIds": [
+          "aa5946f3c619dfaa",
+          "33f4782560bc1b97",
+          "053a7e33bd28b2ce",
+          "4e9aa0cf0b43b6ff"
+        ]
+      },
+      {
+        "label": "function",
+        "terms": [
+          "function",
+          "pla2g7",
+          "dynamical",
+          "velocities",
+          "cognition",
+          "suppressing",
+          "restores",
+          "perturbations",
+          "circuit",
+          "predict"
+        ],
+        "docCount": 15,
+        "lift": 2.49,
+        "score": 5.1,
+        "itemIds": [
+          "7ea8611065f07224",
+          "3b08ebf26aca6aa7",
+          "6667b50f0a35d58c",
+          "f730a9ba8973c6a1"
+        ]
+      },
+      {
+        "label": "colorectal cancer",
+        "terms": [
+          "colorectal cancer",
+          "dostarlimab",
+          "rectal",
+          "avoid",
+          "certain",
+          "allow"
+        ],
+        "docCount": 14,
+        "lift": 2.44,
+        "score": 4.82,
+        "itemIds": [
+          "28430ea71391395f",
+          "bd183539d0043a8c",
+          "0576937bfd5d9030",
+          "c5ee20dc2822912b",
+          "33f4782560bc1b97",
+          "7739414ce18b9d0a",
+          "8a41b8d8e7730609"
+        ]
+      },
+      {
+        "label": "encoded",
+        "terms": [
+          "encoded",
+          "orthogonal",
+          "escape",
+          "constrain",
+          "multiplexed",
+          "viral",
+          "mimics",
+          "inhibit"
+        ],
+        "docCount": 9,
+        "lift": 3.04,
+        "score": 4.82,
+        "itemIds": [
+          "89ac750ee7249256",
+          "324a690d61cf5e47"
+        ]
+      },
+      {
+        "label": "silence",
+        "terms": [
+          "silence",
+          "merck kgaa",
+          "silence therapeutics"
+        ],
+        "docCount": 8,
+        "lift": 3.16,
+        "score": 4.69,
+        "itemIds": [
+          "2118bccf3f8d5b85",
+          "2086e8689edeb046",
+          "196699e49d5cb5f7"
+        ]
+      },
+      {
+        "label": "curbs",
+        "terms": [
+          "curbs",
+          "chaperone",
+          "autophagy"
+        ],
+        "docCount": 7,
+        "lift": 3.33,
+        "score": 4.6,
+        "itemIds": [
+          "04f61e8b5f610381"
+        ]
+      },
+      {
+        "label": "older",
+        "terms": [
+          "older",
+          "ied",
+          "expec9v",
+          "escherichia",
+          "mbrace",
+          "immunogenicity",
+          "valent"
+        ],
+        "docCount": 11,
+        "lift": 2.59,
+        "score": 4.56,
+        "itemIds": [
+          "9c11e02b0b3c20d6",
+          "8ecc54e6160fac12",
+          "8f392b538061f9c2",
+          "0ed2b0599e5a5a57",
+          "736df7b3b729fbbd"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "28430ea71391395f",
+        "title": "FDA Approves Immunotherapy That May Allow Certain Patients with Rectal Cancer to Avoid Chemotherapy, Radiation and Surgery"
+      },
+      {
+        "itemId": "ab34ab71e1619fd4",
+        "title": "Pharmalittle: We’re reading about Roche investments in Germany, a Gilead bowel disease drug, and more"
+      },
+      {
+        "itemId": "bd183539d0043a8c",
+        "title": "GSK’s Jemperli scores FDA approval in rectal cancer, backed by high complete response rate"
+      },
+      {
+        "itemId": "28430ea71391395f",
+        "title": "FDA Approves Immunotherapy That May Allow Certain Patients with Rectal Cancer to Avoid Chemotherapy, Radiation and Surgery"
+      },
+      {
+        "itemId": "ab34ab71e1619fd4",
+        "title": "Pharmalittle: We’re reading about Roche investments in Germany, a Gilead bowel disease drug, and more"
+      },
+      {
+        "itemId": "244c84feb30f6708",
+        "title": "Roivant's autoimmune drug succeeds in two pivotal trials, setting up 2027 filing"
+      },
+      {
+        "itemId": "69305e69ec536392",
+        "title": "GSK brings promise of 'functional cure' to hepatitis B finish line with FDA nod for Hibsago"
+      },
+      {
+        "itemId": "e6174bc977b43ae3",
+        "title": "FDA Approves First-of-Its-Kind Chronic Hepatitis B Treatment"
+      },
+      {
+        "itemId": "ee84b76236b7a64f",
+        "title": "FDA Approves Once-Weekly Generic Hormone Therapy Patch for Women"
+      },
+      {
+        "itemId": "28430ea71391395f",
+        "title": "FDA Approves Immunotherapy That May Allow Certain Patients with Rectal Cancer to Avoid Chemotherapy, Radiation and Surgery"
+      },
+      {
+        "itemId": "c1886401efc2d3ad",
+        "title": "FDA Approves Updated COVID-19 Vaccines for 2026-2027"
+      },
+      {
+        "itemId": "fe6b8902eb866741",
+        "title": "Healthcare industry weighs in on evidence standards for generative AI medical devices"
+      },
+      {
+        "itemId": "4f5b10b2a6a54c37",
+        "title": "Samsung Bio union to contest court ruling blocking worker strikes"
+      },
+      {
+        "itemId": "e6174bc977b43ae3",
+        "title": "FDA Approves First-of-Its-Kind Chronic Hepatitis B Treatment"
+      },
+      {
+        "itemId": "28430ea71391395f",
+        "title": "FDA Approves Immunotherapy That May Allow Certain Patients with Rectal Cancer to Avoid Chemotherapy, Radiation and Surgery"
+      },
+      {
+        "itemId": "ee84b76236b7a64f",
+        "title": "FDA Approves Once-Weekly Generic Hormone Therapy Patch for Women"
+      },
+      {
+        "itemId": "9901ba7b4b502022",
+        "title": "GSK, Ionis win US approval for first-of-its-kind hepatitis B drug"
+      },
+      {
+        "itemId": "69305e69ec536392",
+        "title": "GSK brings promise of 'functional cure' to hepatitis B finish line with FDA nod for Hibsago"
+      },
+      {
+        "itemId": "28430ea71391395f",
+        "title": "FDA Approves Immunotherapy That May Allow Certain Patients with Rectal Cancer to Avoid Chemotherapy, Radiation and Surgery"
+      },
+      {
+        "itemId": "e6174bc977b43ae3",
+        "title": "FDA Approves First-of-Its-Kind Chronic Hepatitis B Treatment"
+      },
+      {
+        "itemId": "ee84b76236b7a64f",
+        "title": "FDA Approves Once-Weekly Generic Hormone Therapy Patch for Women"
+      },
+      {
+        "itemId": "fe6b8902eb866741",
+        "title": "Healthcare industry weighs in on evidence standards for generative AI medical devices"
+      },
+      {
+        "itemId": "e6174bc977b43ae3",
+        "title": "FDA Approves First-of-Its-Kind Chronic Hepatitis B Treatment"
+      },
+      {
+        "itemId": "ee84b76236b7a64f",
+        "title": "FDA Approves Once-Weekly Generic Hormone Therapy Patch for Women"
+      },
+      {
+        "itemId": "eaf21a0cff917c01",
+        "title": "USFDA Oncology Drug Approvals from 2014- 2025: Comparing non-immunotherapy and immunotherapy approvals, their endpoints, and their efficacy."
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "f9619cb41d15aa20",
+        "776f764e06e1464e",
+        "2c2f3eb3226e3809",
+        "2c2f3eb3226e3809",
+        "2c2f3eb3226e3809",
+        "2c2f3eb3226e3809"
+      ],
+      "missed": [
+        "38d29755ef4a33d1",
+        "4deb425ff15858ce"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 20,
+      "totalUsdM": 20554,
+      "largest": {
+        "itemId": "ef1511a8827cc2a7",
+        "usdM": 1500
+      }
+    },
+    "financings": {
+      "count": 43,
+      "totalUsdM": 72100,
+      "byRound": {
+        "financing": 24,
+        "IPO": 10,
+        "Series E": 6,
+        "Series A": 3
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07282613",
+        "title": "A Research Study to See How Much CagriSema Lowers Blood Sugar and Body Weight Compared to Placebo in Children and Adolescents With Type 2 Diabetes",
+        "sponsor": "Novo Nordisk"
+      },
+      {
+        "nct": "NCT07881458",
+        "title": "A Study of EloraTZP in Adult Participants With Obesity or Overweight and Type 2 Diabetes",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07881120",
+        "title": "Phase 2/3 Double-Blind, Placebo-Controlled Study of Afimetoran in Cutaneous Lupus Erythematosus",
+        "sponsor": "Beeline Medicines"
+      },
+      {
+        "nct": "NCT06948214",
+        "title": "Phase 3 Study of LUM-201 in Children With Growth Hormone Deficiency",
+        "sponsor": "Lumos Pharma"
+      },
+      {
+        "nct": "NCT07387367",
+        "title": "A Phase 3 Trial to Compare IV BCV Versus IV CDV for Treatment of Adenovirus Infection After Allo-HCT",
+        "sponsor": "SymBio Pharmaceuticals"
+      },
+      {
+        "nct": "NCT07404865",
+        "title": "Phase 3 Study of Telitacicept in Active Primary Sjögren's Disease"
+      },
+      {
+        "nct": "NCT03394365",
+        "title": "A Phase 3 Study of Tabelecleucel for Participants With Epstein-Barr Virus-Associated Post-Transplant Lymphoproliferative Disease After Failure With Rituximab or Rituximab and Chemotherapy"
+      },
+      {
+        "nct": "NCT06012240",
+        "title": "A Study to Evaluate the Safety and Effectiveness of Upadacitinib Tablets in Adult and Adolescent Participants With Severe Alopecia Areata",
+        "sponsor": "AbbVie"
+      },
+      {
+        "nct": "NCT07883928",
+        "title": "Phase 2/3 Clinical Trial to Evaluate the Immunogenicity and Safety of GC3114B in Adults Aged 65 Years or Older"
+      },
+      {
+        "nct": "NCT07339111",
+        "title": "Phase 3 Pivotal Trial Comparing CARTISTEM® and Surgical Comparator for Knee Cartilage Lesions and Osteoarthritis"
+      },
+      {
+        "nct": "NCT07086976",
+        "title": "A Study to Investigate the Efficacy, Safety, and Pharmacokinetics of Oral Rilzabrutinib Compared With Placebo in Participants 18 Years of Age and Older With Warm Autoimmune Hemolytic Anemia",
+        "sponsor": "Sanofi"
+      },
+      {
+        "nct": "NCT07767903",
+        "title": "A Trial of the Efficacy and Safety of a Fixed Dose of SEP-363856 in Adults With Generalized Anxiety Disorder",
+        "sponsor": "Otsuka"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_f0ce01d29a",
+      "leadItemId": "e6174bc977b43ae3",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_f0ce01d29a",
+      "leadItemId": "e6174bc977b43ae3",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_5e92718df8",
+      "leadItemId": "00278741af95c4f2",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_3899fafcaf",
+      "leadItemId": "8d027fac05df752a",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_1ea33fd929",
+      "leadItemId": "1e7d29886c5a6f31",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "function",
+      "delta": 2
+    },
+    {
+      "term": "colorectal cancer",
+      "delta": 1.9
+    },
+    {
+      "term": "early",
+      "delta": 1.8
+    },
+    {
+      "term": "chronic",
+      "delta": 1.7
+    },
+    {
+      "term": "phase",
+      "delta": 1.6
+    },
+    {
+      "term": "older",
+      "delta": 1.6
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "argonaute",
+    "nivolumab",
+    "function",
+    "encoded",
+    "silence",
+    "curbs",
+    "older",
+    "nephropathy",
+    "neoadjuvant",
+    "screen"
+  ]
+}
