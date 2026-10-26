@@ -1,16 +1,20 @@
 {
-  "generatedAt": "2026-10-25T14:58:24.454Z",
+  "generatedAt": "2026-10-26T17:25:37.617Z",
   "candidates": [
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
-      "term": "Al Sandrock",
+      "term": "Lead",
+      "count": 3
+    },
+    {
+      "term": "MADRID",
       "count": 2
     },
     {
-      "term": "Deborah Waterhouse",
+      "term": "STAT",
       "count": 2
     },
     {
@@ -18,11 +22,15 @@
       "count": 2
     },
     {
-      "term": "Merck",
+      "term": "Staff",
       "count": 2
     },
     {
-      "term": "Schools",
+      "term": "Otsuka Pharmaceutical Development",
+      "count": 2
+    },
+    {
+      "term": "Commercialization",
       "count": 2
     }
   ]
