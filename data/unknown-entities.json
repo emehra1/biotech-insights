@@ -1,17 +1,13 @@
 {
-  "generatedAt": "2026-10-26T17:25:37.617Z",
+  "generatedAt": "2026-10-27T16:43:26.440Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 5
+    },
     {
       "term": "Drug Administration",
       "count": 4
-    },
-    {
-      "term": "Lead",
-      "count": 3
-    },
-    {
-      "term": "MADRID",
-      "count": 2
     },
     {
       "term": "STAT",
@@ -19,18 +15,6 @@
     },
     {
       "term": "Bristol",
-      "count": 2
-    },
-    {
-      "term": "Staff",
-      "count": 2
-    },
-    {
-      "term": "Otsuka Pharmaceutical Development",
-      "count": 2
-    },
-    {
-      "term": "Commercialization",
       "count": 2
     }
   ]
