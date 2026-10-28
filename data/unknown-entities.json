@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-27T16:43:26.440Z",
+  "generatedAt": "2026-10-28T17:12:33.866Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 5
+      "count": 6
     },
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
-      "term": "STAT",
+      "term": "Wednesday",
       "count": 2
     },
     {
-      "term": "Bristol",
+      "term": "Results",
       "count": 2
     }
   ]
