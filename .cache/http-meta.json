@@ -8,9 +8,9 @@
       "contentHash": "99f1ec17b08c2bfc"
     },
     "biorxiv": {
-      "fetchedAt": "2026-10-30T17:02:29.886Z",
+      "fetchedAt": "2026-10-31T16:09:42.463Z",
       "status": 200,
-      "contentHash": "bbd829f47337bb73"
+      "contentHash": "f34ce21bf8474937"
     },
     "cell": {
       "fetchedAt": "2026-08-03T03:50:06.396Z",
@@ -24,21 +24,21 @@
     },
     "clinicaltrials": {
       "etag": "\"174f08d/0.34.1/mvuqrkf4-gzip\"",
-      "fetchedAt": "2026-10-30T17:02:21.974Z",
+      "fetchedAt": "2026-10-31T16:09:35.254Z",
       "status": 200,
-      "contentHash": "d398e19a9c019595"
+      "contentHash": "24be51dbe70d7402"
     },
     "endpoints": {
-      "etag": "\"ef6623267a11a8cde1a25b40cd80d707-gzip\"",
-      "lastModified": "Fri, 30 Oct 2026 16:16:51 GMT",
-      "fetchedAt": "2026-10-30T17:02:22.267Z",
+      "etag": "\"d279eb0e890e9f083cc999d97895f20b-gzip\"",
+      "lastModified": "Sat, 31 Oct 2026 14:47:15 GMT",
+      "fetchedAt": "2026-10-31T16:09:35.337Z",
       "status": 200,
-      "contentHash": "de006ad683388947"
+      "contentHash": "076cee3452f5ca87"
     },
     "europepmc-aaas": {
-      "fetchedAt": "2026-10-30T17:02:25.752Z",
+      "fetchedAt": "2026-10-31T16:09:39.873Z",
       "status": 200,
-      "contentHash": "834ac9fad0e33e58"
+      "contentHash": "cd9690a2680d9ebc"
     },
     "europepmc-aging": {
       "fetchedAt": "2026-08-07T12:00:30.224Z",
@@ -46,9 +46,9 @@
       "contentHash": "5695619d079fa2bc"
     },
     "europepmc-cellpress": {
-      "fetchedAt": "2026-10-30T17:02:23.160Z",
+      "fetchedAt": "2026-10-31T16:09:37.094Z",
       "status": 200,
-      "contentHash": "296dec640de4df48"
+      "contentHash": "5582da050b941849"
     },
     "europepmc-clinical": {
       "fetchedAt": "2026-08-07T12:00:28.790Z",
@@ -56,40 +56,40 @@
       "contentHash": "4a320a7730d641ce"
     },
     "europepmc-jama": {
-      "fetchedAt": "2026-10-30T17:02:28.223Z",
+      "fetchedAt": "2026-10-31T16:09:43.656Z",
       "status": 200,
-      "contentHash": "aa74b009ac09f885"
+      "contentHash": "0caf16d987787089"
     },
     "europepmc-lancet": {
-      "fetchedAt": "2026-10-30T17:02:24.488Z",
+      "fetchedAt": "2026-10-31T16:09:38.537Z",
       "status": 200,
-      "contentHash": "885fdf0ad46fb0f1"
+      "contentHash": "d544ebf82db3593d"
     },
     "europepmc-nejm": {
-      "fetchedAt": "2026-10-30T17:02:26.928Z",
+      "fetchedAt": "2026-10-31T16:09:41.165Z",
       "status": 200,
-      "contentHash": "1d201b7c5c42e24e"
+      "contentHash": "2546562d4c943db7"
     },
     "fda-press": {
-      "etag": "\"1793378797\"",
-      "lastModified": "Fri, 30 Oct 2026 16:46:37 GMT",
-      "fetchedAt": "2026-10-30T17:02:22.937Z",
+      "etag": "\"1793435019\"",
+      "lastModified": "Sat, 31 Oct 2026 08:23:39 GMT",
+      "fetchedAt": "2026-10-31T16:09:35.799Z",
       "status": 200,
-      "contentHash": "491c2612872b1458"
+      "contentHash": "546e94f565247a0e"
     },
     "fierce-biotech": {
-      "etag": "W/\"1793378891\"",
-      "lastModified": "Fri, 30 Oct 2026 16:48:11 GMT",
-      "fetchedAt": "2026-10-30T17:02:22.387Z",
+      "etag": "W/\"1793406435\"",
+      "lastModified": "Sat, 31 Oct 2026 00:27:15 GMT",
+      "fetchedAt": "2026-10-31T16:09:35.441Z",
       "status": 200,
-      "contentHash": "a402ebc255bf00f2"
+      "contentHash": "d64fd97179ee095f"
     },
     "fierce-pharma": {
-      "etag": "W/\"1793377278\"",
-      "lastModified": "Fri, 30 Oct 2026 16:21:18 GMT",
-      "fetchedAt": "2026-10-30T17:02:22.517Z",
+      "etag": "W/\"1793410767\"",
+      "lastModified": "Sat, 31 Oct 2026 01:39:27 GMT",
+      "fetchedAt": "2026-10-31T16:09:35.532Z",
       "status": 200,
-      "contentHash": "14a7cd83662bee8b"
+      "contentHash": "b685a69274d42e74"
     },
     "jama": {
       "etag": "\"80cc39e72966dd1:0\"",
@@ -99,15 +99,15 @@
       "contentHash": "b46926fc6ea87efb"
     },
     "medrxiv": {
-      "fetchedAt": "2026-10-30T17:02:31.527Z",
+      "fetchedAt": "2026-10-31T16:09:43.135Z",
       "status": 200,
-      "contentHash": "392ee7cef6d81cf6"
+      "contentHash": "bd85a3e551d0e56a"
     },
     "nature": {
-      "etag": "\"2b35ed2d6c5a898513cfb83b20569187\"",
-      "fetchedAt": "2026-10-30T17:02:23.095Z",
+      "etag": "\"322c3740fb772a31e419602eb50b00af\"",
+      "fetchedAt": "2026-10-31T16:09:35.894Z",
       "status": 200,
-      "contentHash": "715ca9af15f61f33"
+      "contentHash": "bdbde2dd568c1a2d"
     },
     "nature-aging": {
       "etag": "\"8f3b071ec7cdbdbc36f949c5d5966e76\"",
@@ -158,10 +158,10 @@
       "contentHash": "976e725f75d7ea88"
     },
     "nature-metabolism": {
-      "etag": "\"f0c0c573286ff23d706045884980e102\"",
-      "fetchedAt": "2026-10-29T17:27:36.841Z",
+      "etag": "\"b1263d363bf916440e103a58932939a2\"",
+      "fetchedAt": "2026-10-31T16:09:40.146Z",
       "status": 200,
-      "contentHash": "18376cba9a705170"
+      "contentHash": "58ea03630b96412e"
     },
     "nature-rev-drug-discovery": {
       "etag": "\"b042d87e84ab6ae7f72c05291a95813a\"",
@@ -176,17 +176,17 @@
       "contentHash": "4d83bbaab183e9ff"
     },
     "science-news": {
-      "lastModified": "Fri, 30 Oct 2026 16:38:57 GMT",
-      "fetchedAt": "2026-10-30T17:02:29.241Z",
+      "lastModified": "Sat, 31 Oct 2026 15:39:50 GMT",
+      "fetchedAt": "2026-10-31T16:09:41.610Z",
       "status": 200,
-      "contentHash": "4c1c51bc4e8fe8c2"
+      "contentHash": "14d2ca96091465be"
     },
     "statnews": {
-      "etag": "W/\"2b28703386be316f07f7081685c7bafb\"",
-      "lastModified": "Fri, 30 Oct 2026 16:43:00 GMT",
-      "fetchedAt": "2026-10-30T17:02:22.684Z",
+      "etag": "W/\"060a3955bc590ad433cd770c143cf614\"",
+      "lastModified": "Sat, 31 Oct 2026 11:00:00 GMT",
+      "fetchedAt": "2026-10-31T16:09:35.636Z",
       "status": 200,
-      "contentHash": "1c929cd0dd7e1061"
+      "contentHash": "8e6bea1694c11b97"
     }
   }
 }

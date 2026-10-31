@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-30T17:02:33.625Z",
+  "generatedAt": "2026-10-31T16:09:46.190Z",
   "candidates": [
     {
-      "term": "Lead",
-      "count": 6
+      "term": "Drug Administration",
+      "count": 4
     },
     {
-      "term": "Drug Administration",
+      "term": "Lead",
       "count": 4
     },
     {
@@ -15,6 +15,10 @@
     },
     {
       "term": "Genmab",
+      "count": 2
+    },
+    {
+      "term": "July",
       "count": 2
     }
   ]
