@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W44",
+  "start": "2026-10-26",
+  "end": "2026-11-01",
+  "generatedAt": "2026-11-01T17:10:04.259Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 14,
+    "items": [
+      {
+        "label": "interim",
+        "terms": [
+          "interim",
+          "taci",
+          "baff",
+          "gog-3064",
+          "union",
+          "carboplatin",
+          "keynote",
+          "paclitaxel"
+        ],
+        "docCount": 21,
+        "lift": 5.28,
+        "score": 11,
+        "itemIds": [
+          "093ac470c90a0a4e",
+          "50b8b8ef16ea7a65",
+          "e072841077517b69",
+          "16624a3232647049",
+          "5e0e53525ff23ed0"
+        ]
+      },
+      {
+        "label": "shape",
+        "terms": [
+          "shape",
+          "complexes",
+          "accessibility"
+        ],
+        "docCount": 18,
+        "lift": 4.07,
+        "score": 8.59,
+        "itemIds": [
+          "f28379bef57319fa",
+          "2ebc00d25e41d8c1",
+          "ce4d0d29b6d7edde",
+          "7e36d74ef66738ce",
+          "4a956a47516dc9ca",
+          "2a5c5e2ef3d73fb5"
+        ]
+      },
+      {
+        "label": "advanced",
+        "terms": [
+          "advanced",
+          "endometrial",
+          "tirumotecan",
+          "sacituzumab",
+          "locally",
+          "camrelizumab",
+          "her3",
+          "thp",
+          "jmt",
+          "lung01",
+          "egfr-tki"
+        ],
+        "docCount": 30,
+        "lift": 2.91,
+        "score": 8.45,
+        "itemIds": [
+          "093ac470c90a0a4e",
+          "d392c465ade3f592",
+          "7077468b41ed7b81",
+          "a87f0de9c95e2f1f",
+          "01c156e719b320b2",
+          "494d60b8953787ee",
+          "925317b6e1cd7195",
+          "5b590ac058c906d2"
+        ]
+      },
+      {
+        "label": "extensive",
+        "terms": [
+          "extensive",
+          "tarlatamab",
+          "dll3"
+        ],
+        "docCount": 12,
+        "lift": 4.61,
+        "score": 7.64,
+        "itemIds": [
+          "0efbfa84e07969d0",
+          "2e78e87a8c94221b",
+          "d2b2699c44d95751"
+        ]
+      },
+      {
+        "label": "bispecific",
+        "terms": [
+          "bispecific",
+          "bambusa therapeutics",
+          "antitumor",
+          "tcb",
+          "ccr8",
+          "ccr8xcd3",
+          "engaging",
+          "panku",
+          "shoot",
+          "izalontamab",
+          "brengitecan",
+          "shoots",
+          "trims"
+        ],
+        "docCount": 33,
+        "lift": 2.32,
+        "score": 6.99,
+        "itemIds": [
+          "101a79ae6aa961fc",
+          "3424c08576d9ecdf",
+          "ef0ca17e82ca1dc3",
+          "89ac750ee7249256",
+          "0efbfa84e07969d0",
+          "6ba34a7c0a0dd8e2",
+          "faafeecf76efa5f0",
+          "fa09ce7dcd7f875a"
+        ]
+      },
+      {
+        "label": "aspen",
+        "terms": [
+          "aspen",
+          "bambusa"
+        ],
+        "docCount": 11,
+        "lift": 3.91,
+        "score": 6.52,
+        "itemIds": [
+          "ae43570d2d2ef54b",
+          "6ba34a7c0a0dd8e2",
+          "28b6b76433450577",
+          "4897945c47fa544e",
+          "49715b43cd93858f"
+        ]
+      },
+      {
+        "label": "single",
+        "terms": [
+          "single",
+          "dynamical",
+          "velocities",
+          "pazopanib",
+          "alternating",
+          "hallmarks",
+          "perturbations",
+          "predict",
+          "danionella",
+          "cerebrum",
+          "vertebrate"
+        ],
+        "docCount": 52,
+        "lift": 1.87,
+        "score": 6.5,
+        "itemIds": [
+          "dfb757a6d914e370",
+          "cfc95436e4fc106a",
+          "3b08ebf26aca6aa7",
+          "21746200ccab00ce",
+          "33f4782560bc1b97",
+          "92fd006b79a4f9d8",
+          "f086f57c4e6dff81",
+          "18b8158e4c34d087"
+        ]
+      },
+      {
+        "label": "specific",
+        "terms": [
+          "specific",
+          "transcriptional",
+          "repeat",
+          "variation",
+          "omc1",
+          "oocyte",
+          "cohesion"
+        ],
+        "docCount": 23,
+        "lift": 2.49,
+        "score": 6.33,
+        "itemIds": [
+          "b716452b33a80ad1",
+          "21746200ccab00ce",
+          "1b9cb7607d37304d",
+          "2e78e87a8c94221b",
+          "7c97d881306eef82",
+          "4b8e823940f0dc4b",
+          "a121e77a2f4aeb5f",
+          "b72e592ade2a402c"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "2f23cb4d185be544",
+        "title": "Pfizer’s Talzenna combo moves up treatment line with new FDA nod in prostate cancer"
+      },
+      {
+        "itemId": "25451eea1542d3a6",
+        "title": "HHS moves to allow compounding of some unapproved peptides"
+      },
+      {
+        "itemId": "3313649621fa888a",
+        "title": "FDA Approves First Plasmid DNA-based Immunotherapy for Adults with Recurrent Respiratory Papillomatosis"
+      },
+      {
+        "itemId": "3313649621fa888a",
+        "title": "FDA Approves First Plasmid DNA-based Immunotherapy for Adults with Recurrent Respiratory Papillomatosis"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [],
+      "missed": [
+        "523c4a8b52d3db0a",
+        "bbfd1d0a17abb7b6",
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 23,
+      "totalUsdM": 19815,
+      "largest": {
+        "itemId": "f21603aa915c8b10",
+        "usdM": 5700
+      }
+    },
+    "financings": {
+      "count": 44,
+      "totalUsdM": 49391,
+      "byRound": {
+        "IPO": 10,
+        "financing": 33,
+        "Series E": 1
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07232875",
+        "title": "HRS 4642 Injection Combined With AG Versus Placebo Combined With AG Therapy in First-Line Advanced or Metastatic Pancreatic Cancer"
+      },
+      {
+        "nct": "NCT07634471",
+        "title": "A Clinical Trial of MK-1045 and Rituximab in People With Follicular Lymphoma (MK-1045-007)"
+      },
+      {
+        "nct": "NCT07011719",
+        "title": "Study of Casdatifan and Cabozantinib Versus Placebo and Cabozantinib in Patients With Advanced Clear Cell Renal Cell Carcinoma",
+        "sponsor": "Arcus Biosciences"
+      },
+      {
+        "nct": "NCT07357727",
+        "title": "A Phase 3 Study of Pelabresib (DAK539) and Ruxolitinib in Myelofibrosis (MF)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07209761",
+        "title": "A Study of Quabodepistat-containing Regimens for the Treatment of Drug-resistant Pulmonary Tuberculosis",
+        "sponsor": "Otsuka"
+      },
+      {
+        "nct": "NCT07759128",
+        "title": "A Trial of the Efficacy and Safety of Fixed Doses of SEP-363856 in Adults With Generalized Anxiety Disorder",
+        "sponsor": "Otsuka"
+      },
+      {
+        "nct": "NCT07894328",
+        "title": "A Phase III Clinical Study of HRS-6209 Plus Letrozole as First-line Therapy in Patients With Advanced or Metastatic Breast Cancer"
+      },
+      {
+        "nct": "NCT06246916",
+        "title": "A Study With Combinations of Anti-LAG-3 and Anti-PD-1 Antibodies in Adult Participants With Advanced or Metastatic Melanoma (Harmony Head-to-Head)",
+        "sponsor": "Regeneron"
+      },
+      {
+        "nct": "NCT07855900",
+        "title": "SYNCHRONIZE®-START- A Study to Test Whether Survodutide Helps People Living With Overweight or Obesity Who do Not Have Diabetes to Lose Weight",
+        "sponsor": "Boehringer Ingelheim"
+      },
+      {
+        "nct": "NCT06295731",
+        "title": "Phase 2/3 Randomized Study of Ordastobart (INBRX-106) Add-on to Pembrolizumab in 1L HPV+ PD-L1+ R/M OPSCC (HexAgon-HN)",
+        "sponsor": "Inhibrx Biosciences"
+      },
+      {
+        "nct": "NCT07067463",
+        "title": "A Study of Orelabrutinib in Patients With Primary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      },
+      {
+        "nct": "NCT06875310",
+        "title": "A Study of Adagrasib Plus Pembrolizumab Plus Chemotherapy vs. Placebo Plus Pembrolizumab Plus Chemotherapy in Participants With Previously Untreated Non-squamous Non-small Cell Lung Cancer With KRAS G12C Mutation (KRYSTAL-4)",
+        "sponsor": "Mirati Therapeutics"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_cd5ca83c47",
+      "leadItemId": "7cf27d6b8fd0d6e0",
+      "publisherCount": 4
+    },
+    {
+      "clusterId": "c_4cc9c10694",
+      "leadItemId": "925317b6e1cd7195",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_83f314aac7",
+      "leadItemId": "d01a372e8b0e8c61",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_630afb8ef4",
+      "leadItemId": "961506e4dfa48303",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_3b2df76783",
+      "leadItemId": "48101e064c97172f",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "cancer",
+      "delta": 5.3
+    },
+    {
+      "term": "single",
+      "delta": 4.6
+    },
+    {
+      "term": "advanced",
+      "delta": 3.9
+    },
+    {
+      "term": "bispecific",
+      "delta": 3.7
+    },
+    {
+      "term": "interim",
+      "delta": 3.5
+    },
+    {
+      "term": "checkpoint",
+      "delta": 3
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "interim",
+    "shape",
+    "advanced",
+    "extensive",
+    "bispecific",
+    "aspen",
+    "single",
+    "specific",
+    "astrazeneca",
+    "function"
+  ]
+}

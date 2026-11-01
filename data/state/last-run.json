@@ -1,10 +1,10 @@
 {
-  "runId": "41218217629",
-  "startedAt": "2026-10-31T16:09:34.915Z",
-  "finishedAt": "2026-10-31T16:09:46.186Z",
+  "runId": "41329976609",
+  "startedAt": "2026-11-01T17:09:52.322Z",
+  "finishedAt": "2026-11-01T17:10:03.750Z",
   "outcome": "ok",
-  "date": "2026-10-31",
-  "sourcesOk": 27,
+  "date": "2026-11-01",
+  "sourcesOk": 26,
   "sourcesTotal": 27,
   "itemsKept": 80
 }
