@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-02T20:49:26.995Z",
+  "generatedAt": "2026-11-03T18:29:41.152Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 14
+      "count": 10
     },
     {
       "term": "Drug Administration",
@@ -11,6 +11,14 @@
     },
     {
       "term": "Anthropic",
+      "count": 2
+    },
+    {
+      "term": "Intra-Cellular Therapies",
+      "count": 2
+    },
+    {
+      "term": "Applied Biology",
       "count": 2
     }
   ]
