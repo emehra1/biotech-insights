@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-03T18:29:41.152Z",
+  "generatedAt": "2026-11-04T18:41:08.808Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 10
+      "count": 6
     },
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
-      "term": "Anthropic",
-      "count": 2
-    },
-    {
       "term": "Intra-Cellular Therapies",
+      "count": 3
+    },
+    {
+      "term": "Astellas Pharma Global",
       "count": 2
     },
     {
-      "term": "Applied Biology",
+      "term": "Development",
       "count": 2
     }
   ]
