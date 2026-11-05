@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-04T18:41:08.808Z",
+  "generatedAt": "2026-11-05T18:48:58.612Z",
   "candidates": [
-    {
-      "term": "Lead",
-      "count": 6
-    },
     {
       "term": "Drug Administration",
       "count": 4
     },
     {
-      "term": "Intra-Cellular Therapies",
-      "count": 3
+      "term": "Lead",
+      "count": 4
     },
     {
-      "term": "Astellas Pharma Global",
+      "term": "Rasonque",
       "count": 2
     },
     {
-      "term": "Development",
+      "term": "EMD Serono Research",
+      "count": 2
+    },
+    {
+      "term": "Development Institute",
       "count": 2
     }
   ]
