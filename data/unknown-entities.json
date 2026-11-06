@@ -1,25 +1,13 @@
 {
-  "generatedAt": "2026-11-05T18:48:58.612Z",
+  "generatedAt": "2026-11-06T18:04:02.089Z",
   "candidates": [
     {
-      "term": "Drug Administration",
-      "count": 4
-    },
-    {
       "term": "Lead",
-      "count": 4
+      "count": 7
     },
     {
-      "term": "Rasonque",
-      "count": 2
-    },
-    {
-      "term": "EMD Serono Research",
-      "count": 2
-    },
-    {
-      "term": "Development Institute",
-      "count": 2
+      "term": "Drug Administration",
+      "count": 3
     }
   ]
 }
