@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W45",
+  "start": "2026-11-02",
+  "end": "2026-11-08",
+  "generatedAt": "2026-11-08T17:06:36.379Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 15,
+    "items": [
+      {
+        "label": "china",
+        "terms": [
+          "china",
+          "evommune",
+          "southern medical",
+          "decitabine",
+          "busulfan",
+          "myeloablative",
+          "conditioning",
+          "rearranged",
+          "cyclophosphamide",
+          "kmt2a",
+          "relapse",
+          "hinova pharmaceuticals",
+          "hinova",
+          "leukaemia",
+          "her3",
+          "izalontamab",
+          "brengitecan",
+          "lung01",
+          "ingelheim",
+          "backloaded"
+        ],
+        "docCount": 22,
+        "lift": 2.5,
+        "score": 6.19,
+        "itemIds": [
+          "a91bbaf5c6134819",
+          "251fb2351d409921",
+          "e002b790379b35cc",
+          "71ca00df45af6b0c",
+          "2d95da8edb302645",
+          "18f61c51c5a344f1",
+          "904f8f28dda7d55e",
+          "1c09456bf62e78ce"
+        ]
+      },
+      {
+        "label": "multicentre",
+        "terms": [
+          "multicentre",
+          "versus",
+          "eastern cooperative oncology",
+          "pazopanib",
+          "alternating",
+          "gog-3064",
+          "carboplatin",
+          "transplantation",
+          "keynote",
+          "paclitaxel",
+          "clear",
+          "efzofitimod",
+          "sarcoidosis"
+        ],
+        "docCount": 34,
+        "lift": 2.05,
+        "score": 6.03,
+        "itemIds": [
+          "251fb2351d409921",
+          "523c4a8b52d3db0a",
+          "c64056c5a2160c8d",
+          "16624a3232647049",
+          "6b2d6a4220745a23",
+          "18f61c51c5a344f1",
+          "5dc1eefa2dedefa7",
+          "d5b8c0676e1d7997"
+        ]
+      },
+      {
+        "label": "promotes",
+        "terms": [
+          "promotes",
+          "kdm5a",
+          "demethylation",
+          "nmn",
+          "nampt",
+          "tcb",
+          "ccr8",
+          "ccr8xcd3",
+          "engaging",
+          "inhibiting",
+          "nuclear",
+          "histone",
+          "depletion",
+          "innate",
+          "intratumoral"
+        ],
+        "docCount": 18,
+        "lift": 2.57,
+        "score": 5.78,
+        "itemIds": [
+          "698d1c7f157f449e",
+          "81f51583280d4075",
+          "9f6849109cd55c53",
+          "b32f7372513b44c2",
+          "b04472db0c85d1f5",
+          "6c708637d6848f8d"
+        ]
+      },
+      {
+        "label": "microbiome",
+        "terms": [
+          "microbiome",
+          "metaorganism",
+          "phewas",
+          "exposures",
+          "lifestyles",
+          "physiological",
+          "shifts",
+          "microbial",
+          "opposing",
+          "modifiable"
+        ],
+        "docCount": 25,
+        "lift": 2.17,
+        "score": 5.59,
+        "itemIds": [
+          "2892e4bf1939a8b2",
+          "abba0c671ac238c1",
+          "b84cf2b6fb526c5e",
+          "8f5652ec79902cfd",
+          "fb7f3a9df749943e",
+          "44fb482ee7cd3f4d",
+          "02af87325ff95464",
+          "185e4214a6400a61"
+        ]
+      },
+      {
+        "label": "quantitative",
+        "terms": [
+          "quantitative",
+          "sectional",
+          "serum",
+          "volume"
+        ],
+        "docCount": 9,
+        "lift": 3.17,
+        "score": 4.99,
+        "itemIds": [
+          "e70d186d0c7fe920",
+          "63458601fa6552c2",
+          "e38b632f1b6d94ea"
+        ]
+      },
+      {
+        "label": "mouse",
+        "terms": [
+          "mouse"
+        ],
+        "docCount": 16,
+        "lift": 2.33,
+        "score": 4.89,
+        "itemIds": [
+          "63458601fa6552c2",
+          "81f51583280d4075",
+          "b39b3bcbc45e2106",
+          "079c223d98e43f76"
+        ]
+      },
+      {
+        "label": "interim",
+        "terms": [
+          "interim"
+        ],
+        "docCount": 17,
+        "lift": 2.15,
+        "score": 4.56,
+        "itemIds": [
+          "50b8b8ef16ea7a65",
+          "16624a3232647049",
+          "093ac470c90a0a4e",
+          "5e0e53525ff23ed0"
+        ]
+      },
+      {
+        "label": "profiling",
+        "terms": [
+          "profiling"
+        ],
+        "docCount": 15,
+        "lift": 2.25,
+        "score": 4.53,
+        "itemIds": [
+          "63458601fa6552c2",
+          "2e78e87a8c94221b",
+          "f1989b8fe729a0fd",
+          "11699c26a1aaca64",
+          "b3e8e3a08cd989a0",
+          "2422f61fa20f271e",
+          "0c6cf64430838224"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "d99e7b857b56f8ae",
+        "title": "FDA OKs generic HIV prevention shot, widening access for lower-income countries"
+      },
+      {
+        "itemId": "30fc04fa9e37ef09",
+        "title": "Inovio’s DNA-based immunotherapy Voceryq approved by FDA for rare HPV airway disease"
+      },
+      {
+        "itemId": "bfe9b1c706f9761b",
+        "title": "FDA Authorizes First Continuous Ketone Monitor for Diabetes"
+      },
+      {
+        "itemId": "922dcf03c10c9759",
+        "title": "FDA approves plasmid DNA-based immunotherapy for rare viral disease"
+      },
+      {
+        "itemId": "d99e7b857b56f8ae",
+        "title": "FDA OKs generic HIV prevention shot, widening access for lower-income countries"
+      },
+      {
+        "itemId": "ad11cbb54e079c01",
+        "title": "Pharma critic Bernie Sanders is set to hold major sway over FDA funding bill"
+      },
+      {
+        "itemId": "1031a854c0bf6ac7",
+        "title": "J&J’s Rybrevant nets FDA approval in head and neck cancer"
+      },
+      {
+        "itemId": "74b10c79f011e2c3",
+        "title": "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma"
+      },
+      {
+        "itemId": "94183ca0a48d9fac",
+        "title": "Regulatory lessons from FDA review of approved AAV gene therapies"
+      },
+      {
+        "itemId": "bb9961730e105b96",
+        "title": "A Study to Investigate the Efficacy and Safety of Belumosudil Compared With Best Available Therapy in Participants Aged 12 Years or Older With Chronic Graft-versus-host Disease"
+      },
+      {
+        "itemId": "1031a854c0bf6ac7",
+        "title": "J&J’s Rybrevant nets FDA approval in head and neck cancer"
+      },
+      {
+        "itemId": "74b10c79f011e2c3",
+        "title": "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma"
+      },
+      {
+        "itemId": "1031a854c0bf6ac7",
+        "title": "J&J’s Rybrevant nets FDA approval in head and neck cancer"
+      },
+      {
+        "itemId": "74b10c79f011e2c3",
+        "title": "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma"
+      }
+    ],
+    "crls": [],
+    "readouts": {
+      "met": [
+        "a91bbaf5c6134819",
+        "9bcfbfe5fdeccc22",
+        "af4c74a1176f6ce6",
+        "5ae76bb931ae4017"
+      ],
+      "missed": [
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a",
+        "486c69c895f2961a",
+        "16ce172e754d89c3",
+        "523c4a8b52d3db0a",
+        "8bd266d1bb65df2a",
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a",
+        "523c4a8b52d3db0a",
+        "f2a6c629ce95b8e9",
+        "523c4a8b52d3db0a"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 11,
+      "totalUsdM": 112500,
+      "largest": {
+        "itemId": "e002b790379b35cc",
+        "usdM": 70000
+      }
+    },
+    "financings": {
+      "count": 43,
+      "totalUsdM": 909025,
+      "byRound": {
+        "IPO": 4,
+        "financing": 38,
+        "Series A": 1
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT06745908",
+        "title": "Clinical Trial of N-803 Plus Tislelizumab or Prior Failed Immune Checkpoint Inhibitor and Docetaxel Versus Docetaxel Monotherapy in Participants With Advanced or Metastatic Non-Small Cell Lung Cancer Who Have Acquired Resistance to Immune Checkpoint Inhibitor Therapy"
+      },
+      {
+        "nct": "NCT07357675",
+        "title": "A Clinical Trial To Investigate The Effect Of EA-230 On Hospital Length Of Stay In Patients With Coronary Artery Disease (CAD) Undergoing Coronary Artery Bypass Grafting (CABG) Surgery."
+      },
+      {
+        "nct": "NCT07754123",
+        "title": "Phase III Study of HS-10504 Versus Platinum-Based Doublet Chemotherapy in Patients With C797S+ NSCLC",
+        "sponsor": "Jiangsu Hansoh Pharmaceutical"
+      },
+      {
+        "nct": "NCT07011745",
+        "title": "A Phase 3 Study to Evaluate the Safety and Efficacy of KarXT + KarX-EC for the Treatment of Agitation Associated With Alzheimer's Disease",
+        "sponsor": "Bristol Myers Squibb"
+      },
+      {
+        "nct": "NCT07241390",
+        "title": "A Study of Orforglipron (LY3502970) on Cardiovascular Outcomes in Adults With Atherosclerotic Cardiovascular Disease and/or Chronic Kidney Disease (ATTAIN-Outcomes)",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT06672939",
+        "title": "A Study of Orforglipron (LY3502970) in Adolescent Participants With Obesity, or Overweight With Related Comorbidities",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07223593",
+        "title": "Efficacy and Safety of Orforglipron in Participants With Peripheral Artery Disease",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT06452277",
+        "title": "A Study to Learn More About How Well Sevabertinib Works and How Safe it is Compared With Standard Treatment, in Participants Who Have Advanced Non-small Cell Lung Cancer (NSCLC) With Mutations of the Human Epidermal Growth Factor Receptor 2 (HER2)",
+        "sponsor": "Bayer"
+      },
+      {
+        "nct": "NCT07188558",
+        "title": "A Study to Investigate Ronde-cel Versus Investigator's Choice CD19 CAR T-Cell Therapy"
+      },
+      {
+        "nct": "NCT07299019",
+        "title": "A Study of Orelabrutinib in Patients With Secondary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      },
+      {
+        "nct": "NCT07213804",
+        "title": "A Three-Part Phase 3 Study of Sofetabart Mipitecan in Participants With Platinum-Resistant (Part A) and Platinum-Sensitive (Parts B and C) Ovarian Cancer",
+        "sponsor": "Eli Lilly"
+      },
+      {
+        "nct": "NCT07794579",
+        "title": "A Study of Orforglipron in Participants With Overweight at Risk of Development of Obesity-Related Complications or Progression to Class 1 Obesity",
+        "sponsor": "Eli Lilly"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_c3747c8e9b",
+      "leadItemId": "2d7b6a76b27655da",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_c3747c8e9b",
+      "leadItemId": "2d7b6a76b27655da",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_440b114a8b",
+      "leadItemId": "4be1f480acffd32f",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_5998dc758b",
+      "leadItemId": "961506e4dfa48303",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_809b38ff29",
+      "leadItemId": "0efbfa84e07969d0",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "versus",
+      "delta": 3.6
+    },
+    {
+      "term": "multicentre",
+      "delta": 3.5
+    },
+    {
+      "term": "randomised",
+      "delta": 3
+    },
+    {
+      "term": "microbiome",
+      "delta": 2.8
+    },
+    {
+      "term": "china",
+      "delta": 2.7
+    },
+    {
+      "term": "label",
+      "delta": 2.5
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "china",
+    "multicentre",
+    "promotes",
+    "versus",
+    "microbiome",
+    "quantitative",
+    "mouse",
+    "interim",
+    "profiling",
+    "orforglipron"
+  ]
+}
