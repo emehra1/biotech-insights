@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-11-08T17:06:35.854Z",
+  "generatedAt": "2026-11-09T21:28:41.013Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 7
+    },
     {
       "term": "Drug Administration",
       "count": 3
+    },
+    {
+      "term": "Astellas Pharma Global",
+      "count": 2
+    },
+    {
+      "term": "Development",
+      "count": 2
     }
   ]
 }
