@@ -1,20 +1,24 @@
 {
-  "generatedAt": "2026-11-09T21:28:41.013Z",
+  "generatedAt": "2026-11-10T18:42:58.129Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 7
+      "count": 4
     },
     {
-      "term": "Drug Administration",
+      "term": "PepGen",
       "count": 3
     },
     {
-      "term": "Astellas Pharma Global",
+      "term": "STAT",
       "count": 2
     },
     {
-      "term": "Development",
+      "term": "Health",
+      "count": 2
+    },
+    {
+      "term": "Drug Administration",
       "count": 2
     }
   ]
