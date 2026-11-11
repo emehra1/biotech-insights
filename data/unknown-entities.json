@@ -1,16 +1,12 @@
 {
-  "generatedAt": "2026-11-10T18:42:58.129Z",
+  "generatedAt": "2026-11-11T18:44:21.592Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 4
+      "count": 6
     },
     {
       "term": "PepGen",
-      "count": 3
-    },
-    {
-      "term": "STAT",
       "count": 2
     },
     {
