@@ -1,13 +1,9 @@
 {
-  "generatedAt": "2026-11-11T18:44:21.592Z",
+  "generatedAt": "2026-11-12T18:59:00.190Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 6
-    },
-    {
-      "term": "PepGen",
-      "count": 2
+      "count": 4
     },
     {
       "term": "Health",
@@ -15,6 +11,10 @@
     },
     {
       "term": "Drug Administration",
+      "count": 2
+    },
+    {
+      "term": "FoCUS",
       "count": 2
     }
   ]
