@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-11-13T18:34:56.874Z",
+  "generatedAt": "2026-11-14T17:11:42.398Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 4
+    },
     {
       "term": "Gubra",
       "count": 2
@@ -15,10 +19,6 @@
     },
     {
       "term": "FoCUS",
-      "count": 2
-    },
-    {
-      "term": "Lead",
       "count": 2
     }
   ]
