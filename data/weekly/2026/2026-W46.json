@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W46",
+  "start": "2026-11-09",
+  "end": "2026-11-15",
+  "generatedAt": "2026-11-15T17:48:10.668Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 16,
+    "items": [
+      {
+        "label": "semaglutide",
+        "terms": [
+          "semaglutide",
+          "glp-1",
+          "trevogrumab",
+          "gdf8",
+          "courage",
+          "efinopegdutide",
+          "steatohepatitis",
+          "activin"
+        ],
+        "docCount": 21,
+        "lift": 2.66,
+        "score": 6.46,
+        "itemIds": [
+          "1aa9c67b6da5ea10",
+          "ff49c06398c77436",
+          "02374f36519640ca",
+          "1520458c25c5fa3d",
+          "227a093254fa48d9",
+          "5fdf62ad2335dc70",
+          "0bbd6d50def995e5",
+          "a8100c90c1d1f635"
+        ]
+      },
+      {
+        "label": "basal",
+        "terms": [
+          "basal",
+          "ganglia"
+        ],
+        "docCount": 11,
+        "lift": 3.85,
+        "score": 6.45,
+        "itemIds": [
+          "1f8d8c42cd7a6390",
+          "afc4eaf489d53ebb",
+          "3112561fff9d80aa",
+          "668532739e7994e7",
+          "206b83d994431955",
+          "c6c01b2ac64f5f46",
+          "37c45c6a189a6729"
+        ]
+      },
+      {
+        "label": "blind",
+        "terms": [
+          "blind",
+          "double",
+          "regeneron",
+          "iqr 100",
+          "picc",
+          "amrecibart",
+          "cenvacibart",
+          "thrombosis",
+          "fxi",
+          "catheter",
+          "cilastatin",
+          "funding evopoint biosciences",
+          "habp",
+          "vabp",
+          "imipenem",
+          "funobactam",
+          "relebactam",
+          "bepranemab",
+          "prodromal",
+          "ventilator",
+          "synchronize",
+          "iqr 66",
+          "pneumonia"
+        ],
+        "docCount": 30,
+        "lift": 2.22,
+        "score": 6.29,
+        "itemIds": [
+          "57179e00b515c528",
+          "1659fb35bb1dca0e",
+          "d1b29edac44404fa",
+          "b75178c396f8d416",
+          "c449885367f7430e",
+          "21532f63256cbf95",
+          "1520458c25c5fa3d",
+          "e58bbad7636c43e1"
+        ]
+      },
+      {
+        "label": "windward",
+        "terms": [
+          "windward",
+          "backed",
+          "windward bio"
+        ],
+        "docCount": 11,
+        "lift": 3.38,
+        "score": 5.83,
+        "itemIds": [
+          "fd79a9286d8d120d",
+          "f99425a6330f05e2",
+          "6d72aa340fa190f1",
+          "31f28fc7bea563d1"
+        ]
+      },
+      {
+        "label": "social",
+        "terms": [
+          "social",
+          "geroscience",
+          "illuminate",
+          "rather"
+        ],
+        "docCount": 13,
+        "lift": 3.05,
+        "score": 5.81,
+        "itemIds": [
+          "b6250bd0c0eb8c25",
+          "a18138eaaf865f74",
+          "e893aaf338c45d97",
+          "7d9e9dd83f51cf05",
+          "b3d209e6d3368191",
+          "3633cd280d4bf056"
+        ]
+      },
+      {
+        "label": "dysfunction",
+        "terms": [
+          "dysfunction",
+          "unc13a",
+          "splice",
+          "tdp-43"
+        ],
+        "docCount": 14,
+        "lift": 2.92,
+        "score": 5.78,
+        "itemIds": [
+          "689c2c074e9c05ca",
+          "c9feac800e7d9cb3",
+          "f40dfbc6cc66d2ac",
+          "5fdf62ad2335dc70",
+          "2e6f1c31eac547b6",
+          "290d046ac8b540a7",
+          "66b98fc03b210712"
+        ]
+      },
+      {
+        "label": "flagship",
+        "terms": [
+          "flagship",
+          "valo health",
+          "montai therapeutics",
+          "merges",
+          "montai"
+        ],
+        "docCount": 9,
+        "lift": 3.68,
+        "score": 5.64,
+        "itemIds": [
+          "64437a363aa78fe6",
+          "80f4654caaeba008",
+          "6a1692bd33524a71"
+        ]
+      },
+      {
+        "label": "tnf",
+        "terms": [
+          "tnf",
+          "tnfsf12",
+          "tnfrsf12a",
+          "tweak",
+          "paradoxical",
+          "tert",
+          "eczema",
+          "atopic",
+          "dermatitis",
+          "il-13",
+          "il-23"
+        ],
+        "docCount": 12,
+        "lift": 2.94,
+        "score": 5.4,
+        "itemIds": [
+          "bc048ced3fe707bb",
+          "8bd9c841bd4b9854",
+          "cb38d6acb0388633",
+          "09120491b36770fb",
+          "677e9c8339681072",
+          "e7c68ef5a38db7ae"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "74b10c79f011e2c3",
+        "title": "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma"
+      },
+      {
+        "itemId": "7f770d18cd1dc5dc",
+        "title": "Former Eli Lilly rep claims she was fired for complaining about marketing of Mounjaro diabetes drug"
+      },
+      {
+        "itemId": "a6222042217989b7",
+        "title": "FDA approves novel Bayer drug to reduce recurrence of stroke"
+      },
+      {
+        "itemId": "c54b5fe51e5537d9",
+        "title": "FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk"
+      },
+      {
+        "itemId": "d5cd0eef30293c01",
+        "title": "Bayer wins FDA approval for stroke prevention drug Sunharbo"
+      },
+      {
+        "itemId": "1f8d8c42cd7a6390",
+        "title": "FDA Approves a Second Weekly Basal Insulin Option for Type 2 Diabetes"
+      },
+      {
+        "itemId": "1d643a349ac7fc64",
+        "title": "Bayer wins FDA nod for a new kind of blood thinner"
+      },
+      {
+        "itemId": "8757d1e161aab976",
+        "title": "Merck KGaA lands FDA nod for joint tumor drug it licensed from Abbisko"
+      },
+      {
+        "itemId": "49666f0401fb5bff",
+        "title": "Abbott nabs FDA approval, CE Mark for implantable cardioverter-defibrillator lead"
+      },
+      {
+        "itemId": "ddacbbe1dc023378",
+        "title": "First factor XIa inhibitor nabs FDA approval for stroke prevention"
+      },
+      {
+        "itemId": "c54b5fe51e5537d9",
+        "title": "FDA Approves First Factor Xla Inhibitor to Help Prevent Stroke in Certain Adults at High Risk"
+      },
+      {
+        "itemId": "d5cd0eef30293c01",
+        "title": "Bayer wins FDA approval for stroke prevention drug Sunharbo"
+      },
+      {
+        "itemId": "7f770d18cd1dc5dc",
+        "title": "Former Eli Lilly rep claims she was fired for complaining about marketing of Mounjaro diabetes drug"
+      },
+      {
+        "itemId": "d0482e648b43b58e",
+        "title": "Novel CRISPR therapy is poised to gain first FDA approval to alter genes inside the body"
+      },
+      {
+        "itemId": "d0482e648b43b58e",
+        "title": "Novel CRISPR therapy is poised to gain first FDA approval to alter genes inside the body"
+      },
+      {
+        "itemId": "d4a0c3238970ebfd",
+        "title": "FDA rejects lung cancer treatment ivonescimab from Summit Therapeutics"
+      },
+      {
+        "itemId": "d0482e648b43b58e",
+        "title": "Novel CRISPR therapy is poised to gain first FDA approval to alter genes inside the body"
+      }
+    ],
+    "crls": [
+      {
+        "itemId": "e80696b9772a44d1",
+        "title": "FDA appears to pause controversial speedy review program, complete response letter disclosures"
+      },
+      {
+        "itemId": "09eef65cecbc90b9",
+        "title": "FDA appears to pause controversial speedy review program, complete response letter disclosures"
+      }
+    ],
+    "readouts": {
+      "met": [
+        "69844c43fd51c3dd",
+        "a690f08958306f8c",
+        "a690f08958306f8c",
+        "a690f08958306f8c"
+      ],
+      "missed": [
+        "523c4a8b52d3db0a",
+        "7bb1623d375588df",
+        "523c4a8b52d3db0a"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 27,
+      "totalUsdM": 55746,
+      "largest": {
+        "itemId": "e76a0d738e0418ba",
+        "usdM": 12000
+      }
+    },
+    "financings": {
+      "count": 48,
+      "totalUsdM": 529922,
+      "byRound": {
+        "Series C": 3,
+        "financing": 30,
+        "IPO": 11,
+        "Series A": 2,
+        "Series B": 2
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07541170",
+        "title": "A Study to Evaluate the Efficacy and Safety of Divarasib Compared With Investigator's Choice of Immunotherapy or Observation in Participants With Resected Stage II-III KRAS G12C-Positive Non-Small Cell Lung Cancer (NSCLC)",
+        "sponsor": "Roche"
+      },
+      {
+        "nct": "NCT07924111",
+        "title": "A Randomized, Controlled, Double-Blind, Multicenter Phase III Clinical Trial to Evaluate the Efficacy and Safety of Enlonstobart, With or Without SYS6010 as Adjuvant Therapy, in Participants With Pathologically Residual Esophageal Squamous Cell Carcinoma Following Complete Surgical Resection",
+        "sponsor": "CSPC Megalith Biopharmaceutical"
+      },
+      {
+        "nct": "NCT07592689",
+        "title": "A Phase 3 Trial of DT120 for Major Depressive Disorder (Ascend)",
+        "sponsor": "Definium Therapeutics"
+      },
+      {
+        "nct": "NCT07924059",
+        "title": "Phase 3 Clinical Trial Evaluating the Efficacy and Safety of Navepegritide and Lonapegsomatropin in Achondroplasia",
+        "sponsor": "Ascendis Pharma"
+      },
+      {
+        "nct": "NCT07925190",
+        "title": "A Phase III Study Comparing Mesutoclax + Azacitidine Versus Venetoclax + Azacitidine in Untreated Acute Myeloid Leukemia (AML) Patients",
+        "sponsor": "Beijing InnoCare Pharma"
+      },
+      {
+        "nct": "NCT07621809",
+        "title": "Two Arm, Double-blind, Phase III Study Assessing Efficacy and Safety of Ianalumab Versus Placebo, in Participants With Sjögren's Disease With High Symptom Burden",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07863193",
+        "title": "Phase 3 Study of Denifanstat in Participants With Moderate to Severe Acne (AURORA)",
+        "sponsor": "Sagimet Biosciences"
+      },
+      {
+        "nct": "NCT06439082",
+        "title": "A Study to Investigate the Efficacy and Safety of Crizanlizumab (5 mg/kg) Compared With Placebo in Adolescent and Adult Sickle Cell Disease Patients Who Experience Frequent Vaso-Occlusive Crises (SPARKLE)",
+        "sponsor": "Novartis"
+      },
+      {
+        "nct": "NCT07890597",
+        "title": "A Study of a Medicine Called Atirmociclib in Combination With Giredestrant in Adult Participants With ER-positive, HER2-negative Early-stage Breast Cancer",
+        "sponsor": "Pfizer"
+      },
+      {
+        "nct": "NCT07867080",
+        "title": "A Phase 3 Trial for Intravitreal Injection of 4D-150 in Adults With Diabetic Macular Edema (DME).",
+        "sponsor": "Molecular Therapeutics"
+      },
+      {
+        "nct": "NCT07067463",
+        "title": "A Study of Orelabrutinib in Patients With Primary Progressive Multiple Sclerosis",
+        "sponsor": "Zenas BioPharma"
+      },
+      {
+        "nct": "NCT07708727",
+        "title": "Study of an Injectable Regimen of GS-3242 With Lenacapavir Compared to Biktarvy in People New to HIV-1 Treatment",
+        "sponsor": "Gilead"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_951141cf60",
+      "leadItemId": "b26cbc452ee520fc",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_962ab3d9a1",
+      "leadItemId": "cc093c96f286e591",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_dd5dbe49b4",
+      "leadItemId": "a8100c90c1d1f635",
+      "publisherCount": 3
+    },
+    {
+      "clusterId": "c_b09eb31c6e",
+      "leadItemId": "7de18aa8d09ca02d",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_518a29e78b",
+      "leadItemId": "b23ae3cda0e68f8e",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "glp-1",
+      "delta": 3.3
+    },
+    {
+      "term": "obesity",
+      "delta": 3.2
+    },
+    {
+      "term": "double",
+      "delta": 3.2
+    },
+    {
+      "term": "blind",
+      "delta": 3.2
+    },
+    {
+      "term": "placebo",
+      "delta": 2.8
+    },
+    {
+      "term": "controlled",
+      "delta": 2.7
+    }
+  ],
+  "degradedSources": [
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "semaglutide",
+    "basal",
+    "blind",
+    "ganglia",
+    "double",
+    "windward",
+    "social",
+    "dysfunction",
+    "flagship",
+    "multimorbidity"
+  ]
+}
