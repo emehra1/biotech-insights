@@ -1,8 +1,28 @@
 {
-  "generatedAt": "2026-11-15T17:48:10.185Z",
+  "generatedAt": "2026-11-16T21:06:03.663Z",
   "candidates": [
     {
+      "term": "Lead",
+      "count": 8
+    },
+    {
+      "term": "Johnson",
+      "count": 2
+    },
+    {
       "term": "Gubra",
+      "count": 2
+    },
+    {
+      "term": "Doerr",
+      "count": 2
+    },
+    {
+      "term": "OpenEvidence",
+      "count": 2
+    },
+    {
+      "term": "Summit",
       "count": 2
     },
     {
@@ -11,10 +31,6 @@
     },
     {
       "term": "Drug Administration",
-      "count": 2
-    },
-    {
-      "term": "FoCUS",
       "count": 2
     }
   ]
