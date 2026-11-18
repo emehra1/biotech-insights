@@ -1,20 +1,24 @@
 {
-  "generatedAt": "2026-11-17T19:55:05.249Z",
+  "generatedAt": "2026-11-18T19:28:17.962Z",
   "candidates": [
     {
       "term": "Lead",
       "count": 8
     },
     {
-      "term": "Johnson",
+      "term": "Cassidy",
       "count": 2
     },
     {
-      "term": "Kennedy",
+      "term": "Sellas",
       "count": 2
     },
     {
       "term": "Drug Administration",
+      "count": 2
+    },
+    {
+      "term": "Alkermes",
       "count": 2
     }
   ]
