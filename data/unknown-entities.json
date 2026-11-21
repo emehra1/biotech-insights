@@ -1,9 +1,13 @@
 {
-  "generatedAt": "2026-11-20T19:08:57.916Z",
+  "generatedAt": "2026-11-21T18:02:39.708Z",
   "candidates": [
     {
       "term": "Lead",
-      "count": 7
+      "count": 5
+    },
+    {
+      "term": "Drug Administration",
+      "count": 3
     },
     {
       "term": "Quanterix",
@@ -19,10 +23,6 @@
     },
     {
       "term": "PAHO",
-      "count": 2
-    },
-    {
-      "term": "Drug Administration",
       "count": 2
     }
   ]
