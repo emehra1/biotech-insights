@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 2,
+  "week": "2026-W47",
+  "start": "2026-11-16",
+  "end": "2026-11-22",
+  "generatedAt": "2026-11-22T18:34:40.273Z",
+  "themes": {
+    "status": "ok",
+    "weeksObserved": 17,
+    "items": [
+      {
+        "label": "semaglutide",
+        "terms": [
+          "semaglutide",
+          "etd 61",
+          "etd 63",
+          "redefine",
+          "trevogrumab",
+          "gdf8",
+          "courage",
+          "efinopegdutide",
+          "cagrisema",
+          "cagrilintide",
+          "steatohepatitis",
+          "within",
+          "activin",
+          "garetosmab"
+        ],
+        "docCount": 35,
+        "lift": 2.99,
+        "score": 9.34,
+        "itemIds": [
+          "1520458c25c5fa3d",
+          "a8100c90c1d1f635",
+          "227a093254fa48d9",
+          "5fdf62ad2335dc70",
+          "326dc5e16b9dc35a",
+          "843a55b94c288ab1"
+        ]
+      },
+      {
+        "label": "gaucher",
+        "terms": [
+          "gaucher",
+          "sanofi",
+          "neurological",
+          "symptoms",
+          "infilbray",
+          "venglustat",
+          "genzyme"
+        ],
+        "docCount": 11,
+        "lift": 4.67,
+        "score": 7.37,
+        "itemIds": [
+          "4f5562d77a764c4a",
+          "7eec4348157bd9a1",
+          "2cc6d7ded4f5696f"
+        ]
+      },
+      {
+        "label": "fluid",
+        "terms": [
+          "fluid",
+          "sleep",
+          "waves",
+          "exhibits",
+          "cerebrospinal",
+          "hemodynamic",
+          "disrupts"
+        ],
+        "docCount": 14,
+        "lift": 3.38,
+        "score": 6.57,
+        "itemIds": [
+          "7103411e56536a77",
+          "8ed34ba9f8956d58"
+        ]
+      },
+      {
+        "label": "novo nordisk",
+        "terms": [
+          "novo nordisk"
+        ],
+        "docCount": 19,
+        "lift": 2.75,
+        "score": 6.36,
+        "itemIds": [
+          "a8100c90c1d1f635",
+          "326dc5e16b9dc35a",
+          "843a55b94c288ab1",
+          "8091ab21103c9506",
+          "888a6c5bd137a976",
+          "5e575261c2624d3b"
+        ]
+      },
+      {
+        "label": "during",
+        "terms": [
+          "during",
+          "infection",
+          "reduced"
+        ],
+        "docCount": 28,
+        "lift": 2.23,
+        "score": 6.11,
+        "itemIds": [
+          "1520458c25c5fa3d",
+          "8ed34ba9f8956d58",
+          "e7c68ef5a38db7ae",
+          "a98d5dccabe0d225",
+          "5bcb12bdc1ffab04",
+          "b8ebf47e690074c2",
+          "049d9e1e38af1be4",
+          "eb19e1c3df2b95c7"
+        ]
+      },
+      {
+        "label": "neurodegenerative",
+        "terms": [
+          "neurodegenerative",
+          "cell therapy",
+          "affecting",
+          "pooled",
+          "lrrk2"
+        ],
+        "docCount": 11,
+        "lift": 3.46,
+        "score": 5.94,
+        "itemIds": [
+          "ca46d07775563579",
+          "5325aa1bd1cfb42e",
+          "a6cad26c84b1d786"
+        ]
+      },
+      {
+        "label": "circuits",
+        "terms": [
+          "circuits",
+          "transa",
+          "tex",
+          "tcf-1",
+          "nfat",
+          "runx",
+          "multipotency",
+          "sustain",
+          "maintains",
+          "stemness",
+          "progenitor",
+          "direction"
+        ],
+        "docCount": 11,
+        "lift": 3.38,
+        "score": 5.82,
+        "itemIds": [
+          "c86bcf7304af2881",
+          "220714c723e98cce",
+          "cb2ab0d87f7f1755"
+        ]
+      },
+      {
+        "label": "hypothalamic",
+        "terms": [
+          "hypothalamic",
+          "monkey",
+          "pituitary",
+          "testicular",
+          "maturation"
+        ],
+        "docCount": 11,
+        "lift": 3.24,
+        "score": 5.62,
+        "itemIds": [
+          "a20ba631d6e60444",
+          "4b13bed4d5494faa"
+        ]
+      }
+    ]
+  },
+  "tallies": {
+    "approvals": [
+      {
+        "itemId": "524233aade9dd76a",
+        "title": "FDA approves new breast cancer drug, providing new option for some patients, boost for Roche"
+      },
+      {
+        "itemId": "7db9993ee14a16c4",
+        "title": "In a win for MAHA, FDA creates new regulatory category for the supplement NAC"
+      },
+      {
+        "itemId": "853437c481699efb",
+        "title": "AstraZeneca, Alexion's mysathenia gravis treatment enters crowded market"
+      },
+      {
+        "itemId": "d4a0c3238970ebfd",
+        "title": "FDA rejects lung cancer treatment ivonescimab from Summit Therapeutics"
+      },
+      {
+        "itemId": "3aa7a071f42b954a",
+        "title": "Pharmalittle: We’re reading about a Roche breast cancer pill, obesity drugs in children, and more"
+      },
+      {
+        "itemId": "59640d59845d06cc",
+        "title": "Marrow raises $173M for siRNA drug competing with CRISPR therapy for sickle cell"
+      },
+      {
+        "itemId": "1e5a22b1f89692ac",
+        "title": "GSK’s Nuvalent buyout delivers again as FDA clears Nelkarmi for lung cancer"
+      },
+      {
+        "itemId": "6cc56b105b0d685b",
+        "title": "Roche breast cancer pill cleared by FDA"
+      },
+      {
+        "itemId": "524233aade9dd76a",
+        "title": "FDA approves new breast cancer drug, providing new option for some patients, boost for Roche"
+      },
+      {
+        "itemId": "7db9993ee14a16c4",
+        "title": "In a win for MAHA, FDA creates new regulatory category for the supplement NAC"
+      },
+      {
+        "itemId": "59640d59845d06cc",
+        "title": "Marrow raises $173M for siRNA drug competing with CRISPR therapy for sickle cell"
+      },
+      {
+        "itemId": "494d9dedff7b1fa4",
+        "title": "Beren clinches long-awaited FDA nod for cyclodextrin drug in Niemann-Pick disease"
+      },
+      {
+        "itemId": "5195049b11123700",
+        "title": "Beren wins FDA approval for long-studied rare disease drug"
+      },
+      {
+        "itemId": "83323fd6df90931b",
+        "title": "Roche’s next major breast cancer drug, Wilserdly, secures FDA approval as 4th oral SERD"
+      },
+      {
+        "itemId": "aecb95a9c5d8c274",
+        "title": "FDA Approves First Drug Shown to Help Patients with Infantile-Onset Niemann-Pick Disease Type C Live Longer"
+      },
+      {
+        "itemId": "3aa7a071f42b954a",
+        "title": "Pharmalittle: We’re reading about a Roche breast cancer pill, obesity drugs in children, and more"
+      },
+      {
+        "itemId": "8a2e7dc8088baf65",
+        "title": "FDA clears MiniMed Fit tubeless insulin pump"
+      },
+      {
+        "itemId": "4f5562d77a764c4a",
+        "title": "Sanofi's Infilbray wins first approval for neurological symptoms of Gaucher"
+      },
+      {
+        "itemId": "71693ea8ee3e16c5",
+        "title": "Regeneron breaks into neurology with FDA nod in crowded myasthenia gravis"
+      },
+      {
+        "itemId": "7eec4348157bd9a1",
+        "title": "FDA Approves First Drug to Treat Neurological Symptoms of Type 3 Gaucher Disease"
+      },
+      {
+        "itemId": "5195049b11123700",
+        "title": "Beren wins FDA approval for long-studied rare disease drug"
+      },
+      {
+        "itemId": "83323fd6df90931b",
+        "title": "Roche’s next major breast cancer drug, Wilserdly, secures FDA approval as 4th oral SERD"
+      },
+      {
+        "itemId": "82c7f40cbca113f7",
+        "title": "FDA sets up new safety council to keep tabs on approved vaccines, cell and gene therapies"
+      },
+      {
+        "itemId": "1e39a3f1f83ff300",
+        "title": "Regeneron enters neurology field as FDA approves siRNA for myasthenia gravis"
+      },
+      {
+        "itemId": "2cc6d7ded4f5696f",
+        "title": "Sanofi gets Genzyme asset across FDA finish line with key nod in Gaucher type 3"
+      },
+      {
+        "itemId": "4f5562d77a764c4a",
+        "title": "Sanofi's Infilbray wins first approval for neurological symptoms of Gaucher"
+      },
+      {
+        "itemId": "7eec4348157bd9a1",
+        "title": "FDA Approves First Drug to Treat Neurological Symptoms of Type 3 Gaucher Disease"
+      },
+      {
+        "itemId": "82c7f40cbca113f7",
+        "title": "FDA sets up new safety council to keep tabs on approved vaccines, cell and gene therapies"
+      },
+      {
+        "itemId": "7eec4348157bd9a1",
+        "title": "FDA Approves First Drug to Treat Neurological Symptoms of Type 3 Gaucher Disease"
+      },
+      {
+        "itemId": "71693ea8ee3e16c5",
+        "title": "Regeneron breaks into neurology with FDA nod in crowded myasthenia gravis"
+      },
+      {
+        "itemId": "4f5562d77a764c4a",
+        "title": "Sanofi's Infilbray wins first approval for neurological symptoms of Gaucher"
+      },
+      {
+        "itemId": "ddacbbe1dc023378",
+        "title": "First factor XIa inhibitor nabs FDA approval for stroke prevention"
+      },
+      {
+        "itemId": "2cc6d7ded4f5696f",
+        "title": "Sanofi gets Genzyme asset across FDA finish line with key nod in Gaucher type 3"
+      },
+      {
+        "itemId": "7eec4348157bd9a1",
+        "title": "FDA Approves First Drug to Treat Neurological Symptoms of Type 3 Gaucher Disease"
+      },
+      {
+        "itemId": "71693ea8ee3e16c5",
+        "title": "Regeneron breaks into neurology with FDA nod in crowded myasthenia gravis"
+      },
+      {
+        "itemId": "82c7f40cbca113f7",
+        "title": "FDA sets up new safety council to keep tabs on approved vaccines, cell and gene therapies"
+      },
+      {
+        "itemId": "4f5562d77a764c4a",
+        "title": "Sanofi's Infilbray wins first approval for neurological symptoms of Gaucher"
+      },
+      {
+        "itemId": "2cc6d7ded4f5696f",
+        "title": "Sanofi gets Genzyme asset across FDA finish line with key nod in Gaucher type 3"
+      }
+    ],
+    "crls": [
+      {
+        "itemId": "6e37290484ecd41d",
+        "title": "FDA’s complete response letter for Summit’s ivonescimab cites China-heavy data beyond survival miss"
+      },
+      {
+        "itemId": "84433abead618953",
+        "title": "FDA’s complete response letter for Summit’s ivonescimab cites China-heavy data beyond survival miss"
+      },
+      {
+        "itemId": "492d30952104a9a2",
+        "title": "Fierce Pharma Asia—Ivonescimab’s FDA snub; Pfizer’s in vivo CAR-T deal; China fires scientists in fatal gene trial"
+      },
+      {
+        "itemId": "492d30952104a9a2",
+        "title": "Fierce Pharma Asia—Ivonescimab’s FDA snub; Pfizer’s in vivo CAR-T deal; China fires scientists in fatal gene trial"
+      },
+      {
+        "itemId": "492d30952104a9a2",
+        "title": "Fierce Pharma Asia—Ivonescimab’s FDA snub; Pfizer’s in vivo CAR-T deal; China fires scientists in fatal gene trial"
+      }
+    ],
+    "readouts": {
+      "met": [],
+      "missed": [
+        "1d941c03a0183499",
+        "6523685ab239e269",
+        "6523685ab239e269"
+      ],
+      "mixed": []
+    },
+    "ma": {
+      "count": 19,
+      "totalUsdM": 29880,
+      "largest": {
+        "itemId": "1e5a22b1f89692ac",
+        "usdM": 10600
+      }
+    },
+    "financings": {
+      "count": 49,
+      "totalUsdM": 169281,
+      "byRound": {
+        "financing": 40,
+        "IPO": 5,
+        "Series C": 2,
+        "Series A": 2
+      }
+    },
+    "newPhase3": [
+      {
+        "nct": "NCT07342478",
+        "title": "ROCKET-CLL Global Phase 3 Study: Rocbrutinib vs Pirtobrutinib in cBTKi-Pretreated R/R CLL/SLL",
+        "sponsor": "Newave Pharmaceutical"
+      },
+      {
+        "nct": "NCT07923305",
+        "title": "Phase 2 and 3 Placebo Controlled & Long-term Extension Study of Rilzabrutinib in Adults With iCVID to Evaluate Efficacy, Safety, and Tolerability",
+        "sponsor": "Sanofi"
+      },
+      {
+        "nct": "NCT06430801",
+        "title": "A Study to Evaluate the Efficacy and Safety of Tulisokibart (MK-7240) in Participants With Moderate to Severe Crohn's Disease (MK-7240-008)"
+      },
+      {
+        "nct": "NCT07868939",
+        "title": "Oral VK2735 for Weight Management in Adults With Type 2 Diabetes Mellitus Phase 3 (SUNRISE 2)",
+        "sponsor": "Viking Therapeutics"
+      },
+      {
+        "nct": "NCT07868835",
+        "title": "Oral VK2735 for Weight Management Phase 3 (SUNRISE 1)",
+        "sponsor": "Viking Therapeutics"
+      },
+      {
+        "nct": "NCT07759128",
+        "title": "A Trial of the Efficacy and Safety of Fixed Doses of SEP-363856 in Adults With Generalized Anxiety Disorder",
+        "sponsor": "Otsuka"
+      },
+      {
+        "nct": "NCT07843472",
+        "title": "A Phase III Study to Evaluate the Efficacy and Safety of Petrelintide in Participants With Overweight or Obesity and Established Cardiovascular Disease",
+        "sponsor": "Roche"
+      },
+      {
+        "nct": "NCT07513376",
+        "title": "A Clinical Trial of Adjuvant Intismeran (V940) With or Without Pembrolizumab Coformulated With Berahyaluronidase Alfa (MK-3475A) in High-Risk Stage I Non-Small Cell Lung Cancer (V940-014)"
+      },
+      {
+        "nct": "NCT07365995",
+        "title": "A Phase III Trial of BNT324 Versus Docetaxel in Metastatic Castration-resistant Prostate Cancer",
+        "sponsor": "BioNTech"
+      },
+      {
+        "nct": "NCT07795164",
+        "title": "Phase 3 Study of the Efficacy, Safety, and Clinical Outcomes of Pemvidutide in MASH"
+      },
+      {
+        "nct": "NCT07086976",
+        "title": "A Study to Investigate the Efficacy, Safety, and Pharmacokinetics of Oral Rilzabrutinib Compared With Placebo in Participants 18 Years of Age and Older With Warm Autoimmune Hemolytic Anemia",
+        "sponsor": "Sanofi"
+      },
+      {
+        "nct": "NCT07357727",
+        "title": "A Phase 3 Study of Pelabresib (DAK539) and Ruxolitinib in Myelofibrosis (MF)",
+        "sponsor": "Novartis"
+      }
+    ]
+  },
+  "topClusters": [
+    {
+      "clusterId": "c_bbc2c5066d",
+      "leadItemId": "853437c481699efb",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_e49fae67e3",
+      "leadItemId": "ec338d596603e976",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_c15834f25c",
+      "leadItemId": "ae71aeb819f8c951",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_fff0ce135b",
+      "leadItemId": "5e575261c2624d3b",
+      "publisherCount": 2
+    },
+    {
+      "clusterId": "c_fff0ce135b",
+      "leadItemId": "5e575261c2624d3b",
+      "publisherCount": 2
+    }
+  ],
+  "preprintShift": [
+    {
+      "term": "semaglutide",
+      "delta": 4.5
+    },
+    {
+      "term": "obesity",
+      "delta": 3.5
+    },
+    {
+      "term": "aging",
+      "delta": 3.4
+    },
+    {
+      "term": "during",
+      "delta": 3.1
+    },
+    {
+      "term": "adults",
+      "delta": 3
+    },
+    {
+      "term": "placebo",
+      "delta": 2.7
+    }
+  ],
+  "degradedSources": [
+    "Fierce Biotech",
+    "Fierce Pharma",
+    "ClinicalTrials.gov"
+  ],
+  "lexiconSuggestions": [
+    "semaglutide",
+    "gaucher",
+    "fluid",
+    "during",
+    "neurodegenerative",
+    "circuits",
+    "hypothalamic",
+    "cardiovascular",
+    "insmed",
+    "adults"
+  ]
+}
