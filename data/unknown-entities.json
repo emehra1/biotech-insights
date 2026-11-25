@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-11-24T21:21:37.643Z",
+  "generatedAt": "2026-11-25T20:30:31.937Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 4
+    },
     {
       "term": "Drug Administration",
       "count": 3
@@ -11,14 +15,6 @@
     },
     {
       "term": "Insmed",
-      "count": 2
-    },
-    {
-      "term": "Invivyd",
-      "count": 2
-    },
-    {
-      "term": "Lead",
       "count": 2
     }
   ]
