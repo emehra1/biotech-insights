@@ -1,21 +1,13 @@
 {
-  "generatedAt": "2026-11-26T20:14:27.554Z",
+  "generatedAt": "2026-11-27T20:01:21.243Z",
   "candidates": [
+    {
+      "term": "Lead",
+      "count": 9
+    },
     {
       "term": "Drug Administration",
       "count": 3
-    },
-    {
-      "term": "Lead",
-      "count": 3
-    },
-    {
-      "term": "Bloomberg",
-      "count": 2
-    },
-    {
-      "term": "Insmed",
-      "count": 2
     }
   ]
 }
